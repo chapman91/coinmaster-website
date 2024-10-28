@@ -1,3 +1,7 @@
+/* import a  google font with different weights for the website */
+
+
+
 :root {
   --background-color: #ffff;
   --primary-color: #343434;
@@ -60,3 +64,7 @@ a {
 }
 
 
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+}
