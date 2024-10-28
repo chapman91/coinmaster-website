@@ -1,3 +1,5 @@
 # Ignore build artifacts
 .next/
 node_modules/
+bfg.jar
+coinmaster-website.git/
