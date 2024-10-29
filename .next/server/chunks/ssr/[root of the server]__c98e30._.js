@@ -34,7 +34,7 @@ function NavigationBar() {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Nav$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].Item, {
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Nav$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].Link, {
                     href: "/home",
-                    children: "Active"
+                    children: "Home"
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/organisms/client/navigationbar.jsx",
                     lineNumber: 12,
@@ -43,12 +43,12 @@ function NavigationBar() {
             }, void 0, false, {
                 fileName: "[project]/src/app/components/organisms/client/navigationbar.jsx",
                 lineNumber: 11,
-                columnNumber: 7
+                columnNumber: 8
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Nav$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].Item, {
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Nav$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].Link, {
-                    eventKey: "link-1",
-                    children: "Loooonger NavLink"
+                    href: "/how-to-buy",
+                    children: "How to Buy"
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/organisms/client/navigationbar.jsx",
                     lineNumber: 15,
@@ -61,8 +61,9 @@ function NavigationBar() {
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Nav$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].Item, {
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Nav$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].Link, {
-                    eventKey: "link-2",
-                    children: "Link"
+                    href: "/",
+                    eventKey: "link-1",
+                    children: "Tokenomics"
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/organisms/client/navigationbar.jsx",
                     lineNumber: 18,
@@ -75,17 +76,31 @@ function NavigationBar() {
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Nav$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].Item, {
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Nav$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].Link, {
-                    eventKey: "disabled",
-                    disabled: true,
-                    children: "Disabled"
+                    href: "./buy-now",
+                    eventKey: "link-3",
+                    children: "Buy Now"
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/organisms/client/navigationbar.jsx",
-                    lineNumber: 21,
+                    lineNumber: 24,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/organisms/client/navigationbar.jsx",
-                lineNumber: 20,
+                lineNumber: 23,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Nav$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].Item, {
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$bootstrap$2f$esm$2f$Nav$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].Link, {
+                    eventKey: "link-4",
+                    children: "Socials"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/components/organisms/client/navigationbar.jsx",
+                    lineNumber: 29,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/app/components/organisms/client/navigationbar.jsx",
+                lineNumber: 28,
                 columnNumber: 7
             }, this)
         ]
@@ -96,6 +111,7 @@ function NavigationBar() {
     }, this);
 }
 const __TURBOPACK__default__export__ = NavigationBar;
+ // Add bootstrap css
 }}),
 "[externals]/ [external] (next/dist/server/app-render/work-async-storage.external.js, cjs)": (function(__turbopack_context__) {
 

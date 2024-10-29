@@ -8,18 +8,26 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function NavigationBar() {
   return (
     <Nav justify variant="tabs" defaultActiveKey="/home">
-      <Nav.Item>
-        <Nav.Link href="/home">Active</Nav.Link>
+       <Nav.Item>
+        <Nav.Link href="/home">Home</Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="link-1">Loooonger NavLink</Nav.Link>
+        <Nav.Link href="/how-to-buy">How to Buy</Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="link-2">Link</Nav.Link>
+        <Nav.Link href="/" eventKey="link-1">Tokenomics</Nav.Link>
+      </Nav.Item>
+      {/* <Nav.Item>
+        <Nav.Link eventKey="link-2">Blog</Nav.Link>
+      </Nav.Item> */}
+      <Nav.Item>
+        <Nav.Link href="./buy-now" eventKey="link-3">
+          Buy Now
+        </Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="disabled" disabled>
-          Disabled
+        <Nav.Link eventKey="link-4">
+          Socials
         </Nav.Link>
       </Nav.Item>
     </Nav>
@@ -27,3 +35,6 @@ function NavigationBar() {
 }
 
 export default NavigationBar;
+
+
+// Add bootstrap css
