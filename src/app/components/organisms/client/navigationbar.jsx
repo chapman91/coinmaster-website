@@ -3,6 +3,7 @@
 
 import React from 'react';
 import Nav from 'react-bootstrap/Nav';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function NavigationBar() {
   return (

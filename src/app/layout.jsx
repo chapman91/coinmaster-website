@@ -1,7 +1,7 @@
 
 
 // Adjust the path if your globals.css is in a different folder
-import "./globals.css"; 
+import "./styles/page.module.css"; 
 import { Footer, NavigationBar } from "./components/componentsBarrel";
 
 
