@@ -1,4 +1,4 @@
-/* import a  google font with different weights for the website */
+/** import a  google font with different weights for the website */
 
 
 
@@ -64,3 +64,7 @@ a {
 }
 
 
+.content {
+  max-width: 960px;
+  margin: 0 auto; 
+}
