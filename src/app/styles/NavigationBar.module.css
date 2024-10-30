@@ -1,5 +1,3 @@
-
-
 .backgroundNav {
     background-color: var(--primary-color) !important;
 }
@@ -14,20 +12,25 @@
     box-shadow: none !important;
 }
 
+/* Target Bootstrap's nav-link class in active state */
+.nav-tabs .nav-link {
+    border-radius: 0 !important;
+    border: none !important;
+}
 
 .navItem {
     flex-basis: unset !important;
     margin: 0 10px; 
 }
 
+
 /* Override Bootstrap styles */
 
-.localClasss :global(.customNavLink) {
+.customNavLink {
     flex-basis: auto; 
     padding: 0 10px;
-    text-align: center
+    text-align: center;
 }
-
 
 .navContainer .navItem .navLinkBold {
     font-weight: 700;

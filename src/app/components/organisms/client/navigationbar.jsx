@@ -19,20 +19,20 @@ function NavigationBar() {
       <Navbar.Collapse id="basic-navbar-nav">
       <Nav className={`${styles.navContainer}`} justify variant="tabs" defaultActiveKey="/home">
        <Nav.Item className={styles.navItem}>
-        <Nav.Link href="/home" className={`${styles.customNavLink} ${styles.navLinkBold}`}>Home</Nav.Link>
+        <Nav.Link href="/home" className={`${styles.customNavLink} ${styles.navLinkBold}`} style={{ borderRadius: '0', border: 'none' }}>Home</Nav.Link>
       </Nav.Item>
       <Nav.Item className={styles.navItem}>
-        <Nav.Link href="/how-to-buy" className={`${styles.customNavLink} ${styles.navLinkBold}`}>How to Buy</Nav.Link>
+        <Nav.Link href="/how-to-buy" className={`${styles.customNavLink} ${styles.navLinkBold}`} style={{ borderRadius: '0', border: 'none' }}>How to Buy</Nav.Link>
       </Nav.Item>
       <Nav.Item className={styles.navItem}>
-        <Nav.Link href="/" eventKey="link-1" className={`${styles.customNavLink} ${styles.navLinkBold}`}>Tokenomics</Nav.Link>
+        <Nav.Link href="/" eventKey="link-1" className={`${styles.customNavLink} ${styles.navLinkBold}`} style={{ borderRadius: '0', border: 'none' }}>Tokenomics</Nav.Link>
       </Nav.Item>
       <Nav.Item className={styles.navItem}>
-        <Nav.Link href="./buy-now" eventKey="link-3" className={`${styles.customNavLink} ${styles.navLinkBold}`}>
+        <Nav.Link href="./buy-now" eventKey="link-3" className={`${styles.customNavLink} ${styles.navLinkBold}`} style={{ borderRadius: '0', border: 'none' }}>
           Buy Now
         </Nav.Link>
       </Nav.Item>
-      <NavDropdown title="Socials" id="basic-nav-dropdown" className={`${styles.customNavLink} ${styles.navLinkBold} ${styles.dropdownToggle} custom-dropdown-toggle`} style={{ color: 'white'}}>
+      <NavDropdown title="Socials" id="basic-nav-dropdown" className={`${styles.customNavLink} ${styles.navLinkBold} ${styles.dropdownToggle} custom-dropdown-toggle`} style={{ color: 'white', borderRadius: '0', border: 'none' }}>
         <NavDropdown.Item href="https://X.com">X</NavDropdown.Item>
         <NavDropdown.Item href="https://telegram.com">Telegram</NavDropdown.Item>
         <NavDropdown.Item href="https://coinmarketcap.com">CoinMarketCap</NavDropdown.Item>
