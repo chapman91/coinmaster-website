@@ -1,0 +1,24 @@
+
+
+
+/* NavigationBar.module.css */
+.navContainer {
+    display: flex;
+    justify-content: space-around; 
+    gap: 20px;
+    color: green;
+}
+
+
+.navItem {
+    flex-basis: unset !important;
+    margin: 0 10px; 
+}
+
+/* Override Bootstrap styles */
+
+.localClasss :global(.customNavLink) {
+    flex-basis: auto; 
+    padding: 0 10px;
+    text-align: center
+}

@@ -3,7 +3,7 @@
 // Adjust the path if your globals.css is in a different folder
 import "./styles/global.css"; 
 import { Footer, NavigationBar } from "./components/componentsBarrel";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 

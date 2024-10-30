@@ -10405,52 +10405,9 @@ if ((typeof exports.default === 'function' || typeof exports.default === 'object
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, m: module, e: exports, t: require } = __turbopack_context__;
 {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-Object.defineProperty(exports, "useOnClickOutside", {
-    enumerable: true,
-    get: function() {
-        return useOnClickOutside;
-    }
-});
-const _interop_require_wildcard = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs [client] (ecmascript)");
-const _react = /*#__PURE__*/ _interop_require_wildcard._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
-function useOnClickOutside(el, handler) {
-    _react.useEffect(()=>{
-        if (el == null || handler == null) {
-            return;
-        }
-        const listener = (e)=>{
-            // Do nothing if clicking ref's element or descendent elements
-            if (!el || el.contains(e.target)) {
-                return;
-            }
-            handler(e);
-        };
-        const root = el.getRootNode();
-        root.addEventListener('mousedown', listener);
-        root.addEventListener('touchstart', listener, {
-            passive: false
-        });
-        return function() {
-            root.removeEventListener('mousedown', listener);
-            root.removeEventListener('touchstart', listener);
-        };
-    }, [
-        handler,
-        el
-    ]);
-}
-if ((typeof exports.default === 'function' || typeof exports.default === 'object' && exports.default !== null) && typeof exports.default.__esModule === 'undefined') {
-    Object.defineProperty(exports.default, '__esModule', {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-} //# sourceMappingURL=use-on-click-outside.js.map
-}}),
+const e = new Error("Could not parse module '[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/hooks/use-on-click-outside.js'");
+e.code = 'MODULE_UNPARSEABLE';
+throw e;}}),
 "[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/components/Dialog/Dialog.js [client] (ecmascript)": (function(__turbopack_context__) {
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, m: module, e: exports, t: require } = __turbopack_context__;
