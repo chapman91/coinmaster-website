@@ -14,10 +14,10 @@ import styles from '../../../styles/NavigationBar.module.css';
 function NavigationBar() {
   return (  
    <Navbar expand="md" className={`${styles.backgroundNav} mb-3`}>
-    <Container>
+    <Container fluid>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-   <Nav className={`${styles.navContainer}`} justify variant="tabs" defaultActiveKey="/home">
+      <Nav className={`${styles.navContainer}`} justify variant="tabs" defaultActiveKey="/home">
        <Nav.Item className={styles.navItem}>
         <Nav.Link href="/home" className={`${styles.customNavLink} ${styles.navLinkBold}`}>Home</Nav.Link>
       </Nav.Item>
@@ -32,13 +32,13 @@ function NavigationBar() {
           Buy Now
         </Nav.Link>
       </Nav.Item>
-      <NavDropdown title="Socials" id="basic-nav-dropdown" className={`${styles.customNavLink} ${styles.navLinkBold}`}>
+      <NavDropdown title="Socials" id="basic-nav-dropdown" className={`${styles.customNavLink} ${styles.navLinkBold} ${styles.dropdownToggle} custom-dropdown-toggle`} style={{ color: 'white'}}>
         <NavDropdown.Item href="https://X.com">X</NavDropdown.Item>
         <NavDropdown.Item href="https://telegram.com">Telegram</NavDropdown.Item>
         <NavDropdown.Item href="https://coinmarketcap.com">CoinMarketCap</NavDropdown.Item>
         <NavDropdown.Item href="https://coingecko.com">CoinGecko</NavDropdown.Item>
       </NavDropdown>
-    </Nav>
+       </Nav>
     </Navbar.Collapse>
     </Container>
     </Navbar>

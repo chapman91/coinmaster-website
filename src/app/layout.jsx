@@ -26,10 +26,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">       
-            <body className={`${roboto.className} content`}>
+            <body className={`${roboto.className}`}>
             <NavigationBar/>
+            <div className="content">
             {children}
-            <Footer/>  
+            <Footer/> 
+            </div>
             </body>
         </html>
     )

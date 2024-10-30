@@ -9,7 +9,6 @@
     display: flex;
     justify-content: space-around; 
     gap: 20px;
-    color: green;
 }
 
 
@@ -27,7 +26,13 @@
 }
 
 
-.navContainer .navLinkBold {
+.navContainer .navItem .navLinkBold {
     font-weight: 700;
+    color: var(--background-color);
 }
 
+
+.navContainer  .navLinkBold {
+    font-weight: 700;
+    color: var(--background-color);
+}

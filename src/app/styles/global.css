@@ -42,7 +42,7 @@ body {
 }
 
 body {
-  color: var(--quaternary-color);
+  color: var(--background-color) !important;
   background: var(--background-color);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
