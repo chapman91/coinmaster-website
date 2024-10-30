@@ -25,3 +25,9 @@
     padding: 0 10px;
     text-align: center
 }
+
+
+.navContainer .navLinkBold {
+    font-weight: 700;
+}
+

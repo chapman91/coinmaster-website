@@ -10,6 +10,7 @@
     "debug": "NODE_OPTIONS='--inspect' next dev"
   },
   "dependencies": {
+    "@next/font": "^14.2.15",
     "@nextui-org/react": "^2.4.8",
     "@react-aria/interactions": "^3.22.4",
     "bootstrap": "^5.3.3",

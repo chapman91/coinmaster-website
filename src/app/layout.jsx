@@ -4,6 +4,14 @@
 import { Footer, NavigationBar } from "./components/componentsBarrel";
 import "./styles/global.css"; 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Roboto } from '@next/font/google';
+
+
+// Roboto Configuration
+const roboto = Roboto({
+    subsets: ['latin'],
+    weight: ['400', '700', '900'],
+});
 
 
 
@@ -18,7 +26,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">       
-            <body className="content">
+            <body className={`${roboto.className} content`}>
             <NavigationBar/>
             {children}
             <Footer/>  
