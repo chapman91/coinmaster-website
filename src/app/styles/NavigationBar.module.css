@@ -1,5 +1,8 @@
 
 
+.backgroundNav {
+    background-color: var(--primary-color) !important;
+}
 
 /* NavigationBar.module.css */
 .navContainer {

@@ -6,31 +6,29 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Container from 'react-bootstrap/Container';
-import styles from '../../../styles/NavigationBar.module.css'; 
-
+import styles from '../../../styles/NavigationBar.module.css';
 
 
 
 
 function NavigationBar() {
   return (  
-   <Navbar bg="light" expand="md" className="mb-3">
+   <Navbar expand="md" className={`${styles.backgroundNav} mb-3`}>
     <Container>
-      <Navbar.Brand href="/home">CoinMaster</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
    <Nav className={`${styles.navContainer}`} justify variant="tabs" defaultActiveKey="/home">
        <Nav.Item className={styles.navItem}>
-        <Nav.Link href="/home" className={`${styles.customNavLink} customNavLink`}>Home</Nav.Link>
+        <Nav.Link href="/home" className={`${styles.customNavLink}`}>Home</Nav.Link>
       </Nav.Item>
       <Nav.Item className={styles.navItem}>
-        <Nav.Link href="/how-to-buy" className={`${styles.customNavLink} customNavLink`}>How to Buy</Nav.Link>
+        <Nav.Link href="/how-to-buy" className={`${styles.customNavLink}`}>How to Buy</Nav.Link>
       </Nav.Item>
       <Nav.Item className={styles.navItem}>
-        <Nav.Link href="/" eventKey="link-1" className={`${styles.customNavLink} customNavLink`}>Tokenomics</Nav.Link>
+        <Nav.Link href="/" eventKey="link-1" className={`${styles.customNavLink}`}>Tokenomics</Nav.Link>
       </Nav.Item>
       <Nav.Item className={styles.navItem}>
-        <Nav.Link href="./buy-now" eventKey="link-3" className={`${styles.customNavLink} customNavLink`}>
+        <Nav.Link href="./buy-now" eventKey="link-3" className={`${styles.customNavLink}`}>
           Buy Now
         </Nav.Link>
       </Nav.Item>
