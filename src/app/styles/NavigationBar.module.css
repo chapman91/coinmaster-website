@@ -2,10 +2,13 @@
     background-color: var(--primary-color) !important;
 }
 
+
 /* NavigationBar.module.css */
 .navContainer {
     display: flex;
     justify-content: space-around; 
+    align-items: center;
+   
     gap: 20px;
     border: none !important;
     border-width: 0 !important;
@@ -32,6 +35,23 @@
     text-align: center;
 }
 
+
+/* NavigationBar.module.css */
+.customNavLink.active {
+    background-color: var(--secondary-color); /* Change to your desired color */
+    color: white; /* Change the text color if needed */
+    border-radius: 0 !important; /* Ensure the border radius is set to zero */
+    border: none !important; /* Ensure no border is applied */
+}
+
+/* Optionally, if you want to add hover styles for the active state */
+.customNavLink.active:hover {
+    background-color: var(--tertiary-color); /* Change this to your desired hover color */
+    color: white; /* Keep text color consistent on hover */
+}
+
+
+
 .navContainer .navItem .navLinkBold {
     font-weight: 700;
     color: var(--background-color);
@@ -41,4 +61,23 @@
 .navContainer  .navLinkBold {
     font-weight: 700;
     color: var(--background-color);
+}
+
+
+/* Override Bootstrap dropdown styles */
+.dropdown-toggle {
+    border-radius: 0 !important;
+    border: none !important;
+    color: white !important;
+}
+
+
+.dropdown-toggle:focus, .drop-toggle:active {
+    outline: none;
+    box-shadow: none;
+}
+
+
+#basic-nav-dropdown {
+    border-radius: none;
 }

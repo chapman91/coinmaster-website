@@ -16,8 +16,8 @@ function NavigationBar() {
    <Navbar expand="md" className={`${styles.backgroundNav} mb-3`}>
     <Container fluid>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className={`${styles.navContainer}`} justify variant="tabs" defaultActiveKey="/home">
+      <Navbar.Collapse id="basic-navbar-nav" >
+      <Nav className={`mx-auto justify-content-center ${styles.navContainer}`} justify variant="tabs" defaultActiveKey="/home">
        <Nav.Item className={styles.navItem}>
         <Nav.Link href="/home" className={`${styles.customNavLink} ${styles.navLinkBold}`} style={{ borderRadius: '0', border: 'none' }}>Home</Nav.Link>
       </Nav.Item>
@@ -32,12 +32,42 @@ function NavigationBar() {
           Buy Now
         </Nav.Link>
       </Nav.Item>
-      <NavDropdown title="Socials" id="basic-nav-dropdown" className={`${styles.customNavLink} ${styles.navLinkBold} ${styles.dropdownToggle} custom-dropdown-toggle`} style={{ color: 'white', borderRadius: '0', border: 'none' }}>
-        <NavDropdown.Item href="https://X.com">X</NavDropdown.Item>
-        <NavDropdown.Item href="https://telegram.com">Telegram</NavDropdown.Item>
-        <NavDropdown.Item href="https://coinmarketcap.com">CoinMarketCap</NavDropdown.Item>
-        <NavDropdown.Item href="https://coingecko.com">CoinGecko</NavDropdown.Item>
-      </NavDropdown>
+      
+            {/* NavDropdown */}
+  <NavDropdown 
+  title="Socials" 
+  id="basic-nav-dropdown" 
+  className={`${styles.dropdownContainer} ${styles.customNavLink} ${styles.navLinkBold} ${styles.dropdownToggle}`} 
+  style={{ color: 'white', borderRadius: '0', border: 'none' }}
+>
+  <div className={styles.dropdownItemsContainer}>
+    <NavDropdown.Item 
+      href="https://X.com" 
+      className={styles.dropdownItem}
+    >
+      X
+    </NavDropdown.Item>
+    <NavDropdown.Item 
+      href="https://telegram.com" 
+      className={styles.dropdownItem}
+    >
+      Telegram
+    </NavDropdown.Item>
+    <NavDropdown.Item 
+      href="https://coinmarketcap.com" 
+      className={styles.dropdownItem}
+    >
+      CoinMarketCap
+    </NavDropdown.Item>
+    <NavDropdown.Item 
+      href="https://coingecko.com" 
+      className={styles.dropdownItem}
+    >
+      CoinGecko
+    </NavDropdown.Item>
+  </div>
+</NavDropdown>
+
        </Nav>
     </Navbar.Collapse>
     </Container>
