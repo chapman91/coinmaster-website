@@ -6,16 +6,67 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Container from 'react-bootstrap/Container';
+import Alert from 'react-bootstrap/Alert';
 import styles from '../../../styles/NavigationBar.module.css';
+import Image from 'next/image'; 
+import { coinmasterLogo } from '../../../assets/images';
+
+// Custom Nav Item component
+
+const CustomDropdownTitle = () => {
+ return (
+ <div className={styles.customTitle}>
+    <span>Socials</span>
+  </div>
+ )
+}
 
 
-
+// Navigation Bar
 
 function NavigationBar() {
   return (  
-   <Navbar expand="md" className={`${styles.backgroundNav} mb-3`}>
+
+// Create
+   <header>
+    {/* Banner Section */}
+    <Alert variant="dark" className="text-center m-o">
+      <div className="d-flex justify-content-between align-items-center">
+        {/* Logo on the far left */}
+        <Image
+         src={coinmasterLogo}
+         alt="Logo Left"
+         width={50}
+         height={50}
+         className={styles.logoLeft}     
+        />
+
+        {/* Centered Logo - Hidden on small and tablet screens  */}
+      <div className="d-none d-lg-block">
+        <Image 
+        src="/logo-center.png"
+        alt="Logo Center"
+        width={100}
+        height={50}
+        className={styles.logoCenter}
+        />
+      </div>
+
+      <p className="m-0 text-white">
+      Welcome to CoinMaster - The Next Generation Cryptocurrency!
+      </p>
+      </div>
+    
+    
+    
+    
+    
+    </Alert>
+
+  {/* Main Navigation */}
+   <Navbar expand="md" className="mb-3" bg="dark" variant="dark">
     <Container fluid>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Toggle aria-controls="basic-navbar-nav" bsPrefix="navbar-toggler" />
       <Navbar.Collapse id="basic-navbar-nav" >
       <Nav className={`mx-auto justify-content-center ${styles.navContainer}`} justify variant="tabs" defaultActiveKey="/home">
        <Nav.Item className={styles.navItem}>
@@ -32,15 +83,13 @@ function NavigationBar() {
           Buy Now
         </Nav.Link>
       </Nav.Item>
-      
-            {/* NavDropdown */}
-  <NavDropdown 
-  title="Socials" 
+      <NavDropdown 
+  title={<CustomDropdownTitle/>} 
   id="basic-nav-dropdown" 
-  className={`${styles.dropdownContainer} ${styles.customNavLink} ${styles.navLinkBold} ${styles.dropdownToggle}`} 
-  style={{ color: 'white', borderRadius: '0', border: 'none' }}
+  className={`${styles.customNavLink} ${styles.navLinkBold} ${styles.dropdownToggle}`} 
+  style={{ borderTopLeftRadius: 0, borderTopRightRadius: 0 }}
 >
-  <div className={styles.dropdownItemsContainer}>
+  <div className={`rounded-0 ${styles.dropdownItemsContainer}`}>
     <NavDropdown.Item 
       href="https://X.com" 
       className={styles.dropdownItem}
@@ -66,16 +115,17 @@ function NavigationBar() {
       CoinGecko
     </NavDropdown.Item>
   </div>
-</NavDropdown>
-
-       </Nav>
+      </NavDropdown>
+      </Nav>
     </Navbar.Collapse>
     </Container>
     </Navbar>
+    </header>
   );
 }
 
 export default NavigationBar;
 
 
-// Add bootstrap css
+// Target the hamburger menu and change the color 
+// Applied background color and variant color 

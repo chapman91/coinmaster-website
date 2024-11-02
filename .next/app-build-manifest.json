@@ -16,7 +16,21 @@
     ],
     "/(route)/how-to-buy/page": [
       "static/chunks/[root of the server]__b283c8._.css",
-      "static/chunks/node_modules_ffa81a._.js",
+      "static/chunks/node_modules_c9df0a._.js",
+      "static/chunks/_ff93c7._.js",
+      "static/chunks/src_app_layout_jsx_202b73._.js",
+      "static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js",
+      "static/chunks/node_modules_next_dist_compiled_107ce8._.js",
+      "static/chunks/node_modules_next_dist_client_34bfc0._.js",
+      "static/chunks/node_modules_next_dist_d09de6._.js",
+      "static/chunks/node_modules_@swc_helpers_cjs_00636a._.js",
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_2eec69._.js",
+      "static/chunks/_c4c472._.js",
+      "static/chunks/_25636b._.js"
+    ],
+    "/_not-found/page": [
+      "static/chunks/[root of the server]__b283c8._.css",
+      "static/chunks/node_modules_c9df0a._.js",
       "static/chunks/src_app_035ba8._.js",
       "static/chunks/src_app_layout_jsx_202b73._.js",
       "static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js",

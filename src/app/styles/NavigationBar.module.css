@@ -1,14 +1,13 @@
-.backgroundNav {
+/* .backgroundNav {
     background-color: var(--primary-color) !important;
-}
+} */
+/* Targets the social nav item */
 
 
 /* NavigationBar.module.css */
 .navContainer {
-    display: flex;
-    justify-content: space-around; 
-    align-items: center;
-   
+    
+    align-items: center; 
     gap: 20px;
     border: none !important;
     border-width: 0 !important;
@@ -46,8 +45,9 @@
 
 /* Optionally, if you want to add hover styles for the active state */
 .customNavLink.active:hover {
-    background-color: var(--tertiary-color); /* Change this to your desired hover color */
-    color: white; /* Keep text color consistent on hover */
+    background-color: var(--quinary-color); /* Change this to your desired hover color */
+    color: var(--background-color);
+    /* color: white; Keep text color consistent on hover */
 }
 
 
@@ -58,26 +58,27 @@
 }
 
 
-.navContainer  .navLinkBold {
+.navContainer  .navLinkBold :nth-child(5) {
     font-weight: 700;
-    color: var(--background-color);
-}
-
-
-/* Override Bootstrap dropdown styles */
-.dropdown-toggle {
-    border-radius: 0 !important;
     border: none !important;
-    color: white !important;
+}
+
+.navContainer  .navLinkBold :nth-child(5):hover {
+    font-weight: 700;
+    border: none !important;
 }
 
 
-.dropdown-toggle:focus, .drop-toggle:active {
+
+/* .dropdown-toggle:focus, .drop-toggle:active {
     outline: none;
     box-shadow: none;
-}
+} */
 
 
-#basic-nav-dropdown {
+/* #basic-nav-dropdown {
     border-radius: none;
-}
+} */
+
+
+/* ! dropdownContainer is not present in styles but is set up as a classname in Nav componen  */
