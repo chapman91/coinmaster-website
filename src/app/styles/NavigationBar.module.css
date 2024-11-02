@@ -8,6 +8,7 @@
 .customAlertBackground {
     background: var(--quaternary-color) !important;
     border: none  !important;
+    margin-bottom: none !important;
 }
 
 

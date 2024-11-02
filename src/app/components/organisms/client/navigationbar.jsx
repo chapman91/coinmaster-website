@@ -13,13 +13,13 @@ import images from '../../../assets/images';
 
 // Custom Nav Item component
 
-const CustomDropdownTitle = () => {
- return (
- <div className={styles.customTitle}>
-    <span>Socials</span>
-  </div>
- )
-}
+// const CustomDropdownTitle = () => {
+//  return (
+//  <div className={styles.customTitle}>
+//     <span>Socials</span>
+//   </div>
+//  )
+// }
 
 
 // Navigation Bar
@@ -30,7 +30,7 @@ function NavigationBar() {
 // Create
    <header>
     {/* Banner Section */}
-    <Alert className={`${styles.customAlertBackground} text-center m-o rounded-0`}>
+    <Alert className={`${styles.customAlertBackground} mb-0 text-center m-o rounded-0`}>
       <div className="d-flex justify-content-between align-items-center">
         {/* Logo on the far left */}
         <Image 
@@ -41,7 +41,7 @@ function NavigationBar() {
         className={styles.logoCenter}
         />    
         {/* Centered Logo - Hidden on small and tablet screens  */}
-      <div className="d-none d-lg-block">  
+      <div className="d-none d-lg-flex flex-grow-1 justify-content-center">  
       <Image
          src={images.coinmasterLogo}
          alt="Logo Left"
@@ -49,7 +49,6 @@ function NavigationBar() {
          height={50}
          className={styles.logoLeft}     
         />
-
       </div>
       </div>  
     </Alert>
@@ -75,7 +74,7 @@ function NavigationBar() {
         </Nav.Link>
       </Nav.Item>
       <NavDropdown 
-  title={<CustomDropdownTitle/>} 
+  title="Social"
   id="basic-nav-dropdown" 
   className={`${styles.customNavLink} ${styles.navLinkBold} ${styles.dropdownToggle}`} 
   style={{ borderTopLeftRadius: 0, borderTopRightRadius: 0 }}
