@@ -4,9 +4,15 @@
 /* Targets the social nav item */
 
 
+/* Background color Brand Navbar */
+.customAlertBackground {
+    background: var(--quaternary-color) !important;
+    border: none  !important;
+}
+
+
 /* NavigationBar.module.css */
-.navContainer {
-    
+.navContainer {  
     align-items: center; 
     gap: 20px;
     border: none !important;

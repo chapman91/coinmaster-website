@@ -9,7 +9,7 @@ import Container from 'react-bootstrap/Container';
 import Alert from 'react-bootstrap/Alert';
 import styles from '../../../styles/NavigationBar.module.css';
 import Image from 'next/image'; 
-import { coinmasterLogo } from '../../../assets/images';
+import images from '../../../assets/images';
 
 // Custom Nav Item component
 
@@ -30,37 +30,28 @@ function NavigationBar() {
 // Create
    <header>
     {/* Banner Section */}
-    <Alert variant="dark" className="text-center m-o">
+    <Alert className={`${styles.customAlertBackground} text-center m-o rounded-0`}>
       <div className="d-flex justify-content-between align-items-center">
         {/* Logo on the far left */}
-        <Image
-         src={coinmasterLogo}
+        <Image 
+        src={images.cyclogo}
+        alt="Logo Center"
+        width={100}
+        height={50}
+        className={styles.logoCenter}
+        />    
+        {/* Centered Logo - Hidden on small and tablet screens  */}
+      <div className="d-none d-lg-block">  
+      <Image
+         src={images.coinmasterLogo}
          alt="Logo Left"
          width={50}
          height={50}
          className={styles.logoLeft}     
         />
 
-        {/* Centered Logo - Hidden on small and tablet screens  */}
-      <div className="d-none d-lg-block">
-        <Image 
-        src="/logo-center.png"
-        alt="Logo Center"
-        width={100}
-        height={50}
-        className={styles.logoCenter}
-        />
       </div>
-
-      <p className="m-0 text-white">
-      Welcome to CoinMaster - The Next Generation Cryptocurrency!
-      </p>
-      </div>
-    
-    
-    
-    
-    
+      </div>  
     </Alert>
 
   {/* Main Navigation */}
