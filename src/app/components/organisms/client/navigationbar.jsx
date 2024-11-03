@@ -14,39 +14,20 @@ import { useRouter } from 'next/navigation';
 
 
 
-
-// Custom Nav Item component
-
-// const CustomDropdownTitle = () => {
-//  return (
-//  <div className={styles.customTitle}>
-//     <span>Socials</span>
-//   </div>
-//  )
-// }
-
-
-// Navigation Bar
-
 function NavigationBar() {
 
-  // hoveredItem is managed using useState to track which nav item is hovered, changing its color conditionally
-  // state variable - hoveredItem - stores the currently hovered item 
-  // setHoveredItem is a function used to update the value of `hoveredItem`. 
+ 
   const [hoveredItem, setHoveredItem] = useState(null);
 
-  // Function triggered when the user hovers over a specific item (like a naviagtion link)
-  // `item` is taken as an argument, representing the item the user is hovering over.
-  // Sets `hoveredItem` to the currently hovered item.
+ 
   const handleMouseEnter = (item) => {
-    setHoveredItem(item); // Set the hovered item
+    setHoveredItem(item); 
   };
 
 
-  // `handleMouseLeave` is a function triggered when the user's mouse leaves item.
-  // `setHoveredItem(null)` resets hoveredItem back to null, meaning no item is currently hovered. 
+  
   const handleMouseLeave = () => {
-    setHoveredItem(null); // Reset hovered item on mouse item
+    setHoveredItem(null); 
   };
 
 
@@ -55,9 +36,15 @@ function NavigationBar() {
   const currentRoute = router.pathname; 
 
 
+  // Instead od checking `currentRoute` for each link, consider using the active prop for `Nav.Link` 
+  // Refactor the `Nav.Link` componenets to use the `active` prop based on your route condition
+  const getLinkStyle = (route, item) => ({
+    color: currentRoute === route || hoveredItem === item ? 'black' : 'white',
+    borderRadius: '0', 
+    border: 'none',
+    transition: 'color 0.3s',
+  });
   return (  
-
-// Create
    <header>
     {/* Banner Section */}
     <Alert className={`${styles.customAlertBackground} mb-0 text-center m-o rounded-0`}>
@@ -92,23 +79,33 @@ function NavigationBar() {
       <Navbar.Collapse id="basic-navbar-nav" >
       <Nav className={`mx-auto justify-content-center ${styles.navContainer}`} justify variant="tabs" defaultActiveKey="/home">
        <Nav.Item className={styles.navItem}>
-        <Nav.Link href="/home" className={`${styles.customNavLink} ${styles.navLinkBold} `} style={{
-                            borderRadius: '0',
-                            border: 'none',
-                            color: hoveredItem === '/home' ? 'blue' : (hoveredItem === 'home' ? 'blue' : 'black'),
-                            transition: 'color 0.3s',
-                        }}
-                        onMouseEnter={() => handleMouseEnter('link')}
+        <Nav.Link href="/home" className={`${styles.customNavLink} ${styles.navLinkBold} `}
+        active={currentRoute === '/home'}
+        style={
+                           getLinkStyle('/home', 'home')
+                        }
+                        onMouseEnter={() => handleMouseEnter('home')}
                         onMouseLeave={handleMouseLeave}>Home</Nav.Link>
       </Nav.Item>
       <Nav.Item className={styles.navItem}>
-        <Nav.Link href="/how-to-buy" className={`${styles.customNavLink} ${styles.navLinkBold}`} style={{ borderRadius: '0', border: 'none' }}>How to Buy</Nav.Link>
+        <Nav.Link href="/how-to-buy" className={`${styles.customNavLink} ${styles.navLinkBold}`} 
+        active={currentRoute === '/how-to-buy'}
+        onMouseEnter={() => handleMouseEnter('how-to-buy')}
+                        onMouseLeave={handleMouseLeave} style={getLinkStyle('/how-to-buy', 'how-to-buy')}>How to Buy</Nav.Link>
       </Nav.Item>
       <Nav.Item className={styles.navItem}>
-        <Nav.Link href="/" eventKey="link-1" className={`${styles.customNavLink} ${styles.navLinkBold}`} style={{ borderRadius: '0', border: 'none' }}>Tokenomics</Nav.Link>
+        <Nav.Link href="/" eventKey="link-1" className={`${styles.customNavLink} ${styles.navLinkBold}`} 
+                        active={currentRoute === '/tokenomics'}
+                        onMouseEnter={() => handleMouseEnter('tokenomics')}
+                        onMouseLeave={handleMouseLeave} 
+                        style={getLinkStyle('/tokenomics', 'tokenomics')}>Tokenomics</Nav.Link>
       </Nav.Item>
       <Nav.Item className={styles.navItem}>
-        <Nav.Link href="./buy-now" eventKey="link-3" className={`${styles.customNavLink} ${styles.navLinkBold}`} style={{ borderRadius: '0', border: 'none' }}>
+        <Nav.Link href="./buy-now" eventKey="link-3" className={`${styles.customNavLink} ${styles.navLinkBold}`}  
+                        active={currentRoute === '/buy-now'}
+                        onMouseEnter={() => handleMouseEnter('buy-now')}
+                        onMouseLeave={handleMouseLeave} 
+                        style={getLinkStyle('/buy-now', 'buy-now')}>
           Buy Now
         </Nav.Link>
       </Nav.Item>
@@ -156,5 +153,7 @@ function NavigationBar() {
 export default NavigationBar;
 
 
-// Target the hamburger menu and change the color 
-// Applied background color and variant color 
+
+
+
+/**  Each Nav.Link compares currentRoute with its href to determine if it should be styled as active. */ 
