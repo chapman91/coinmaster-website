@@ -10,6 +10,7 @@
   --quaternary-color: linear-gradient(90deg, #545252 0%, #8B8787 100%);
   --quinary-color: #000000;
   --dropdown-color: #BBBAB7;
+  --dropdown-color-transparent: rgba(187, 186, 183, 0.5);
   --dropdown-border: #FDFCFA;
 }
 
@@ -64,9 +65,9 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
+/* 
 
 .content {
   max-width: 960px;
   margin: 0 auto; 
-}
+} */

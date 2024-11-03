@@ -1,0 +1,36 @@
+/* src/styles/HomePage.module.css */
+
+
+.backgroundContainer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.heroBackground {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+
+.heroImage {
+    position: relative;
+    width: auto; /* adjust dynamically based on its height */
+    height: 100vh; /* sets the height of heroImage to match the viewport height*/
+    max-width: 80%;
+    margin: auto;
+    object-fit: contain; /* Ensure the image maintains its aspect ratio */
+    z-index: 2;
+    margin: 0 auto;
+    display: block;
+}

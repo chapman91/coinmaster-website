@@ -1,16 +1,12 @@
-import { Carousel, Tokenomics, Roadmap, Invitation, About } from './(route)/routeBarrel'
+import {  HomePage } from './(route)/routeBarrel'
 // This is where the specific content on the homepage should be
 
-const HomePage = () => {
+const HeroPage = () => {
   return (
   <section>
-    <Carousel/>
-    <Tokenomics/>
-    <Roadmap/>
-    <Invitation/>
-    <About/>
+    <HomePage/>
   </section>
   )
 }
 
-export default HomePage
+export default HeroPage
