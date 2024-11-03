@@ -1,91 +1,50 @@
-/* .backgroundNav {
-    background-color: var(--primary-color) !important;
-} */
-/* Targets the social nav item */
+/* NavigationBar Styles Structure */
 
-
-/* Background color Brand Navbar */
+/* Background color for the Alert component */
 .customAlertBackground {
-    background: var(--quaternary-color) !important;
-    border: none  !important;
-    margin-bottom: none !important;
+    background: var(--quaternary-color) !important; /* Set background color */
+    border: none !important; /* Remove border */
+    margin-bottom: 0 !important; /* Corrected to ensure there's no bottom margin */
 }
 
-
-/* NavigationBar.module.css */
+/* Navigation Container */
 .navContainer {  
-    align-items: center; 
-    gap: 20px;
-    border: none !important;
-    border-width: 0 !important;
-    box-shadow: none !important;
+    align-items: center; /* Align items vertically */
+    gap: 20px; /* Space between nav items */
+    border: none !important; /* Remove borders */
+    box-shadow: none !important; /* Remove shadow effect */
 }
 
-/* Target Bootstrap's nav-link class in active state */
+
+
+/* Override Bootstrap's nav-link styles */
 .nav-tabs .nav-link {
-    border-radius: 0 !important;
-    border: none !important;
-}
-
-.navItem {
-    flex-basis: unset !important;
-    margin: 0 10px; 
-}
-
-
-/* Override Bootstrap styles */
-
-.customNavLink {
-    flex-basis: auto; 
-    padding: 0 10px;
-    text-align: center;
-}
-
-
-/* NavigationBar.module.css */
-.customNavLink.active {
-    background-color: var(--secondary-color); /* Change to your desired color */
-    color: white; /* Change the text color if needed */
-    border-radius: 0 !important; /* Ensure the border radius is set to zero */
+    border-radius: 0 !important; /* Remove border radius */
     border: none !important; /* Ensure no border is applied */
 }
 
-/* Optionally, if you want to add hover styles for the active state */
-.customNavLink.active:hover {
-    background-color: var(--quinary-color); /* Change this to your desired hover color */
-    color: var(--background-color);
-    /* color: white; Keep text color consistent on hover */
+/* Navigation Item Styles */
+.navItem {
+    flex-basis: unset !important; /* Reset flex basis for items */
+    margin: 0 10px; /* Horizontal spacing */
 }
 
-
-
-.navContainer .navItem .navLinkBold {
-    font-weight: 700;
+/* Bold Link Styles */
+.navContainer  .navLinkBold.navLinkBold {
+    font-weight: 700; /* Bold text */
     color: var(--background-color);
 }
 
-
-.navContainer  .navLinkBold :nth-child(5) {
-    font-weight: 700;
-    border: none !important;
+/* Specific styles for the fifth child in the navLinkBold class */
+.navContainer .navLinkBold:nth-child(5) {
+    font-weight: 700; /* Maintain bold text */
+    border: none !important; /* Ensure no border is applied */
 }
 
-.navContainer  .navLinkBold :nth-child(5):hover {
-    font-weight: 700;
-    border: none !important;
+.navContainer .navLinkBold:nth-child(5):hover {
+    /* Maintain hover state styling, if needed */
+    border: none !important; /* Ensure no border on hover */
 }
-
-
-
-/* .dropdown-toggle:focus, .drop-toggle:active {
-    outline: none;
-    box-shadow: none;
-} */
-
-
-/* #basic-nav-dropdown {
-    border-radius: none;
-} */
 
 
 /* ! dropdownContainer is not present in styles but is set up as a classname in Nav componen  */

@@ -1,7 +1,7 @@
 // Client side 
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -10,6 +10,10 @@ import Alert from 'react-bootstrap/Alert';
 import styles from '../../../styles/NavigationBar.module.css';
 import Image from 'next/image'; 
 import images from '../../../assets/images';
+import { useRouter } from 'next/navigation';
+
+
+
 
 // Custom Nav Item component
 
@@ -25,6 +29,32 @@ import images from '../../../assets/images';
 // Navigation Bar
 
 function NavigationBar() {
+
+  // hoveredItem is managed using useState to track which nav item is hovered, changing its color conditionally
+  // state variable - hoveredItem - stores the currently hovered item 
+  // setHoveredItem is a function used to update the value of `hoveredItem`. 
+  const [hoveredItem, setHoveredItem] = useState(null);
+
+  // Function triggered when the user hovers over a specific item (like a naviagtion link)
+  // `item` is taken as an argument, representing the item the user is hovering over.
+  // Sets `hoveredItem` to the currently hovered item.
+  const handleMouseEnter = (item) => {
+    setHoveredItem(item); // Set the hovered item
+  };
+
+
+  // `handleMouseLeave` is a function triggered when the user's mouse leaves item.
+  // `setHoveredItem(null)` resets hoveredItem back to null, meaning no item is currently hovered. 
+  const handleMouseLeave = () => {
+    setHoveredItem(null); // Reset hovered item on mouse item
+  };
+
+
+  const router = useRouter();
+
+  const currentRoute = router.pathname; 
+
+
   return (  
 
 // Create
@@ -35,6 +65,7 @@ function NavigationBar() {
         {/* Logo on the far left */}
         <Image 
         src={images.cyclogo}
+        href="/home"
         alt="Logo Center"
         width={100}
         height={50}
@@ -44,9 +75,10 @@ function NavigationBar() {
       <div className="d-none d-lg-flex flex-grow-1 justify-content-center">  
       <Image
          src={images.coinmasterLogo}
+         href="/home"
          alt="Logo Left"
-         width={50}
-         height={50}
+         width={45}
+         height={45}
          className={styles.logoLeft}     
         />
       </div>
@@ -60,7 +92,14 @@ function NavigationBar() {
       <Navbar.Collapse id="basic-navbar-nav" >
       <Nav className={`mx-auto justify-content-center ${styles.navContainer}`} justify variant="tabs" defaultActiveKey="/home">
        <Nav.Item className={styles.navItem}>
-        <Nav.Link href="/home" className={`${styles.customNavLink} ${styles.navLinkBold}`} style={{ borderRadius: '0', border: 'none' }}>Home</Nav.Link>
+        <Nav.Link href="/home" className={`${styles.customNavLink} ${styles.navLinkBold} `} style={{
+                            borderRadius: '0',
+                            border: 'none',
+                            color: hoveredItem === '/home' ? 'blue' : (hoveredItem === 'home' ? 'blue' : 'black'),
+                            transition: 'color 0.3s',
+                        }}
+                        onMouseEnter={() => handleMouseEnter('link')}
+                        onMouseLeave={handleMouseLeave}>Home</Nav.Link>
       </Nav.Item>
       <Nav.Item className={styles.navItem}>
         <Nav.Link href="/how-to-buy" className={`${styles.customNavLink} ${styles.navLinkBold}`} style={{ borderRadius: '0', border: 'none' }}>How to Buy</Nav.Link>
