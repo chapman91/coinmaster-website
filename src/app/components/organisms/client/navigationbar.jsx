@@ -39,7 +39,14 @@ function NavigationBar() {
   // Instead od checking `currentRoute` for each link, consider using the active prop for `Nav.Link` 
   // Refactor the `Nav.Link` componenets to use the `active` prop based on your route condition
   const getLinkStyle = (route, item) => ({
+
+    // currentRoute === route: This checks if the `currentRoute` (the current URL path that the user is on) is equal to route (the specific path for that navigation link).
+    // hoveredItem === item: This checks if hoveredItem (the item currently being hovered over by the mouse) is equal to item (the specific identifier for that navigation link).
+    // Logical OR Operator `||`: if either of conditions on the left or right evaluates to true, the overall expression will be true.
+    // Ternary Operator: `condition ? valueIfTrue : valueIfFalse`
+    // `===` is a stricy equality operator: use to compare two values to determine if they are equal in both value and type
     color: currentRoute === route || hoveredItem === item ? 'black' : 'white',
+    backgroundColor: currentRoute === route || hoveredItem === item ? 'white' : 'transparent' ,
     borderRadius: '0', 
     border: 'none',
     transition: 'color 0.3s',
