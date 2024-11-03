@@ -9,6 +9,8 @@
   --teritary-color: linear-gradient(to bottom, #0B0F13 0%, #D6B759 50%, #D09C52 100%);
   --quaternary-color: linear-gradient(90deg, #545252 0%, #8B8787 100%);
   --quinary-color: #000000;
+  --dropdown-color: #BBBAB7;
+  --dropdown-border: #FDFCFA;
 }
 
 /* Base button styles */

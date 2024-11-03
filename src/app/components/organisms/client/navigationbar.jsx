@@ -119,33 +119,63 @@ function NavigationBar() {
       <NavDropdown 
   title="Social"
   id="basic-nav-dropdown" 
-  className={`${styles.customNavLink} ${styles.navLinkBold} ${styles.dropdownToggle}`} 
+  className={` ${styles.customNavLink} ${styles.navLinkBold} ${styles.dropdownToggle}`} 
   style={{ borderTopLeftRadius: 0, borderTopRightRadius: 0 }}
+ 
 >
   <div className={`rounded-0 ${styles.dropdownItemsContainer}`}>
     <NavDropdown.Item 
       href="https://X.com" 
       className={styles.dropdownItem}
     >
-      X
+      <Image
+       src={images.xLogo}
+       alt="X icon"
+       width={16}
+       height={16}
+       className={styles.iconLeft}   
+      />
+      X 
     </NavDropdown.Item>
     <NavDropdown.Item 
       href="https://telegram.com" 
       className={styles.dropdownItem}
     >
+       <Image
+       src={images.telegramLogo}
+       alt="Telegram icon"
+       width={16}
+       height={16}
+       className={styles.iconLeft}   
+      />
       Telegram
     </NavDropdown.Item>
     <NavDropdown.Item 
       href="https://coinmarketcap.com" 
       className={styles.dropdownItem}
     >
+      <Image
+       src={images.coinMarketCap}
+       alt="coinMarketCap icon"
+       width={16}
+       height={16}
+       className={styles.iconLeft}   
+      />
       CoinMarketCap
     </NavDropdown.Item>
     <NavDropdown.Item 
       href="https://coingecko.com" 
       className={styles.dropdownItem}
     >
+      <Image
+       src={images.coinGecko}
+       alt="coinGecko icon"
+       width={16}
+       height={16}
+       className={styles.iconLeft}   
+      />
       CoinGecko
+      
     </NavDropdown.Item>
   </div>
       </NavDropdown>

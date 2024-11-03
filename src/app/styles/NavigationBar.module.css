@@ -33,6 +33,7 @@
 .navContainer  .navLinkBold.navLinkBold {
     font-weight: 700; /* Bold text */
     color: var(--background-color);
+
 }
 
 /* Specific styles for the fifth child in the navLinkBold class */
@@ -45,6 +46,24 @@
     /* Maintain hover state styling, if needed */
     border: none !important; /* Ensure no border on hover */
 }
+
+
+.dropdownItemsContainer {
+    background-color: var(--dropdown-color);
+}
+
+
+/* Icon Styles in Dropdown */
+/* ! Fix this specificity */
+.navContainer .customNavLink .navItem .dropdownItemsContainer .dropdownItem .iconLeft {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+
+
 
 
 /* ! dropdownContainer is not present in styles but is set up as a classname in Nav componen  */
