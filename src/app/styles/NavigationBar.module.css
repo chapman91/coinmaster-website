@@ -65,7 +65,14 @@
 }
 
 
+/* NavigationBar.module.css */
+.yellowStripContainer {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - var(--navbar-height));
+    overflow: hidden; 
+}
 
 
 
-/* ! dropdownContainer is not present in styles but is set up as a classname in Nav componen  */
+

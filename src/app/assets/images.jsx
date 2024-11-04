@@ -38,6 +38,7 @@ const images = {
     unmaskedCyroman: '/assets/images/unmasked-cyroman.png',
     usdcLogo: '/assets/images/usdc-logo.png',
     xLogo: '/assets/images/x-logo.png',
+    yellowStrip: '/assets/images/yellow-strip.png',
 };
 
 export default images;

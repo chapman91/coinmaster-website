@@ -80,7 +80,7 @@ function NavigationBar() {
     </Alert>
 
   {/* Main Navigation */}
-   <Navbar expand="md" className="mb-3" bg="dark" variant="dark">
+   <Navbar expand="md" bg="dark" variant="dark">
     <Container fluid>
       <Navbar.Toggle aria-controls="basic-navbar-nav" bsPrefix="navbar-toggler" />
       <Navbar.Collapse id="basic-navbar-nav" >
@@ -183,12 +183,25 @@ function NavigationBar() {
     </Navbar.Collapse>
     </Container>
     </Navbar>
+    {/* Yellow Strip at the Bottom of Navigation Bar */}
+   <div className={styles.yellowStripContainer}>
+    <Image
+    src={images.yellowStrip}
+    alt="Yellow Strip"
+    fill
+    objectFit="cover"
+    priority 
+    />
+    </div> 
     </header>
   );
 }
 
 export default NavigationBar;
 
+
+
+// Adjust the styling and positioning of the `Image` component
 
 
 
