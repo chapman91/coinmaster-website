@@ -67,10 +67,10 @@
 
 /* NavigationBar.module.css */
 .yellowStripContainer {
-    position: relative;
     width: 100%;
-    height: calc(100vh - var(--navbar-height));
-    overflow: hidden; 
+    height: 18px;
+    position: relative;
+    overflow: hidden;
 }
 
 
