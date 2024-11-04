@@ -52,7 +52,7 @@ function NavigationBar() {
     transition: 'color 0.3s',
   });
   return (  
-   <header>
+   <header className="header">
     {/* Banner Section */}
     <Alert className={`${styles.customAlertBackground} mb-0 text-center m-o rounded-0`}>
       <div className="d-flex justify-content-between align-items-center">
@@ -184,15 +184,16 @@ function NavigationBar() {
     </Container>
     </Navbar>
     {/* Yellow Strip at the Bottom of Navigation Bar */}
-   <div className={styles.yellowStripContainer}>
-    <Image
+    <div className={styles.yellowStripContainer}>
+    <div className={styles.gradient}></div>  
+    <img
     src={images.yellowStrip}
     alt="Yellow Strip"
-    fill
-    objectFit="cover"
-    priority 
+    className={styles.yellowStrip}
     />
-    </div> 
+    
+    </div>
+     
     </header>
   );
 }

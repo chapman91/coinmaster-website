@@ -64,14 +64,44 @@
     vertical-align: middle;
 }
 
+.yellowStripContainer {
+    position: relative;
+    /* filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 1)) */
+}
+
+/* Background color */
+
+.yellowStripContainer .gradient {
+    width: 100%;
+    height: 100%;
+    background-image: 
+    linear-gradient(to bottom, black, transparent);
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+
+
+
 
 /* NavigationBar.module.css */
-.yellowStripContainer {
+.yellowStripContainer .yellowStrip {
+    position: relative !important;
     width: 100%;
-    height: 18px;
-    position: relative;
-    overflow: hidden;
-}
+    height: 100%;
+    object-fit: cover;
+    display: inline-block;
+    margin: 0;
+} 
+
+
+
+
+
+
 
 
 
