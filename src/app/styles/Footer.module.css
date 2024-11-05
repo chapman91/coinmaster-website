@@ -1,0 +1,22 @@
+.footer {
+    padding: 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+  
+  .social-icon {
+    width: 24px; /* Adjust size as needed */
+    height: 24px;
+    margin: 0 10px;
+  }
+  
+  .footer-nav .nav-link {
+    color: #333;
+    margin: 0 15px;
+    text-decoration: none;
+  }
+  
+  .footer-nav .nav-link:hover {
+    color: #007bff; /* Adjust hover color as needed */
+  }
+  
