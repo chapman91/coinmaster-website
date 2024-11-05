@@ -66,7 +66,7 @@
 
 .yellowStripContainer {
     position: relative;
-    /* filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 1)) */
+    height: 25px /* Set a fixed height for consistent display */
 }
 
 /* Background color */
@@ -98,6 +98,8 @@
 } 
 
 
+
+/* ! YellowStrip Problem: .yellowStrip & .gradient to height: 100%   */
 
 
 
