@@ -1,7 +1,8 @@
 
 
 // Adjust the path if your globals.css is in a different folder
-import { Footer, NavigationBar } from "./components/componentsBarrel";
+import { NavigationBar } from "./components/componentsBarrel";
+import { Footer } from "./components/componentsBarrel";
 import "./styles/global.css"; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Roboto } from '@next/font/google';
@@ -25,8 +26,9 @@ export const metadata = {
 // Layout components wraps page components in `Next.js`
 export default function RootLayout({ children }) {
     return (
-        <html lang="en">       
-            <body className={`${roboto.className}`}>
+        <html lang="en">     
+          
+            <body className={roboto.className}>
             <NavigationBar/>
             <div className="content">
             {children}

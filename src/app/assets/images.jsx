@@ -39,10 +39,10 @@ const images = {
     usdcLogo: '/assets/images/usdc-logo.png',
     xLogo: '/assets/images/x-logo.png',
     yellowStrip: '/assets/images/yellow-strip.png',
-    xLogoFooter: '/assets/images/x-logo-footer.png',
-    telegramLogoFooter: '/assets/images/telegram-footer.png',
-    coingeckoLogoFooter: '/assets/images/coingecko-cap-footer.png',
-    coinmarketcapLogoFooter: '/assets/images/coinmarketcap-logo-footer.png',
+    xFooter: '/assets/images/x-logo-footer.png',
+    telegramFooter: '/assets/images/telegram-footer.png',
+    coingeckoFooter: '/assets/images/coingecko-cap-footer.png',
+    coinmarketcapFooter: '/assets/images/coinmarketcap-logo-footer.png',
 };
 
 export default images;
