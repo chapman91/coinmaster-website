@@ -39,10 +39,10 @@ const images = {
     usdcLogo: '/assets/images/usdc-logo.png',
     xLogo: '/assets/images/x-logo.png',
     yellowStrip: '/assets/images/yellow-strip.png',
-    xFooter: '/assets/images/x-logo-footer.png',
+    twitter: '/assets/images/xxlogo.png',
     telegramFooter: '/assets/images/telegram-footer.png',
     coingeckoFooter: '/assets/images/coingecko-cap-footer.png',
-    coinmarketcapFooter: '/assets/images/coinmarketcap-logo-footer.png',
+    coinmarketcapFooter: '/assets/images/msign-1.png',
 };
 
 export default images;
