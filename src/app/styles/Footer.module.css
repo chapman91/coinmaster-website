@@ -60,12 +60,107 @@
 
 
   /** Tablet Size: 768px to 1024px */
+  /* media query should only apply if the viewport's width is 1024px or less */
+  /* (min-width: 768px) condition should only apply styles  if the viewport's width is 768px or greater */
+  /* and keyword combines two conditions - viewport must be between 768px and 1024px */
+@media (max-width: 767px) {
+  /* .footer {
+    padding: 15px 0;
+  } */
 
-@media (max-width: 1024px) and (min-width: 768px) {
-
-
-
-
-
-
+  .footerContainer {
+    padding: 0 15px;
   }
+
+  .iconLink img {
+    height: 50px; /* Smaller icons for mobile */
+    
+  }
+
+  .navLink {
+    font-size: 12px; /* Smaller font size */
+  }
+
+  .navLinks {
+    display: block; /* Stack nav items vertically */
+    text-align: center;
+  }
+
+  .navLink {
+    margin: 5px 0; /* Add space between links */
+  }
+
+  .copyrightSection {
+    font-size: 10px;
+    padding-top: 10px;
+  }
+}
+
+
+
+/* Large Mobile (Up to 767px) */
+@media (max-width: 767px) and (min-width: 600px) {
+  /* .footer {
+    padding: 18px 0;
+  } */
+
+  .footerContainer {
+    padding: 0 20px;
+  }
+
+  .iconLink img {
+    height: 40px; /* Slightly larger icons */
+  }
+
+  .navLink {
+    font-size: 14px;
+  }
+
+  .navLinks {
+    display: flex; /* Align links horizontally */
+    justify-content: center;
+  }
+
+  .navLink {
+    margin: 0 10px; /* Space between links */
+  }
+
+  .copyrightSection {
+    font-size: 12px;
+    padding-top: 15px;
+  }
+}
+
+
+@media (max-width: 599px) {
+  /* .footer {
+    padding: 10px 0;
+  } */
+
+  .footerContainer {
+    padding: 0 10px;
+  }
+
+  .iconLink img {
+    height: 45px; /* Even smaller icons */
+  }
+
+  .navLink {
+    font-size: 12px; /* Compact font size */
+  }
+
+  .navLinks {
+    display: block; /* Stack nav items vertically */
+    text-align: center;
+  }
+
+  .navLink {
+    margin: 5px 0; /* Add vertical spacing between links */
+  }
+
+  .copyrightSection {
+    font-size: 10px;
+    padding-top: 5px;
+  }
+}
+
