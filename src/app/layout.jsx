@@ -1,6 +1,7 @@
 
 
 // Adjust the path if your globals.css is in a different folder
+import WalletProvider from '../app/components/providers/WalletProvider';
 import { NavigationBar } from "./components/componentsBarrel";
 import { Footer } from "./components/componentsBarrel";
 import "./styles/global.css"; 
@@ -31,7 +32,9 @@ export default function RootLayout({ children }) {
             <body className={roboto.className}>
             <NavigationBar/>
             <div className="content">
+            <WalletProvider>
             {children}
+            </WalletProvider>
             <Footer/> 
             </div>
             </body>
