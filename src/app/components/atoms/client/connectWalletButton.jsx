@@ -13,6 +13,13 @@ const WalletConnectButton = () => {
   const [isConnecting, setIsConnecting] = useState(false);
 
 
+  // Function to shorten the wallet address
+  // This function takes wallet address and shortens it, showing only the first 4 and last 4 characters with an ellipsis in between
+  const shortenAddress = (address) => {
+    return address ? `${address.slice(0, 4)}...${address.slice(-4)}` : '';
+  }
+
+
 /**
  *  Issue: You mentioned that the `WalletMultiButton` isn't connected, even though it is imported. 
  *  The issue may lie in how the custom connection logic combination with the `WalletMultiButton`.
@@ -49,23 +56,25 @@ const WalletConnectButton = () => {
           <WalletMultiButton  style={{
                 backgroundColor: '#FFFFFF', // Custom background color
                 color: '#000000', // Custom text color
-                fontSize: '16px', // Custom font size
+                fontSize: '14px', // Custom font size
                 padding: '10px 20px', // Custom padding
                 borderRadius: '0px', // Custom border radius
             }}>
-              Connect
+              Connect Wallet
           </WalletMultiButton> 
         
        
         </>
       ) : (
         <div className={styles.connectedButtonContainer}>
-          <p className={styles.connectedButtonText}>
-            Connected to {publicKey?.toBase58()}
+          
+          {/* Connected State Display: Instead of showing the full wallet address, it now displays "Connected to [shortened address]" */}
+          <p 
+          title="Click to disconnect" // Tooltip for better UX
+          onClick={disconnect}
+          className={styles.connectedButtonText}>
+            Connected to {shortenAddress(publicKey?.toBase58())}
           </p>
-          <button onClick={disconnect} className={styles.disconnectButton}>
-            Disconnect
-          </button>
         </div>
       )}
     </div>
@@ -76,3 +85,8 @@ export default WalletConnectButton;
 
 
 /** Use the `WalletMultiButton's` internal children prop to modify the default label text  */
+
+/**
+ * 
+ * You can modify connectedButtonText and disconnectButton styles in connectWalletButton.module.css to further style the display as desired.
+ */
