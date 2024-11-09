@@ -5,12 +5,14 @@ import React, { useState } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { WalletConnectButton } from '../../componentsBarrel';
 import Container from 'react-bootstrap/Container';
 import Alert from 'react-bootstrap/Alert';
 import styles from '../../../styles/NavigationBar.module.css';
 import Image from 'next/image'; 
 import images from '../../../assets/images';
 import { useRouter } from 'next/navigation';
+
 
 
 
@@ -76,7 +78,12 @@ function NavigationBar() {
          className={styles.logoLeft}     
         />
       </div>
+      {/* Wallet Connect Button */}
+      <div>
+      <WalletConnectButton /> 
+      </div>
       </div>  
+
     </Alert>
 
   {/* Main Navigation */}
@@ -190,8 +197,7 @@ function NavigationBar() {
     src={images.yellowStrip}
     alt="Yellow Strip"
     className={styles.yellowStrip}
-    />
-    
+    />  
     </div>
      
     </header>
