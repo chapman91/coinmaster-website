@@ -3,26 +3,38 @@ import images from '../../assets/images';
 import styles from '../../styles/HomePage.module.css';
 import Image from 'next/image';
 
-
 // Import the hero image and hero background 
 
 const HomePage = () => {
   return (
     <div className={styles.backgroundContainer}>
+      {/* City Image  */}
       <Image
       src={images.heroBg}
       alt="Hero Background"
       className={styles.heroBackground}
+      objectFit="cover"
       layout="fill"
+      priority
       />
+      {/* CoinMaster Image */}
+  
       <Image
       src={images.heroImage}
       alt="Hero Foreground"
       className={styles.heroImage}
-      width={500}
-      height={500}
+      width={386}
+      height={850}
+      priority
       />
-      
+
+   
+    <img
+    src={images.yellowStrip}
+    alt="Yellow Strip"
+    className={styles.yellowStripHomePage}
+    />  
+       
     </div>
   )
 }

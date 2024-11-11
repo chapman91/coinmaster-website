@@ -57,7 +57,7 @@ const WalletConnectButton = () => {
                 backgroundColor: '#FFFFFF', // Custom background color
                 color: '#000000', // Custom text color
                 fontSize: '14px', // Custom font size
-                padding: '10px 20px', // Custom padding
+                padding: '10px 12px', // Custom padding
                 borderRadius: '0px', // Custom border radius
             }}>
               Connect Wallet
