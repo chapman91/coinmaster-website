@@ -43,6 +43,9 @@ const images = {
     telegramFooter: '/assets/images/telegram-footer.png',
     coingeckoFooter: '/assets/images/coingecko-cap-footer.png',
     coinmarketcapFooter: '/assets/images/msign-1.png',
+    creatorsImage: '/assets/images/creators.png',
+    liquidityPool: '/assets/images/Liquidity-Pool.png',
+    treasuryImage: '/assets/images/treasury.png'
 };
 
 export default images;
