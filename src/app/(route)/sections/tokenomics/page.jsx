@@ -2,6 +2,7 @@ import React from 'react'
 import { SimpleGrid, Box, Heading } from '@chakra-ui/react';
 import { TokenomicsCard } from "../../../components/componentsBarrel";
 import images from '../../../assets/images'
+import Video from 'next-video'; // Import Video component from next-video
 
 /**
  * TokenomicsPage Component
@@ -48,8 +49,8 @@ const TokenomicsSection = () => {
 return (
   <Box position="relative" p={8} bg="gray.900" overflow="hidden" color="white">
    {/* Background Video */}
-   <video
-   src={images.tokenomicsGif}
+   <Video
+   src="/videos/cyronmics_bg.mp4"
    autoPlay
    loop
    muted

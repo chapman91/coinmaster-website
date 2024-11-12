@@ -5,3 +5,10 @@ node_modules/
 bfg.jar
 coinmaster-website.git/
 
+
+# next-video
+videos/*
+!videos/*.json
+!videos/*.js
+!videos/*.ts
+public/_next-video
