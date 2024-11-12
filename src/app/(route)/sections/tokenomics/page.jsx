@@ -1,5 +1,5 @@
 import React from 'react'
-import { SimpleGrid, Box } from '@chakra-ui/react';
+import { SimpleGrid, Box, Heading } from '@chakra-ui/react';
 import { TokenomicsCard } from "../../../components/componentsBarrel";
 import images from '../../../assets/images'
 
@@ -44,9 +44,34 @@ const TokenomicsSection = () => {
     },
   ];
 
+//  TokenomicsSection structure and styles
 return (
-  <Box p={8} bg="gray.900">
+  <Box position="relative" p={8} bg="gray.900" overflow="hidden" color="white">
+   {/* Background Video */}
+   <video
+   src={images.tokenomicsGif}
+   autoPlay
+   loop
+   muted
+   playsInline
+   style={{
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    zIndex: -1,
+   }}
+   />
+
+   <Heading as="h2" size="lg" textAlign="center" mb={8} zIndex={1}>
+    Tokenomics Overview
+   </Heading>
+
     <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={6}>
+    {/* Mapping tokeonomcisData to Render TokenomicsCard Components */}
+    {/* Understand the execution of the function */}
       {tokenomicsData.map((data, index) => (
         <TokenomicsCard 
           key={index}

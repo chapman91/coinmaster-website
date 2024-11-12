@@ -45,7 +45,8 @@ const images = {
     coinmarketcapFooter: '/assets/images/msign-1.png',
     creatorsImage: '/assets/images/creators.png',
     liquidityPool: '/assets/images/Liquidity-Pool.png',
-    treasuryImage: '/assets/images/treasury.png'
+    treasuryImage: '/assets/images/treasury.png',
+    tokenomicsGif: '/assets/vidoes/cyronmics_bg.mp4'
 };
 
 export default images;

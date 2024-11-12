@@ -35,14 +35,24 @@ const TokenomicsCard = ({ title, percentage, imageSrc }) => {
     color="white"
     >
       <VStack spacing={4}>
-        <Image src={imageSrc} boxSize="80px" alt={title}/>
+
+        <Box 
+         p={7}
+         border="4px solid"
+         borderColor="yellow.400"
+         borderRadius="20px"
+         objectFit="contain"    
+        >
+        <Image src={imageSrc} boxSize="210px" alt={title}/>
+        </Box> 
+          
+          
           <Text fontSize="xl" fontWeight="bold">
             {title}
           </Text>
             <Text fontSize="2xl" fontWeight="extrabold" color="yellow.300">
               {percentage}
-            </Text>
-       
+            </Text>    
       </VStack>   
     </Box>
   )

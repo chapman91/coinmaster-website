@@ -27,8 +27,7 @@ const HomePage = () => {
       height={850}
       priority
       />
-
-   
+      
     <img
     src={images.yellowStrip}
     alt="Yellow Strip"
