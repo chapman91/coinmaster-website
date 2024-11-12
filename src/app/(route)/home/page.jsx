@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 const HomePage = () => {
   return (
-    <div className={styles.backgroundContainer}>
+    <main className={styles.backgroundContainer}>
       {/* City Image  */}
       <Image
       src={images.heroBg}
@@ -34,8 +34,9 @@ const HomePage = () => {
     alt="Yellow Strip"
     className={styles.yellowStripHomePage}
     />  
-       
-    </div>
+    </main>
+
+    
   )
 }
 

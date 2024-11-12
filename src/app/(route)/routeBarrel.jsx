@@ -11,4 +11,4 @@ export { default as About } from './sections/about/page';
 export { default as Carousel } from './sections/carousel/page';
 export { default as Invitation } from './sections/invitation/page';
 export { default as Roadmap } from './sections/roadmap/page';
-export { default as Tokenomics } from './sections/tokenomics/page';
+export { default as TokenomicsSection } from './sections/tokenomics/page';

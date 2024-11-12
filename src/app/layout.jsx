@@ -1,7 +1,7 @@
 
 
 // Adjust the path if your globals.css is in a different folder
-import { WalletContext } from './components/componentsBarrel'
+import { WalletContext, ChakraProviderWrapper } from './components/componentsBarrel'
 import { NavigationBar } from "./components/componentsBarrel";
 import { Footer } from "./components/componentsBarrel";
 import "./styles/global.css"; 
@@ -10,12 +10,13 @@ import { Roboto } from '@next/font/google';
 import '@solana/wallet-adapter-react-ui/styles.css';
 
 
+
+
 // Roboto Configuration
 const roboto = Roboto({
     subsets: ['latin'],
     weight: ['400', '700', '900'],
 });
-
 
 
 export const metadata = {
@@ -29,11 +30,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return ( 
         <html lang="en">     
-               <head></head>
-
+            <head></head>
             <body className={roboto.className}>
+            <ChakraProviderWrapper>
 
-                
             {/* Wrap the main app content with WalletContext */}
             <WalletContext>
             <NavigationBar/>
@@ -44,8 +44,9 @@ export default function RootLayout({ children }) {
             <Footer/> 
             </div>
             </WalletContext> 
-            </body>
-          
+         
+            </ChakraProviderWrapper>
+            </body>   
         </html>
       
     )
