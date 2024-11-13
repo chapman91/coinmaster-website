@@ -141,11 +141,14 @@ const TokenomicsSection = () => {
     />    
 
     {/* Section Content  */}
-      <Heading as="h2" size="lg" textAlign="center" mb={8} zIndex={1}>
+      <Heading as="h2" size="lg" textAlign="center" mb={6} zIndex={1} >
         Tokenomics Overview
       </Heading>
 
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={6}>
+
+     {/* Centered Tokenomics Cards */}
+     <Box width="100%" display="flex" justifyContent="center" alignItems="center">
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={6} justifyContent="center" alignItems="center">
         {/* Mapping tokenomicsData to Render TokenomicsCard Components */}
         {tokenomicsData.map((data, index) => (
           <TokenomicsCard 
@@ -156,16 +159,20 @@ const TokenomicsSection = () => {
           />
         ))}
       </SimpleGrid>
+      </Box>
+
+
 
         {/* Token Address footer text  */}
-        <Box mt={6} fontSize="sm" color="gray.300" display="flex" alignItems="center"> 
+        <Box mt={6} zIndex={1}> 
          <Tooltip label="Click to copy" aria-label="A tooltip">
-          <Button as="span"  display="flex" alignItems="center" cursor="pointer" onClick={handleCopyAddress}>
-            <span>{`[ TOKEN ADDRESS ]`}</span>
-            <Icon as={FiCopy} ml={2}/>
+          <Button variant="ghost"  as="span"  display="flex" alignItems="center" cursor="pointer" onClick={handleCopyAddress} p={0} background="transparent" color="yellow.400" _hover={{ backgroundColor: "transparent", color: "yellow.300" }}>
+            <span>{`[ 0xYourTokenAddressHere ]`}</span>
+            <Icon as={FiCopy} ml={2} color="white"/>
           </Button>
          </Tooltip>
         </Box>
+
     </Box>
   );
 };
