@@ -24,8 +24,9 @@ import { Box, Flex, Image, Text, VStack } from "@chakra-ui/react";
 const TokenomicsCard = ({ title, percentage, imageSrc }) => {
   return (
     <Box
+    position="relative"
     bg="gray.800"
-    borderRadius="lg"
+    borderRadius="25px"
     p={6}
     boxShadow="md"
     textAlign="center"
@@ -34,21 +35,33 @@ const TokenomicsCard = ({ title, percentage, imageSrc }) => {
     borderColor="gray.700"
     color="white"
     >
-      <VStack spacing={4}>
+
+      {/* Semi-Tranparent overlay */}
+      <Box
+       position="absolute"
+       top="0"
+       left="0"
+       width="100%"
+       height="100%"
+       bg="rgba(52, 52, 52, 0.9)" // 50% opacity of #343434
+       borderRadius="25px"
+       zIndex="1" // Places overlay above background but below content 
+      />
+
+      {/* Card Content */}
+      <VStack spacing={4} zIndex="2" position="relative">
 
         <Box 
          bg="customGray.500"
          p={7}
          border="4px solid"
          borderColor="yellow.400"
-         borderRadius="20px"
+         borderRadius="25px"
          objectFit="contain" 
 
         >
         <Image src={imageSrc} boxSize="210px" alt={title}/>
-        </Box> 
-          
-          
+        </Box>         
           <Text fontSize="xl" fontWeight="bold">
             {title}
           </Text>
