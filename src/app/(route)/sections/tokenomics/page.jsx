@@ -1,8 +1,7 @@
-import React from 'react'
+import React from 'react';
 import { SimpleGrid, Box, Heading } from '@chakra-ui/react';
 import { TokenomicsCard } from "../../../components/componentsBarrel";
-import images from '../../../assets/images'
-import Video from 'next-video'; // Import Video component from next-video
+import images from '../../../assets/images';
 
 /**
  * TokenomicsPage Component
@@ -20,23 +19,22 @@ import Video from 'next-video'; // Import Video component from next-video
  */
 
 const TokenomicsSection = () => {
-
-// Array of tokenomics data to be displayed on the page, with each object representing a card's content.
+  // Array of tokenomics data to be displayed on the page, with each object representing a card's content.
   const tokenomicsData = [
     {
       title: "MAX SUPPLY",
       percentage: "500 Trillion CYC",
-      imageSrc: images.cyrocoinDistribution,  // Using image from object
+      imageSrc: images.cyrocoinDistribution,
     },
     {
       title: "LIQUIDITY POOL & BURNT",
       percentage: "90%",
-      imageSrc: images.liquidityPool,  /**U */
+      imageSrc: images.liquidityPool,
     },
     {
       title: "DAO TREASURY",
       percentage: "5%",
-      imageSrc: images.treasuryImage,  /**U*/ 
+      imageSrc: images.treasuryImage,
     },
     {
       title: "CREATORS",
@@ -45,47 +43,44 @@ const TokenomicsSection = () => {
     },
   ];
 
-//  TokenomicsSection structure and styles
-return (
-  <Box position="relative" p={8} bg="gray.900" overflow="hidden" color="white">
-   {/* Background Video */}
-   <Video
-   src="/videos/cyronmics_bg.mp4"
-   autoPlay
-   loop
-   muted
-   playsInline
-   style={{
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    objectFit: 'cover',
-    zIndex: -1,
-   }}
-   />
+  // TokenomicsSection structure and styles
+  return (
+    <Box position="relative" p={8} overflow="hidden" color="white">
+      {/* Background Video */}
+      <video
+        src="/assets/videos/cyronmics_bg.mp4" // Direct URL reference from the public directory
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          zIndex: -1,
+        }}
+      />
 
-   <Heading as="h2" size="lg" textAlign="center" mb={8} zIndex={1}>
-    Tokenomics Overview
-   </Heading>
+      <Heading as="h2" size="lg" textAlign="center" mb={8} zIndex={1}>
+        Tokenomics Overview
+      </Heading>
 
-    <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={6}>
-    {/* Mapping tokeonomcisData to Render TokenomicsCard Components */}
-    {/* Understand the execution of the function */}
-      {tokenomicsData.map((data, index) => (
-        <TokenomicsCard 
-          key={index}
-          title={data.title}
-          percentage={data.percentage}
-          imageSrc={data.imageSrc}     
-        />
-      ))
-      }
-    </SimpleGrid>
-  </Box>
-
-  )
-}
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={6}>
+        {/* Mapping tokenomicsData to Render TokenomicsCard Components */}
+        {tokenomicsData.map((data, index) => (
+          <TokenomicsCard 
+            key={index}
+            title={data.title}
+            percentage={data.percentage}
+            imageSrc={data.imageSrc}
+          />
+        ))}
+      </SimpleGrid>
+    </Box>
+  );
+};
 
 export default TokenomicsSection;
