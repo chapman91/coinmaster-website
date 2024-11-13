@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { SimpleGrid, Box, Heading, Icon, Tooltip, useToast, Button } from '@chakra-ui/react';
+import { SimpleGrid, Box, Heading, Icon, Tooltip, useToast, Button, Text } from '@chakra-ui/react';
 import { TokenomicsCard } from "../../../components/componentsBarrel";
 import images from '../../../assets/images';
 import { FiCopy } from 'react-icons/fi'; 
@@ -108,7 +108,7 @@ const TokenomicsSection = () => {
 
   // TokenomicsSection structure and styles
   return (
-    <Box position="relative" p={8} overflow="hidden" color="white" minHeight="100vh" flexDirection="column" justifyContent="center" alignItems="center">
+    <Box position="relative" p={8} overflow="hidden" color="white"  flexDirection="column" justifyContent="center" alignItems="center">
       {/* Background Video */}
       <video
         src="/assets/videos/cyronmics_bg.mp4" // Direct URL reference from the public directory
@@ -141,7 +141,7 @@ const TokenomicsSection = () => {
     />    
 
     {/* Section Content  */}
-      <Heading as="h2" size="lg" textAlign="center" mb={6} zIndex={1} >
+      <Heading as="h2" size="lg" textAlign="center" mb={6} zIndex={4} color="white">
         Tokenomics Overview
       </Heading>
 
@@ -167,7 +167,7 @@ const TokenomicsSection = () => {
         <Box mt={6} zIndex={1}> 
          <Tooltip label="Click to copy" aria-label="A tooltip">
           <Button variant="ghost"  as="span"  display="flex" alignItems="center" cursor="pointer" onClick={handleCopyAddress} p={0} background="transparent" color="yellow.400" _hover={{ backgroundColor: "transparent", color: "yellow.300" }}>
-            <span>{`[ 0xYourTokenAddressHere ]`}</span>
+            <Text fontSize="24px" fontWeight="bold">{`[ Token Address ]`}</Text>
             <Icon as={FiCopy} ml={2} color="white"/>
           </Button>
          </Tooltip>
