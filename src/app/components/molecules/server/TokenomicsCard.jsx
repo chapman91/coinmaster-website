@@ -37,11 +37,13 @@ const TokenomicsCard = ({ title, percentage, imageSrc }) => {
       <VStack spacing={4}>
 
         <Box 
+         bg="customGray.500"
          p={7}
          border="4px solid"
          borderColor="yellow.400"
          borderRadius="20px"
-         objectFit="contain"    
+         objectFit="contain" 
+
         >
         <Image src={imageSrc} boxSize="210px" alt={title}/>
         </Box> 
@@ -63,4 +65,4 @@ export default TokenomicsCard;
 
 
 
-// Change component and import name 
+// Understand how the Box and VStack components work 
