@@ -37,7 +37,7 @@ const TokenomicsSection = () => {
       imageSrc: images.cyrocoinDistribution,
     },
     {
-      title: "LIQUIDITY POOL & BURNT",
+      title: "LIQUIDITY POOL",
       percentage: "90%",
       imageSrc: images.liquidityPool,
     },

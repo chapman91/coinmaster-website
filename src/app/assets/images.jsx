@@ -22,7 +22,7 @@ const images = {
     dialogurBoxOne: '/assets/images/dialogue-box-1.png',
     dialogurBoxTwo: '/assets/images/dialogue-box-2.png',
     exclaimMarks: '/assets/images/exclain-marks.png',
-    exclamationBubble: '/assets/images/exclainBubble.png',
+    exclamationBubble: '/assets/images/exclamation-bubble.png',
     exclamation: '/assets/images/exclamation.png',
     fightIcons: '/assets/images/fight-icons.png',
     flipIcon: '/assets/images/flip-icons.png',
@@ -46,7 +46,8 @@ const images = {
     creatorsImage: '/assets/images/creators.png',
     liquidityPool: '/assets/images/Liquidity-Pool.png',
     treasuryImage: '/assets/images/treasury.png',
-    tokenomicsGif: '/assets/vidoes/cyronmics_bg.mp4'
+    tokenomicsGif: '/assets/vidoes/cyronmics_bg.mp4',
+    aboutBackground: '/assets/images/about-background.png'
 };
 
 export default images;
