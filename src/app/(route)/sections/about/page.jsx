@@ -36,13 +36,14 @@ const About = () => {
         ="1000px"
       >
       {/* Yellow Shock Sign (Burst Effect) */}
-      <Image
+       {/* Yellow Shock Sign (Burst Effect) */}
+       <Image
        src={images.exclamation}
        alt="Yellow Shock Sign"
        position="absolute"
-       top="-13%"
-       left="-15%"
-       boxSize={{ base: "50px", md: "80px", lg: "210px"}}
+       top={{ xs: "1%", base: "-10%", sm: "-0.3%", md:"-1%", lg:"-10%", xl: "-13%" }}
+       left={{ xs: "-11%", base: "-10%", sm: "-8%", md: "-9%", lg: "-20%", xl: "-15%" }}
+       boxSize={{ xs: "70px", base: "50px", sm: "70px", md: "80px", lg: "145px", xl: "200px"}}
        zIndex="2"     
       />
 
@@ -67,11 +68,11 @@ const About = () => {
               Our mission is to inspire and empower individuals with secure and innovative solutions.
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga maiores voluptate magnam voluptates doloremque tempora maxime repellendus eos facilis qui deserunt perferendis quia est voluptatibus, ipsam debitis, laboriosam quis laudantium.
             </Text>
-          </VStack>
-          {/* Signature */}
-          <Text fontSize="2xl" fontStyle="italic" mt={200} fontFamily="'Dancing Script', cursive" color="gray.500">
+             {/* Signature */}
+          <Text fontSize="2xl" fontStyle="italic" mt={10} fontFamily="'Dancing Script', cursive" color="gray.500">
               — Cyrus Maxwell
             </Text>
+          </VStack>
         </GridItem>
 
         {/* Image Column - Right Side */}

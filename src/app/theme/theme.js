@@ -13,6 +13,14 @@ const theme = extendTheme({
             400: '#FFD700',
         },
     },
+    breakpoints: {
+        xs: "20em", // 320px, for extra-small screens
+        sm: "30em", // 480px (default)
+        md: "48em", // 768px (default)
+        lg: "62em", // 992px (default)
+        xl: "80em", // 1280px (default)
+        "2xl": "96em", // 1536px (default)
+    }
     // Add other theme settings here (e.g )
 });
 
