@@ -28,7 +28,7 @@ const About = () => {
         boxShadow="xl"
         p={8}
        
-        maxHeight={{ base: "80vh", md: "75vh", lg: "80vh" }}
+        maxHeight={{ xs:"100vh", base: "80vh", md: "75vh", lg: "80vh" }}
         // overflow="hidden"
         position="relative"
         w={{ base: "100%", md: "75%", lg: "60%"}}
@@ -41,7 +41,7 @@ const About = () => {
        src={images.exclamation}
        alt="Yellow Shock Sign"
        position="absolute"
-       top={{ xs: "1%", base: "-10%", sm: "-0.3%", md:"-1%", lg:"-10%", xl: "-13%" }}
+       top={{ xs: "1%", base: "-10%", sm: "-0.3%", md:"-1%", lg:"-10%", xl: "-17%" }}
        left={{ xs: "-11%", base: "-10%", sm: "-8%", md: "-9%", lg: "-20%", xl: "-15%" }}
        boxSize={{ xs: "70px", base: "50px", sm: "70px", md: "80px", lg: "145px", xl: "200px"}}
        zIndex="2"     
@@ -69,7 +69,7 @@ const About = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga maiores voluptate magnam voluptates doloremque tempora maxime repellendus eos facilis qui deserunt perferendis quia est voluptatibus, ipsam debitis, laboriosam quis laudantium.
             </Text>
              {/* Signature */}
-          <Text fontSize="2xl" fontStyle="italic" mt={10} fontFamily="'Dancing Script', cursive" color="gray.500">
+            <Text fontSize={{ base: "lg", md: "2xl" }} fontStyle="italic"  fontFamily="'Dancing Script', cursive" color="gray.500">
               — Cyrus Maxwell
             </Text>
           </VStack>
@@ -81,22 +81,37 @@ const About = () => {
          justifyContent="center"
         >
         
-        {/* Exclamantion Bubble */}
-        <GridItem>
-          <Image
-            src={images.exclamationBubble}
-            alt="Exclamation Bubble"
-            boxSize={{ base: "100px", md: "150px", lg: "385px" }}
-            position="absolute"
-            right="-4"
-            top="-7"
-            // Adds space between images
+      {/* Exclamation Bubble */}
+      <GridItem>
+  <Image
+    src={images.exclamationBubble}
+    alt="Exclamation Bubble"
+    boxSize={{
+      base: "80px",   // Smaller screens
+      sm: "100px",    // Small screens (480px and up)
+      md: "150px",    // Medium screens (768px and up)
+      lg: "385px"     // Large screens (992px and up)
+    }}
+    position="absolute"
+    right={{
+      base: "-2%",   // Adjusted to keep in place for smaller screens
+      sm: "-4%",     // Adjust slightly outwards for small screens
+      md: "-6%",     // Medium screens position
+      lg: "-4%"      // Large screens (exact fit)
+    }}
+    top={{
+      base: "-5%",   // Extra space above for smaller screens
+      sm: "-7%",     // Slight adjustment for small screens
+      md: "-10%",    // Medium screens
+      lg: "-50%"     // Large screens (exact fit)
+    }}
+    zIndex="2"  // Ensures it remains above other elements
+  />
+      </GridItem>
 
-          />
-        </GridItem>
 
         {/* CoinMaster Image */}
-        <GridItem>
+        <GridItem  mt={{ xs: "100px", base: "100px", md: "0px" }}>
           <Image
             src={images.cyroMan}
             alt="CoinMaster SuperHero"
