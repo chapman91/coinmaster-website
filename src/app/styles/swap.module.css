@@ -1,0 +1,133 @@
+/* Main body container styling */
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #0a0a0a, #1a1a1a); /* Dark gradient background */
+    min-height: 100vh;
+    padding: 20px;
+    color: #fff; /* White text for contrast */
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Inner container for the Swap box */
+  .innerContainer {
+    width: 100%;
+    max-width: 400px; /* Width of the card */
+    background: #2a2a2a; /* Card background color */
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* Input container for "You pay" and "You receive" */
+  .inputContainer {
+    width: 100%;
+    background: #1e1e1e; /* Slightly darker background for input sections */
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #333; /* Subtle border */
+  }
+  
+  /* Label text for inputs */
+  .labels {
+    font-size: 14px;
+    color: #aaa; /* Subtle gray text */
+  }
+  
+  /* Input field for amount */
+  .inputField {
+    width: 60%;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    text-align: right;
+    outline: none;
+  }
+  
+  /* Dropdown for selecting assets */
+  .selectField {
+    width: 35%;
+    padding: 10px;
+    background: #333; /* Dropdown background */
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  /* Swap button */
+  .button {
+    width: 100%;
+    padding: 12px;
+    background: #ff9900; /* Vibrant yellow for call-to-action */
+    color: #000; /* Black text for contrast */
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .button:hover {
+    background: #ffaa33; /* Slightly lighter on hover */
+  }
+  
+  /* Wallet button for "Connect Wallet" */
+  .walletButton {
+    width: 100%;
+    padding: 12px;
+    background: #444; /* Neutral gray for inactive wallets */
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .walletButton:hover {
+    background: #555;
+  }
+  
+  /* Token icon next to dropdown */
+  .tokenIcon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 480px) {
+    .innerContainer {
+      padding: 15px;
+      max-width: 300px; /* Adjust card width for smaller screens */
+    }
+  
+    .inputField {
+      font-size: 14px;
+    }
+  
+    .selectField {
+      font-size: 12px;
+    }
+  
+    .button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  

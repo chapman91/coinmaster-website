@@ -10,6 +10,8 @@ export { default as Footer } from './organisms/client/Footer';
 export { default as WalletContext } from  './providers/Context';
 export { ConnectionContext } from  './providers/Context';
 
+// Swap component
+export { default as Swap } from './organisms/client/Swap'
 
 // Providers 
 export { default as ChakraProviderWrapper } from "./providers/ChakraProviderWrapper";
