@@ -91,64 +91,113 @@ export default function Swap() {
       return;
     }
 
+    /**
+     *  URL Construction
+     * 
+     *  `inputMint=${fromAsset.mint}` - Specifies the mint address of the input
+     * 
+     *  `outputMint={toAsset.mint}` - Specifies the mint address of the output token. 
+     * 
+     *  `amount=${currentAmount * Math.pow(10, fromAsset.decimals )}`
+     * 
+     *  `slippage=0.5`: Sets the slippage tolerance to 0.5% allowing slight variation in the exchange rate to ensure the swap executes
+     * 
+     *  
+     * 
+     * 
+     */
+
     const quote = await (
+
+      // Sends an HTTP GET request to the Jupiter API with the constructed URL
       await fetch(
         `https://quote-api.jup.ag/v6/quote?inputMint=${fromAsset.mint}&outputMint=${toAsset.mint}&amount=${currentAmount * Math.pow(10, fromAsset.decimals)}&slippage=0.5`
       )
     ).json();
 
+    // Checks if the quote is valid and contains an `outAmount`, representing the amount of the output token received.
     if (quote && quote.outAmount) {
       const outAmountNumber =
         Number(quote.outAmount) / Math.pow(10, toAsset.decimals);
       setToAmount(outAmountNumber);
     }
-
+    // Store Full Quote - Updates the quoteResponse state with the full API response, preserving all quote details for later use if the user decides to proceed with the swap 
     setQuoteResponse(quote);
   }
 
+
+  /**
+   * Sign and Send Transactions
+   * @returns 
+   */
   async function signAndSendTransaction() {
+
+    // Wallet Connection Check
     if (!wallet.connected || !wallet.signTransaction) {
       console.error(
         'Wallet is not connected or does not support signing transactions'
       );
-      return;
+      return; // Exits the function without proceeding if the wallet is not connected or lacks signing capability
     }
 
-    // get serialized transactions for the swap
+    // get serialized transactions for the swap | fetch the Swap Transaction
     const { swapTransaction } = await (
+      // Make a POST request to the Jupiter API's /swap endpoint to obtain a serialized transaction for the swap
       await fetch('https://quote-api.jup.ag/v6/swap', {
         method: 'POST',
+        // Specifies the request type in the request headers
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          quoteResponse,
-          userPublicKey: wallet.publicKey?.toString(),
-          wrapAndUnwrapSol: true,
+          quoteResponse, // Sends the quote datat that was previously fected
+          userPublicKey: wallet.publicKey?.toString(), // Sets the user's public key as a string (using optional chaining)
+          wrapAndUnwrapSol: true, // Indicates that SOL should be wrapped/converted to and from `wSOL` if needed
           // feeAccount is optional. Use if you want to charge a fee.  feeBps must have been passed in /quote API.
           // feeAccount: "fee_account_public_key"
         }),
       })
     ).json();
+    /**
+     *  Deserialize, Sign, and Send the Transaction
+     */
 
     try {
-      const swapTransactionBuf = Buffer.from(swapTransaction, 'base64');
+     
+      // Converted to its raw binary format
+      const swapTransactionBuf = Buffer.from(swapTransaction, 'base64'); // Converts the base64-encoded `swapTransaction` to a buffer with `Buffer.from(swapTransaction, 'base64' )`
+      // Deserialize the transaction into a usable transaction object
       const transaction = VersionedTransaction.deserialize(swapTransactionBuf);
+      // The deserialized transaction is signed using the connected wallet 
       const signedTransaction = await wallet.signTransaction(transaction);
-
+      // The signed transaction is serialized again (into a Buffer-like format) to prepare it for network transmission. 
       const rawTransaction = signedTransaction.serialize();
+      /**
+       *  Send the Transaction - `sendRawTransaction` broadcasts the transaction to the Solana network
+       *  Get Blockhash - `getLatestBlockhash` fetches the latest blockhash and block height for confirming the transaction
+       *  Confirm the Transaction - `confirmTransaction` checks that the transaction was included in a block within the valid timeframe
+       *  Log Transaction Link - Outputs a link to view the transaction on Solscan, allowing users to track the transaction's status on the Solana blockchain
+       * 
+       */
+
+      // Sends the serialized (binary) transaction ( rawTransaction ) to the Solana blockchain 
       const txid = await connection.sendRawTransaction(rawTransaction, {
-        skipPreflight: true,
+        skipPreflight: false,
         maxRetries: 2,
       });
-
-      const latestBlockHash = await connection.getLatestBlockhash();
+      /** Fetching the Latest Blockchash */ 
+      const latestBlockHash = await connection.getLatestBlockhash(); // Retrieves the latest block has and the last va;id block height from the Solana network
       await connection.confirmTransaction({
+        // Option Object
+        // A unique identifier for a specific block on the Solana blockchain
         blockhash: latestBlockHash.blockhash,
+        // The maximum block height at which this transaction can still be valid
+        // The latest blockhash is used to confirm the transaction, ensuring it was processed within the valid block height window
         lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
         signature: txid
       }, 'confirmed');
       
+      // Logging the Transaction Link
       console.log(`https://solscan.io/tx/${txid}`);
 
     } catch (error) {
@@ -262,3 +311,9 @@ export default function Swap() {
      * 
      * 
      */
+
+
+/**
+ * ! || logical OR operator - It's used to evaluate multiple expressions and return the first "truthy" value it encounters, or the last value if none are truthy
+ * 
+ */
