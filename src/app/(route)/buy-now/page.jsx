@@ -13,7 +13,7 @@ const BuyNowPage = () => {
   })
 
   return (
-    <div>BuyNowPage
+    <div>
 
  <Swap/>
 

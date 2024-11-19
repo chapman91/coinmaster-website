@@ -4,7 +4,7 @@ import styles from '../../../styles/swap.module.css';
 import { useWallet } from '@solana/wallet-adapter-react'; // Manage wallet connections and transactions on Solana
 import { VersionedTransaction, Connection } from '@solana/web3.js'; // Creating and sending transactions on Solana
 import React, { useState, useEffect, useCallback } from 'react'; // State management, side effects, and debounced functions
-
+import { Alert, AlertIcon, Box, CloseButton } from '@chakra-ui/react';
 
 
 // Swap tokens on the Solana blockchain, using a swap service (Jupiter) to fetch quotes and wallet connection to sign and submit transactions
@@ -44,6 +44,35 @@ export default function Swap() {
   const [fromAmount, setFromAmount] = useState(0);
   const [toAmount, setToAmount] = useState(0);
   const [quoteResponse, setQuoteResponse] = useState(null);
+  
+
+  // useState for setErrorMessage
+  /** errorMessage: Holds the current value for the error message.
+   *  Initiallu set to `null` (no error message displayed) 
+   * 
+   * */ 
+
+  /**
+  *  setErrorMessage: 
+  *  If called with a string, it sets the error message to that string.
+  *  If called with null, it clears the error message (hides the pop-up).
+  * 
+  */
+
+   /**
+    *  useState(initialValue); string | null means the state can be a string or null
+    *  nul: Represents the absence of a value
+    * 
+    */
+
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  // Automatically clear the error message 5 seconds
+  setTimeout(() => {
+    setErrorMessage(null); // Reset the error message
+  }, 3000); // Time in millieseconds (5000ms = 5 seconds)
+
+
 
   const wallet = useWallet();
 
@@ -69,13 +98,34 @@ export default function Swap() {
   const handleFromValueChange = (
     event: React.ChangeEvent<HTMLInputElement>
     ) => {
-      setFromAmount(Number(event.target.value));
+      
+      // Capture Raw Input 
+      const rawValue = event.target.value; // The raw string input
+
+      // Convert to Number 
+      const value = Number(rawValue); // Convert the string to a number
+
+
+
+      // Validate the value: Ensure it's a number and greater than or equal to 0 
+      // `!isNaN(value)`: Ensures the input is a valid number
+      // logical NOT (!) operator with the isNaN() function to determine if a value is a valid number
+      // ! operator is logical NOT operator: reverses the boolean exression: true becomes false & false becomes true
+      if (!isNaN(value) && value >= 0) {
+        setFromAmount(value);  // Update state only if the value is valid
+       } else {
+        setErrorMessage("Invalid input: value must be a number greater than equal or equal to 0")
+       }
     };
     
   const debounceQuoteCall = useCallback(debounce(getQuote, 500), []);
 
+
+  // Delays API calls until the user has stopped typing
   useEffect(() => {
-    debounceQuoteCall(fromAmount);
+    if (fromAmount > 0) {
+      debounceQuoteCall(fromAmount);
+    }
   }, [fromAmount, debounceQuoteCall]);
 
 /**
@@ -87,7 +137,7 @@ export default function Swap() {
 
   async function getQuote(currentAmount: number) {
     if (isNaN(currentAmount) || currentAmount <= 0) {
-      console.error('Invalid fromAmount value:', currentAmount);
+      setErrorMessage('Invalid fromAmount value:', currentAmount);
       return;
     }
 
@@ -132,13 +182,18 @@ export default function Swap() {
    */
   async function signAndSendTransaction() {
 
-    // Wallet Connection Check
-    if (!wallet.connected || !wallet.signTransaction) {
-      console.error(
-        'Wallet is not connected or does not support signing transactions'
-      );
-      return; // Exits the function without proceeding if the wallet is not connected or lacks signing capability
+    // Check if the wallet is connected
+    if (!wallet.connected) {
+      setErrorMessage('Wallet is not connected. Please connect your wallet.');
+      return;
     }
+
+    // Cheeck if the wallet supports signing transactions
+    if (!wallet.signTransaction) {
+      setErrorMessgae('Wallet does not support signing transactions.')
+      return;
+    }
+
 
     // get serialized transactions for the swap | fetch the Swap Transaction
     const { swapTransaction } = await (
@@ -201,7 +256,7 @@ export default function Swap() {
       console.log(`https://solscan.io/tx/${txid}`);
 
     } catch (error) {
-      console.error('Error signing or sending the transaction:', error);
+      setErrorMessage('Error signing or sending the transaction:', error);
     }
   }
 
@@ -256,6 +311,21 @@ export default function Swap() {
         >
           Swap
         </button>
+        {/* Error Pop-Up */}
+        {errorMessage && (
+          <Box position="fixed" top="10%" left="50%" transform="translateX(-50%)" zIndex="1000">
+            <Alert status="error" borderRadius="md" boxShadow="lg">
+              {errorMessage}
+              <CloseButton
+               position="absolute"
+               right="8px"
+               top="8px"
+               onClick={() => setErrorMessage(null)}
+              />
+            </Alert>
+          </Box>
+        )
+       }
       </div>
     </div>
   );
