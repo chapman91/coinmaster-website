@@ -1,6 +1,6 @@
 'use client'; // Client component
 
-import styles from './swap.module.css';
+import styles from '../../../styles/swap.module.css';
 import { useWallet } from '@solana/wallet-adapter-react'; // Manage wallet connections and transactions on Solana
 import { VersionedTransaction, Connection } from '@solana/web3.js'; // Creating and sending transactions on Solana
 import React, { useState, useEffect, useCallback } from 'react'; // State management, side effects, and debounced functions
