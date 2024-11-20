@@ -3,8 +3,7 @@
 import { useEffect } from 'react';
 import styles from "../../styles/buy-now.module.css";
 import React from 'react';
-import { Swap } from '../../components/componentsBarrel'
-
+import { DefaultSwap } from "../../components/componentsBarrel"
 
 const BuyNowPage = () => {
 
@@ -13,12 +12,9 @@ const BuyNowPage = () => {
   })
 
   return (
-    <div>
-
- <Swap/>
-
+    <div>BuyNowPage
+      <DefaultSwap/>
     </div>
-   
   )
 }
 

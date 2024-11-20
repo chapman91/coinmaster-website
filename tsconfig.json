@@ -18,7 +18,9 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "paths": {
-      "@/": ["./src/*"]
+      "@/": [
+        "./src/*"
+      ]
     },
     "plugins": [
       {
@@ -32,7 +34,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/app/components/organisms/client/Swap.tsx"  ],
   "exclude": [
     "node_modules"
   ]

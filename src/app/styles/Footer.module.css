@@ -27,7 +27,8 @@
   position: relative; 
 }
 
-.footerContainer .navLinks a:focus, a:hover {
+.footerContainer .navLinks a:focus, 
+.footerContainer .navLinks a:hover {
   text-decoration: none;
   color: var(--secondary-color);
 }
