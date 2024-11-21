@@ -4,7 +4,7 @@ const images = {
     coinmasterLogo: '/assets/images/c-logo.png',
     arrowOne: '/assets/images/arrow-1.png',
     arrowTwo: '/assets/images/arrow-2.png',
-    buyNowBg: '/assets/images/arrow-2.png',
+    buyNowBg: '/assets/images/buy-now-bg.png',
     cardSampleOne: '/assets/images/card-smaple-1.png',
     cardSampleTwo: '/assets/images/card-sample-2.png',
     cardSampleThree: '/assets/images/card-sample-3.png',
