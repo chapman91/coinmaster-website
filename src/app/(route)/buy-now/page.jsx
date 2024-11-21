@@ -18,6 +18,7 @@ const BuyNowPage = () => {
      style={{ backgroundImage: `url(${images.buyNowBg})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
+      backgroundRepeat: "no-repeat",
       height: '100vh',
       width: '100%',
     }} // Set the background image dynamically

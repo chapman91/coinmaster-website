@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import '@jup-ag/terminal/css'; // Import the required CSS for styling
 import { useWallet } from '@solana/wallet-adapter-react';
-
+import styles from '../../../styles/DefaultSwap.module.css';
 
 export default function DefaultSwap() {
 
@@ -44,7 +44,7 @@ export default function DefaultSwap() {
     return (
         <div>
             {/* The placeholder div where Jupiter Terminal will render */}
-            <div id="integrated-terminal" style={{ width: '100%', height: '600px' }} />
+            <div id="integrated-terminal" className={styles.customTerminalStyle}/>
         </div>
     );
 }
