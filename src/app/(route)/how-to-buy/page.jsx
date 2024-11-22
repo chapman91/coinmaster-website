@@ -78,26 +78,30 @@ export default function HowToBuy() {
 
 
 
-                     {/* Top Dialogue Bubble */}
-                     <div className={`${styles.gridItem} ${styles.dialogueBubble}`}>
-                    <img
-                        src={images.dialogueBoxOne}
-                        alt="Dialogue Bubble"
-                        className={styles.bubbleImage}
-                    />
+                {/*! Dialogue Bubble + CoinMaster Character III */}
+
+
+            <div className={styles.dialogueContainer}>
+             {/* Top Dialogue Bubble */}
+               <div className={`${styles.gridItem} ${styles.dialogueBubbleOne}`}
+                style={{ backgroundImage: `url(${images.dialogueBoxOne})`}}
+               >
+                <div className={styles.overlayContent}>
                     <p className={styles.overlayText}>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, dolore adipisci! Incidunt aliquid quod laborum praesentium consectetur dicta mollitia voluptas hic eligendi cumque!
                     </p>
                 </div>
-
+  </div>
                 {/* Top Character */}
-                <div className={`${styles.gridItem} ${styles.character}`}>
+                <div className={`${styles.gridItem} ${styles.characterCoinMaster}`}>
                     <img
                         src={images.cyroMan}
                         alt="Character"
-                        className={styles.characterImage}
+                        className={styles.characterImageCoinMaster}
                     />
                 </div>
+              
+            </div>
 
 
                   {/* Bottom Dialogue Bubble */}
