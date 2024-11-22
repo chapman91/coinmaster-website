@@ -1,125 +1,126 @@
 "use client"
 
-import { Box, Heading, Text, VStack, HStack, Flex, Icon, Divider } from '@chakra-ui/react';
-import { ChevronDownIcon } from '@chakra-ui/icons';
+import React, { useEffect, useRef } from 'react';
+import styles from '../../styles/how-to-buy.module.css';
 import images from '../../assets/images';
 
 export default function HowToBuy() {
     return (
-        <Box
-            bgImage={`url(${images.howToBuyPageBg})`} // Replace with your background image path
-            bgSize="cover"
-            bgPos="center"
-            bgRepeat="no-repeat"
-            minH="100vh"
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            justifyContent="space-between"
-            color="white"
+        <div
+            className={styles.container}
+            style={{
+                backgroundImage: `url(${images.howToBuyPageBg})`,
+            }}
         >
             {/* Header Section */}
-            <VStack mt={8} spacing={2} textAlign="center">
-                <Heading as="h1" size="2xl" color="yellow.400" textShadow="2px 2px black">
-                    How To Buy
-                </Heading>
-                <Text fontSize="lg" fontWeight="bold">
-                    INSTRUCTIONS
-                </Text>
-                <Text fontSize="sm" color="gray.300">
-                    Interactive Dialogue in Progress
-                </Text>
-                <ChevronDownIcon boxSize={8} color="white" />
-            </VStack>
+            <div className={styles.header}>
+                <h1 className={styles.title}>How To Buy</h1>
+                <p className={styles.instructions}>INSTRUCTIONS</p>
+                <p className={styles.subtext}>Interactive Dialogue in Progress</p>
+            </div>
 
             {/* Main Section */}
-            <Flex
-                direction="column"
-                alignItems="center"
-                bg="blackAlpha.800"
-                border="2px solid yellow"
-                borderRadius="lg"
-                p={6}
-                w={{ base: '90%', md: '80%', lg: '60%' }}
-                maxW="600px"
-                boxShadow="lg"
-            >
-                {/* Speech Bubble Top */}
-                <Box
-                    bg="white"
-                    border="2px solid black"
-                    borderRadius="md"
-                    p={4}
-                    mb={4}
-                    alignSelf="flex-start"
-                    position="relative"
-                    _before={{
-                        content: `''`,
-                        position: 'absolute',
-                        bottom: '-10px',
-                        left: '20px',
-                        borderWidth: '10px',
-                        borderStyle: 'solid',
-                        borderColor: 'white transparent transparent transparent',
-                    }}
-                >
-                    <Text fontSize="sm" color="black">
-                        First step to buy...
-                    </Text>
-                </Box>
+            <div className={styles.gridContainer}>
 
-                {/* Character Top */}
-                <Box
-                    bgImage="url('/path-to-character-1.jpg')" // Replace with character image
-                    bgSize="contain"
-                    bgRepeat="no-repeat"
-                    bgPos="center"
-                    w="60px"
-                    h="60px"
-                    alignSelf="flex-start"
-                    ml="auto"
-                    mb={4}
-                />
-
-                {/* Speech Bubble Bottom */}
-                <Box
-                    bg="white"
-                    border="2px solid black"
-                    borderRadius="md"
-                    p={4}
-                    mt={4}
-                    alignSelf="flex-end"
-                    position="relative"
-                    _before={{
-                        content: `''`,
-                        position: 'absolute',
-                        top: '-10px',
-                        right: '20px',
-                        borderWidth: '10px',
-                        borderStyle: 'solid',
-                        borderColor: 'transparent transparent white transparent',
-                    }}
+            {/* Dialogue Bubble + CoinMaster Character */}
+            <div className={styles.dialogueContainer}>
+                {/* Top Dialogue Bubble */}
+                <div 
+                className={`${styles.gridItem} ${styles.dialogueBubbleOne}`}
+                style={{ backgroundImage: `url(${images.dialogueBoxOne})`}}
                 >
-                    <Text fontSize="sm" color="black">
+                    {/* <img
+                        src={images.dialogueBoxOne}
+                        alt="Dialogue Bubble"
+                        className={styles.bubbleImage}
+                    /> */}
+                    <div className={styles.overlayContent}>
+                    <p className={styles.overlayText}>
+                    download phantom or your wallet of choice from the app store or google play store for free. Desktop users, download the google chrome extensions by going to phantom.app
+                    </p>
+                    </div>
+                </div>
+
+                {/* Top CoinMaster Character */}
+                <div className={`${styles.gridItem} ${styles.characterCoinMaster}`}>
+                    <img
+                        src={images.cyroMan}
+                        alt="CoinMaster Character"
+                        className={styles.characterImageCoinMaster}
+                    />
+                </div>
+
+            </div>
+
+                {/*! Dialogue Bubble + CoinMaster Character II */}
+
+                <div className={styles.dialogueContainer}>
+
+                <div className={`${styles.gridItem} ${styles.dialogueBubbleOne}`}
+                style={{ backgroundImage: `url(${images.dialogueBoxTwo})`}}
+                >
+                   <div className={styles.overlayContent}>
+                    <p className={styles.overlayText}>
+                    have Sol in your wallet to switch to $Babo. If you do not have any Sol, you can buy directly on phantom, transfer from another wallet, or buy on an exchange such as Coinbase or Kraken and send it to your wallet.
+                    </p>
+                    </div>
+                </div>
+
+                {/* Bottom Character */}
+                <div className={`${styles.gridItem} ${styles.characterCoinMaster}`}>
+                    <img
+                        src={images.unmaskedCyroman}
+                        alt="Unmasked Character"
+                        className={styles.characterImageCoinMaster}
+                    />
+                </div>
+                </div>
+
+
+
+                     {/* Top Dialogue Bubble */}
+                     <div className={`${styles.gridItem} ${styles.dialogueBubble}`}>
+                    <img
+                        src={images.dialogueBoxOne}
+                        alt="Dialogue Bubble"
+                        className={styles.bubbleImage}
+                    />
+                    <p className={styles.overlayText}>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, dolore adipisci! Incidunt aliquid quod laborum praesentium consectetur dicta mollitia voluptas hic eligendi cumque!
+                    </p>
+                </div>
+
+                {/* Top Character */}
+                <div className={`${styles.gridItem} ${styles.character}`}>
+                    <img
+                        src={images.cyroMan}
+                        alt="Character"
+                        className={styles.characterImage}
+                    />
+                </div>
+
+
+                  {/* Bottom Dialogue Bubble */}
+                  <div className={`${styles.gridItem} ${styles.dialogueBubble}`}>
+                    <img
+                        src={images.dialogueBoxTwo}
+                        alt="Dialogue Bubble"
+                        className={styles.bubbleImage}
+                    />
+                    <p className={styles.overlayText}>
                         Second step to buy...
-                    </Text>
-                </Box>
+                    </p>
+                </div>
 
-                {/* Character Bottom */}
-                <Box
-                    bgImage="url('/path-to-character-2.jpg')" // Replace with character image
-                    bgSize="contain"
-                    bgRepeat="no-repeat"
-                    bgPos="center"
-                    w="60px"
-                    h="60px"
-                    alignSelf="flex-end"
-                    mt={4}
-                />
-            </Flex>
-
-            {/* Footer Section */}
-            
-        </Box>
+                {/* Bottom Character */}
+                <div className={`${styles.gridItem} ${styles.character}`}>
+                    <img
+                        src={images.unmaskedCyroman}
+                        alt="Unmasked Character"
+                        className={styles.characterImage}
+                    />
+                </div>
+            </div>
+        </div>
     );
 }
