@@ -6,7 +6,7 @@ import images from '../../assets/images';
 
 export default function HowToBuy() {
     return (
-        <div
+        <section
             className={styles.container}
             style={{
                 backgroundImage: `url(${images.howToBuyPageBg})`,
@@ -22,9 +22,10 @@ export default function HowToBuy() {
             {/* Main Section */}
             <div className={styles.gridContainer}>
 
+
             {/* Dialogue Bubble + CoinMaster Character */}
             <div className={styles.dialogueContainer}>
-                {/* Top Dialogue Bubble */}
+                {/* Top Dialogue Bubble | Row 1 */}
                 <div 
                 className={`${styles.gridItem} ${styles.dialogueBubbleOne}`}
                 style={{ backgroundImage: `url(${images.dialogueBoxOne})`}}
@@ -41,7 +42,7 @@ export default function HowToBuy() {
                     </div>
                 </div>
 
-                {/* Top CoinMaster Character */}
+                {/* Top CoinMaster Character | Row 2 */}
                 <div className={`${styles.gridItem} ${styles.characterCoinMaster}`}>
                     <img
                         src={images.cyroMan}
@@ -49,12 +50,11 @@ export default function HowToBuy() {
                         className={styles.characterImageCoinMaster}
                     />
                 </div>
-
             </div>
 
-                {/*! Dialogue Bubble + CoinMaster Character II */}
 
-                <div className={styles.dialogueContainer}>
+            {/*! Dialogue Bubble + CoinMaster Character II */}
+            <div className={styles.dialogueContainer}>
 
                 <div className={`${styles.gridItem} ${styles.dialogueBubbleOne}`}
                 style={{ backgroundImage: `url(${images.dialogueBoxTwo})`}}
@@ -71,16 +71,13 @@ export default function HowToBuy() {
                     <img
                         src={images.unmaskedCyroman}
                         alt="Unmasked Character"
-                        className={styles.characterImageCoinMaster}
+                        className={styles.characterImageCoinMasterLeft}
                     />
                 </div>
-                </div>
+            </div>
 
 
-
-                {/*! Dialogue Bubble + CoinMaster Character III */}
-
-
+            {/*! Dialogue Bubble + CoinMaster Character III */}
             <div className={styles.dialogueContainer}>
              {/* Top Dialogue Bubble */}
                <div className={`${styles.gridItem} ${styles.dialogueBubbleOne}`}
@@ -104,27 +101,32 @@ export default function HowToBuy() {
             </div>
 
 
-                  {/* Bottom Dialogue Bubble */}
-                  <div className={`${styles.gridItem} ${styles.dialogueBubble}`}>
-                    <img
-                        src={images.dialogueBoxTwo}
-                        alt="Dialogue Bubble"
-                        className={styles.bubbleImage}
-                    />
+            {/* Dialogue Bubble + CoinMaster IV */}
+            <div className={styles.dialogueContainer}>
+
+                  <div className={`${styles.gridItem} ${styles.dialogueBubbleOne}`}
+                  style={{ backgroundImage: `url(${images.dialogueBoxTwo})`}}
+                  >
+                   <div className={styles.overlayContent}>
                     <p className={styles.overlayText}>
-                        Second step to buy...
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint delectus temporibus illum rem eum, voluptatum reprehenderit praesentium nulla nostrum magni qui nisi quis blanditiis necessitatibus rerum, quibusdam quo.
                     </p>
+                    </div>
                 </div>
 
-                {/* Bottom Character */}
-                <div className={`${styles.gridItem} ${styles.character}`}>
+                    {/* Bottom Character */}
+                <div className={`${styles.gridItem} ${styles.characterCoinMaster}`}>
                     <img
                         src={images.unmaskedCyroman}
                         alt="Unmasked Character"
-                        className={styles.characterImage}
+                        className={styles.characterImageCoinMasterLeft}
                     />
                 </div>
+
             </div>
-        </div>
+
+              
+            </div>
+        </section>
     );
 }
