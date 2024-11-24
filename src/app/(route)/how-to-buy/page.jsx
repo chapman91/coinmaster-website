@@ -3,6 +3,8 @@
 import React, { useEffect, useRef } from 'react';
 import styles from '../../styles/how-to-buy.module.css';
 import images from '../../assets/images';
+import { Box, Icon } from "@chakra-ui/react";
+import { BsChevronDoubleDown } from "react-icons/bs"; // Import arrow icon
 
 export default function HowToBuy() {
     return (
@@ -17,13 +19,42 @@ export default function HowToBuy() {
                 <h1 className={styles.title}>How To Buy</h1>
                 <p className={styles.instructions}>INSTRUCTIONS</p>
                 <p className={styles.subtext}>Interactive Dialogue in Progress</p>
+                 {/* Arrow Component */}
+          
             </div>
+
+            <div className={styles.arrowAndMainContainer}>
+                {/* Arrow Element */}
+                <div
+                    className={styles.arrowContainer}
+                    onClick={() => {
+                        // Smooth scroll to main section
+                        const mainSection = document.querySelector(`.${styles.gridContainer}`);
+                        if (mainSection) {
+                            mainSection.scrollIntoView({ behavior: "smooth" });
+                        }
+                    }}
+                >
+                    <Icon
+                        as={BsChevronDoubleDown}
+                        w={10} /* Arrow size */
+                        h={10}
+                        color="white"
+                        _hover={{
+                            transform: "scale(1.2)", // Hover effect
+                            transition: "all 0.2s",
+                        }}
+                    />
+            </div>
+          </div>
+       
+
 
             {/* Main Section */}
             <div className={styles.gridContainer}>
 
 
-            {/* Dialogue Bubble + CoinMaster Character */}
+            {/* Dialogue Bubble + CoinMaster Character I */}
             <div className={styles.dialogueContainer}>
                 {/* Top Dialogue Bubble | Row 1 */}
                 <div 
@@ -37,7 +68,7 @@ export default function HowToBuy() {
                     /> */}
                     <div className={styles.overlayContent}>
                     <p className={styles.overlayText}>
-                    download phantom or your wallet of choice from the app store or google play store for free. Desktop users, download the google chrome extensions by going to phantom.app
+                        Add text to picture 
                     </p>
                     </div>
                 </div>
@@ -61,7 +92,8 @@ export default function HowToBuy() {
                 >
                    <div className={styles.overlayContent}>
                     <p className={styles.overlayText}>
-                    have Sol in your wallet to switch to $Babo. If you do not have any Sol, you can buy directly on phantom, transfer from another wallet, or buy on an exchange such as Coinbase or Kraken and send it to your wallet.
+                    Add text to picture 
+
                     </p>
                     </div>
                 </div>
@@ -85,7 +117,8 @@ export default function HowToBuy() {
                >
                 <div className={styles.overlayContent}>
                     <p className={styles.overlayText}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, dolore adipisci! Incidunt aliquid quod laborum praesentium consectetur dicta mollitia voluptas hic eligendi cumque!
+                    Add text to picture 
+
                     </p>
                 </div>
   </div>
@@ -109,7 +142,8 @@ export default function HowToBuy() {
                   >
                    <div className={styles.overlayContent}>
                     <p className={styles.overlayText}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint delectus temporibus illum rem eum, voluptatum reprehenderit praesentium nulla nostrum magni qui nisi quis blanditiis necessitatibus rerum, quibusdam quo.
+                    Add text to picture 
+
                     </p>
                     </div>
                 </div>

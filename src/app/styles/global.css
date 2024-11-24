@@ -12,6 +12,7 @@
   --dropdown-color: #BBBAB7;
   --dropdown-color-transparent: rgba(187, 186, 183, 0.5);
   --dropdown-border: #FDFCFA;
+  --border-color: #D09D52;
 }
 
 /* Base button styles */
@@ -45,6 +46,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-size: 16px;
 }
 
 body {

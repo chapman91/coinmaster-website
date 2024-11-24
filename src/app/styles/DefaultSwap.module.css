@@ -7,7 +7,7 @@
     background-color: var(--primary-color);
     border-radius: 8px;
     padding: 10px;
-    outline: 1px solid var(--secondary-color);
+    outline: 1px solid var(--border-color);
     outline-offset: 0px;
     transition: all 0.3 s ease-in-out;
 
