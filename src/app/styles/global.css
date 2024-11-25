@@ -13,6 +13,7 @@
   --dropdown-color-transparent: rgba(187, 186, 183, 0.5);
   --dropdown-border: #FDFCFA;
   --border-color: #D09D52;
+  --invitation-gradient: linear-gradient(to bottom, #0B0F13 0%, #D6B759 50%, #D09C52 100%);
 }
 
 /* Base button styles */

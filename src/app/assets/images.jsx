@@ -17,7 +17,7 @@ const images = {
     cyclogo: '/assets/images/cyc-logo.png',
     cyrocoinDistribution: '/assets/images/cyrocoin-distribution.png',
     cyrocoinLogo: '/assets/images/cyrocoin-logo.png',
-    cyromanUnmasked: '/assets/images/cyroman-unmasked.png',
+    coinMasterCyrus: '/assets/images/cyroman-unmasked.png',
     cyroMan: '/assets/images/cyroman.png',
     dialogueBoxOne: '/assets/images/dialogue-box-1.png',
     dialogueBoxTwo: '/assets/images/dialogue-box-2.png',

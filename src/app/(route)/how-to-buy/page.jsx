@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import styles from '../../styles/how-to-buy.module.css';
 import images from '../../assets/images';
 import { Box, Icon } from "@chakra-ui/react";
