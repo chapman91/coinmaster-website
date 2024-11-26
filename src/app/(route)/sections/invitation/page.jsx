@@ -14,7 +14,8 @@ const InvitationSection = () => {
          sx={{
           background: "var(--invitation-gradient)",
          }}
-         py={{ base: 10, md: 20 }}
+         py={{ base: 0, md: 20 }}
+         pb={0}
          px={{ base: 5, md: 10 }}
          textAlign="center"
          color="white"
