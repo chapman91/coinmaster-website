@@ -1,5 +1,5 @@
 import {  HomePage } from './(route)/routeBarrel';
-import { About, Carousel, Invitation, Roadmap, TokenomicsSection, InvitationSection } from "../app/(route)/routeBarrel"
+import { About, CarouselSection, Roadmap, TokenomicsSection, InvitationSection } from "../app/(route)/routeBarrel"
 
 
 
@@ -11,7 +11,7 @@ const HeroPage = () => {
     <HomePage/>
     <TokenomicsSection/>  
     <About/>
-    <Carousel/>
+    <CarouselSection/>
     <Roadmap/>
     <InvitationSection/>
    

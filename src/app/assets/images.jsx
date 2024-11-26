@@ -47,7 +47,8 @@ const images = {
     liquidityPool: '/assets/images/Liquidity-Pool.png',
     treasuryImage: '/assets/images/treasury.png',
     tokenomicsGif: '/assets/vidoes/cyronmics_bg.mp4',
-    aboutBackground: '/assets/images/about-background.png'
+    aboutBackground: '/assets/images/about-background.png',
+    coinmasterCover: '/assets/images/coinmaster-cover.jpg',
 };
 
 export default images;
