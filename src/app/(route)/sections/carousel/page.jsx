@@ -16,9 +16,9 @@ const CarouselSection = () => {
 
   const settings = {
     dots: true, // show dots for navigation 
-    infinite: true, // Infinite scroll
+    infinite: false, // Infinite scroll
     speed: 500, // Transition speed
-    slidesToShow: 2, // Number of slides visible at a time
+    slidesToShow: 1, // Number of slides visible at a time
     slidesToScroll: 1, // Number of slides to scroll
     arrows: true, // Show next/prev arrows
     responsive: [
@@ -80,23 +80,28 @@ const handleCoverClick = (flipbookId) => {
         <Box
         key={index}
         position="relative"
-        borderRadius="lg"
+        borderRadius="xl"
         overflow="hidden"
-        boxShadow="lg"
-        mx={3} // Margin between slides
+        boxShadow="0px 8px 16px rgba(0, 0, 0, 0.8), 0px 8px 16px rgba(0, 0, 0, 0.8)"
+        mx={{ base: 2, md: 5 }} // Margin between slides
         onClick={() => window.open(book.link, "_blank")} // Open flipbook on click
-        cursor="pointer"      
+        cursor="pointer"   
+        maxW="400px" // Mas width for consistency
+        width={{ base: "90%", md: "40%" }} // Smaller width on desktop   
         >
-        {/* Badge for "NEW" */}
-        <Badge
+        {/* Badge Positioned on the Image */}
+        <Image
+        src={images.newBanner}
         colorScheme="red"
         position="absolute"
-        top={2}
-        left={2}
-        zIndex={1} 
-        >
-          New
-        </Badge>
+        top={{ base: 2, md: -3 }}
+        left={{ base: 2, md: -2 }}
+        zIndex={3} // Ensure it's on top of the image
+        width={{ base: "50px", md: "120px" }} // Responsive width for the badge
+        height="auto" // Maintain aspect ratio
+        boxShadow="xl"
+        />
+     
 
       {/* Cover Image  */}
       <Image 
@@ -104,17 +109,12 @@ const handleCoverClick = (flipbookId) => {
        alt={book.volume}
        objectFit="cover"
        width="100%"
-       height="350px"
+       height="auto"
+       style={{
+        aspectRatio: "auto", // Optional, ensures modern aspect-ratio support
+       }}
       />
 
-      {/* Cover Image  */}
-      <Image 
-       src={book.image}
-       alt={book.volume}
-       objectFit="cover"
-       width="100%"
-       height="350px"
-      />
 
       {/* Volume Text */}
       <Box 

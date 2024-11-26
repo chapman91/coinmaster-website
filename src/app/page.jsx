@@ -9,9 +9,9 @@ const HeroPage = () => {
   return (
   <section>
     <HomePage/>
+     <CarouselSection/>
     <TokenomicsSection/>  
     <About/>
-    <CarouselSection/>
     <Roadmap/>
     <InvitationSection/>
    
