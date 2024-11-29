@@ -34,6 +34,7 @@ const images = {
     howToBuyPageBg: '/assets/images/how-to-buy-page-bg.png',
     newBanner: '/assets/images/new-banner.png',
     roadmapBg: '/assets/images/roadmap-bg.png',
+    roadmapImage: '/assets/images/roadmap.png',
     telegramLogo: '/assets/images/telegram-logo.png',
     unmaskedCyroman: '/assets/images/unmasked-cyroman.png',
     usdcLogo: '/assets/images/usdc-logo.png',
