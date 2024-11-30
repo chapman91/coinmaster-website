@@ -2,109 +2,89 @@
 
 /* Background color for the Alert component */
 .customAlertBackground {
-    background: var(--quaternary-color) !important; /* Set background color */
-    border: none !important; /* Remove border */
-    margin-bottom: 0 !important; /* Corrected to ensure there's no bottom margin */
+  background: var(--quaternary-color) !important; /* Set background color */
+  border: none !important; /* Remove border */
+  margin-bottom: 0 !important; /* Corrected to ensure there's no bottom margin */
 }
 
 /* Navigation Container */
-.navContainer {  
-    align-items: center; /* Align items vertically */
-    gap: 20px; /* Space between nav items */
-    border: none !important; /* Remove borders */
-    box-shadow: none !important; /* Remove shadow effect */
+.navContainer {
+  align-items: center; /* Align items vertically */
+  gap: 20px; /* Space between nav items */
+  border: none !important; /* Remove borders */
+  box-shadow: none !important; /* Remove shadow effect */
 }
-
-
 
 /* Override Bootstrap's nav-link styles */
 .nav-tabs .nav-link {
-    border-radius: 0 !important; /* Remove border radius */
-    border: none !important; /* Ensure no border is applied */
+  border-radius: 0 !important; /* Remove border radius */
+  border: none !important; /* Ensure no border is applied */
 }
 
 /* Navigation Item Styles */
 .navItem {
-    flex-basis: unset !important; /* Reset flex basis for items */
-    margin: 0 10px; /* Horizontal spacing */
+  flex-basis: unset !important; /* Reset flex basis for items */
+  margin: 0 10px; /* Horizontal spacing */
 }
 
 /* Bold Link Styles */
-.navContainer  .navLinkBold.navLinkBold {
-    font-weight: 700; /* Bold text */
-    color: var(--background-color);
-
+.navContainer .navLinkBold.navLinkBold {
+  font-weight: 700; /* Bold text */
+  color: var(--background-color);
 }
 
 /* Specific styles for the fifth child in the navLinkBold class */
 .navContainer .navLinkBold:nth-child(5) {
-    font-weight: 700; /* Maintain bold text */
-    border: none !important; /* Ensure no border is applied */
+  font-weight: 700; /* Maintain bold text */
+  border: none !important; /* Ensure no border is applied */
 }
 
 .navContainer .navLinkBold:nth-child(5):hover {
-    /* Maintain hover state styling, if needed */
-    border: none !important; /* Ensure no border on hover */
+  /* Maintain hover state styling, if needed */
+  border: none !important; /* Ensure no border on hover */
 }
-
 
 .dropdownItemsContainer {
-    background-color: var(--dropdown-color-transparent);
-    margin: 3px;
+  background-color: var(--dropdown-color-transparent);
+  margin: 3px;
 }
-
 
 /* Icon Styles in Dropdown */
 /* ! Fix this specificity */
- .dropdownItemsContainer .dropdownItem .iconLeft {
-    width: 22px;
-    height: 22px;
-    margin-right: 8px;
-    margin-bottom: 5px;
-    vertical-align: middle;
+.dropdownItemsContainer .dropdownItem .iconLeft {
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+  margin-bottom: 5px;
+  vertical-align: middle;
 }
 
 .yellowStripContainer {
-    position: relative;
-    height: 25px /* Set a fixed height for consistent display */
+  position: relative;
+  height: 25px; /* Set a fixed height for consistent display */
 }
 
 /* Background color */
 
 .yellowStripContainer .gradient {
-    width: 100%;
-    height: 100%;
-    background-image: 
-    linear-gradient(to bottom, black, transparent);
-    opacity: 0.5;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, black, transparent);
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
 }
-
-
-
-
 
 /* NavigationBar.module.css */
 .yellowStripContainer .yellowStrip {
-    position: relative !important;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: inline-block;
-    margin: 0;
-} 
-
-
+  position: relative !important;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: inline-block;
+  margin: 0;
+}
 
 /* ! YellowStrip Problem: .yellowStrip & .gradient to height: 100%   */
-
-
-
-
-
-
-
-

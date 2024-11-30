@@ -1,0 +1,84 @@
+/* Roadmap.module.css */
+
+.roadmapContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  clip-path: inset(-50px 0 0 0); /* Allow top to overflow */
+}
+
+.backgroundImage {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  background-image: url('../../../public/assets/images/roadmap-bg.png'); /* Replace with your actual image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.roadmapImageContainer {
+  grid-row: 1 / -1; /* Align with the background image in the grid */
+  grid-column: 1 / -1; /* Align with the background image in the grid */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Adjust roadmap image size */
+  min-height: 100%;
+  margin: 0 auto; /* Center the image horizontally */
+  z-index: 2; /* Place above the background image */
+  object-fit: contain; 
+}
+
+.responsiveRoadmap {
+  max-width: 100%; /* Ensure the roadmap scales to fit */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image doesn’t get distorted */
+}
+
+
+/* Media query for extra small devices (phones, < 576px) */
+@media (max-width: 575.98px) {
+    .roadmapImageContainer {
+      /* Styles for phones */
+      height: 100vh;
+    }
+
+    .roadmapImageDirect {
+      height: 100% !important; 
+    }
+  }
+  
+  /* Media query for small devices (tablets, 576px - 767px) */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .selector {
+      /* Styles for small tablets */
+    }
+  }
+  
+  /* Media query for medium devices (larger tablets, 768px - 991px) */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .selector {
+      /* Styles for tablets or smaller laptops */
+    }
+  }
+  
+  /* Media query for large devices (desktops, 992px - 1199px) */
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .selector {
+      /* Styles for desktops */
+    }
+  }
+  
+  /* Media query for extra-large devices (large desktops, >= 1200px) */
+  @media (min-width: 1200px) {
+    .selector {
+      /* Styles for large desktops */
+    }
+  }

@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "debug": "NODE_OPTIONS='--inspect' next dev"
+    "debug": "NODE_OPTIONS='--inspect' next dev",
+    "format": "prettier --write .",
+    "format-check": "prettier --check ."
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.2.4",
@@ -36,7 +38,10 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
-    "eslint": "^8",
-    "eslint-config-next": "15.0.1"
+    "eslint": "^8.57.1",
+    "eslint-config-next": "15.0.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.4.1"
   }
 }

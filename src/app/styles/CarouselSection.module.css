@@ -1,11 +1,13 @@
 .slide {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .slide:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add focus shadow */
-  }
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.slide:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add focus shadow */
+}
 
 /* Add padding inside the slick-list */
 .slick-list {
@@ -18,26 +20,25 @@
 
 /* Style for the dots container */
 .slick-dots {
-    bottom: -20px !important; /* Adjust the position of the dots */
+  bottom: -20px !important; /* Adjust the position of the dots */
+}
+
+/* Default style for dots */
+.slick-dots li button:before {
+  font-size: 12px !important; /* Make the dots slightly bigger */
+  color: gray !important; /* Default color */
+  opacity: 1 !important; /* Make the dots fully visible */
+}
+
+/* Style for the active dot */
+.slick-dots li.slick-active button:before {
+  color: yellow !important; /* Change the color to yellow for the active dot */
+  font-size: 16px !important; /* Make the active dot slightly bigger */
+}
+
+/* Optional: Adjust spacing on smaller screens */
+@media (max-width: 768px) {
+  .slick-list {
+    padding: 0 10px; /* Less padding for smaller screens */
   }
-  
-  /* Default style for dots */
-  .slick-dots li button:before {
-    font-size: 12px !important; /* Make the dots slightly bigger */
-    color: gray !important; /* Default color */
-    opacity: 1 !important; /* Make the dots fully visible */
-  }
-  
-  /* Style for the active dot */
-  .slick-dots li.slick-active button:before {
-    color: yellow !important; /* Change the color to yellow for the active dot */
-    font-size: 16px !important; /* Make the active dot slightly bigger */
-  }
-  
-  
-  /* Optional: Adjust spacing on smaller screens */
-  @media (max-width: 768px) {
-    .slick-list {
-      padding: 0 10px; /* Less padding for smaller screens */
-    }
-  }
+}

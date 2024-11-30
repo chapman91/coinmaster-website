@@ -1,19 +1,27 @@
 /** import a  google font with different weights for the website */
 
-
-
 :root {
   --background-color: #ffff;
   --primary-color: #343434;
-  --secondary-color: #FFE236 ;
-  --teritary-color: linear-gradient(to bottom, #0B0F13 0%, #D6B759 50%, #D09C52 100%);
-  --quaternary-color: linear-gradient(90deg, #545252 0%, #8B8787 100%);
+  --secondary-color: #ffe236;
+  --teritary-color: linear-gradient(
+    to bottom,
+    #0b0f13 0%,
+    #d6b759 50%,
+    #d09c52 100%
+  );
+  --quaternary-color: linear-gradient(90deg, #545252 0%, #8b8787 100%);
   --quinary-color: #000000;
-  --dropdown-color: #BBBAB7;
+  --dropdown-color: #bbbab7;
   --dropdown-color-transparent: rgba(187, 186, 183, 0.5);
-  --dropdown-border: #FDFCFA;
-  --border-color: #D09D52;
-  --invitation-gradient: linear-gradient(to bottom, #0B0F13 0%, #D6B759 50%, #D09C52 100%);
+  --dropdown-border: #fdfcfa;
+  --border-color: #d09d52;
+  --invitation-gradient: linear-gradient(
+    to bottom,
+    #0b0f13 0%,
+    #d6b759 50%,
+    #d09c52 100%
+  );
 }
 
 /* Base button styles */
@@ -22,9 +30,8 @@
   border-radius: 5px;
   font-size: 16px;
   border: none;
-  cursor: pointer; 
+  cursor: pointer;
 }
-
 
 /* Primary Button */
 .button-primary {
@@ -32,13 +39,11 @@
   color: var(--quaternary-color);
 }
 
-
 /* Secondary Button */
 .button-secondary {
   background-color: var(--quaternary-color);
   color: var(--quinary-color);
 }
-
 
 html,
 body {
@@ -57,7 +62,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 
 /* Universal Selector */
 * {

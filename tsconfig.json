@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -18,9 +14,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "paths": {
-      "@/": [
-        "./src/*"
-      ]
+      "@/": ["./src/*"]
     },
     "plugins": [
       {
@@ -33,9 +27,8 @@
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "src/app/components/organisms/client/Swap.tsx"  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "**/*.tsx",
+    "src/app/components/organisms/client/Swap.tsx"
+  ],
+  "exclude": ["node_modules"]
 }

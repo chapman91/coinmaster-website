@@ -1,21 +1,21 @@
 /* buy-now.module.css */
 
 .buyNowPage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Full viewport height */
-    width: 100vw; /* Full viewport width*/
-    background-size: cover; /* Ensures the image covers the entire area */
-    background-position: center; /*Centers the image*/
-    background-repeat: no-repeat; /* Prevents titling*/
-    color: white; /*Ensures text is visible over the background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width*/
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center; /*Centers the image*/
+  background-repeat: no-repeat; /* Prevents titling*/
+  color: white; /*Ensures text is visible over the background */
 }
 
 /* Responsive adjustments  */
 @media (max-width: 768px) {
-    .buyNowPage {
-        background-size: contain; /* Adjust the background for smaller screens*/
-    }
+  .buyNowPage {
+    background-size: contain; /* Adjust the background for smaller screens*/
+  }
 }

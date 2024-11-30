@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const Modals = () => {
-  return (
-    <div>Modals</div>
-  )
-}
+  return <div>Modals</div>;
+};
 
-export default Modals
+export default Modals;

@@ -1,13 +1,12 @@
 .footer {
-    padding-top: 10px;
-    background: var(--quaternary-color);
-    text-align: center;
-    width: 100%;
+  padding-top: 10px;
+  background: var(--quaternary-color);
+  text-align: center;
+  width: 100%;
 
-    display: flex;
-    flex-direction: column;
-  }
-
+  display: flex;
+  flex-direction: column;
+}
 
 .footerContainer {
   min-height: 200px;
@@ -16,27 +15,24 @@
   justify-content: space-between;
 }
 
-
-
 .navLinks a {
   text-decoration: none; /* Removes underline */
-  outline: none; 
-  cursor: pointer; 
+  outline: none;
+  cursor: pointer;
   font-weight: 700;
   color: var(--background-color);
-  position: relative; 
+  position: relative;
 }
 
-.footerContainer .navLinks a:focus, 
+.footerContainer .navLinks a:focus,
 .footerContainer .navLinks a:hover {
   text-decoration: none;
   color: var(--secondary-color);
 }
 
-
 .navLinks a::after {
   content: '';
-  position: absolute; 
+  position: absolute;
   left: 0;
   bottom: -5px; /* Position the underline slightly below the text */
   width: 100%;
@@ -47,23 +43,20 @@
   transform-origin: left;
 }
 
-
 .navLinks a:hover::after {
   transform: scaleX(1);
 }
 
 .copyrightSection {
-    background: var(--primary-color);
-    text-align: center;
-    margin-top: auto;
-  }
+  background: var(--primary-color);
+  text-align: center;
+  margin-top: auto;
+}
 
-
-
-  /** Tablet Size: 768px to 1024px */
-  /* media query should only apply if the viewport's width is 1024px or less */
-  /* (min-width: 768px) condition should only apply styles  if the viewport's width is 768px or greater */
-  /* and keyword combines two conditions - viewport must be between 768px and 1024px */
+/** Tablet Size: 768px to 1024px */
+/* media query should only apply if the viewport's width is 1024px or less */
+/* (min-width: 768px) condition should only apply styles  if the viewport's width is 768px or greater */
+/* and keyword combines two conditions - viewport must be between 768px and 1024px */
 @media (max-width: 767px) {
   /* .footer {
     padding: 15px 0;
@@ -75,7 +68,6 @@
 
   .iconLink img {
     height: 50px; /* Smaller icons for mobile */
-    
   }
 
   .navLink {
@@ -96,8 +88,6 @@
     padding-top: 10px;
   }
 }
-
-
 
 /* Large Mobile (Up to 767px) */
 @media (max-width: 767px) and (min-width: 600px) {
@@ -132,7 +122,6 @@
   }
 }
 
-
 @media (max-width: 599px) {
   /* .footer {
     padding: 10px 0;
@@ -164,4 +153,3 @@
     padding-top: 5px;
   }
 }
-
