@@ -8,7 +8,8 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  clip-path: inset(-50px 0 0 0); /* Allow top to overflow */
+
+  clip-path: inset(-50px 0 0 0);
 }
 
 .backgroundImage {
@@ -33,7 +34,7 @@
   min-height: 100%;
   margin: 0 auto; /* Center the image horizontally */
   z-index: 2; /* Place above the background image */
-  object-fit: contain; 
+  object-fit: contain;
 }
 
 .responsiveRoadmap {
@@ -42,43 +43,98 @@
   object-fit: contain; /* Ensure the image doesn’t get distorted */
 }
 
+.checkpoint {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+
+/* Pseudo-element for radar effect */
+.checkpoint::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.7);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0; /* Start invisible */
+    animation: radarPulse 2s infinite ease-out; /* Radar animation */
+}
+
+/* @keyframes for radar artist  */
+@keyframes radarPulse {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(3); 
+        opacity: 0; 
+    }
+    
+    }
+
+
+
+.checkpointImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.7);
+  transition: transform 0.3s ease; /* Hover animation*/
+}
+
+
+
+
+
+
+.checkpointImage:hover {
+  transform: scale(1.2); 
+}
 
 /* Media query for extra small devices (phones, < 576px) */
 @media (max-width: 575.98px) {
-    .roadmapImageContainer {
-      /* Styles for phones */
-      height: 100vh;
-    }
+  .roadmapImageContainer {
+    /* Styles for phones */
+    height: 100vh;
+  }
 
-    .roadmapImageDirect {
-      height: 100% !important; 
-    }
+  .roadmapImageDirect {
+    height: 100% !important;
   }
-  
-  /* Media query for small devices (tablets, 576px - 767px) */
-  @media (min-width: 576px) and (max-width: 767.98px) {
-    .selector {
-      /* Styles for small tablets */
-    }
+}
+
+/* Media query for small devices (tablets, 576px - 767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .selector {
+    /* Styles for small tablets */
   }
-  
-  /* Media query for medium devices (larger tablets, 768px - 991px) */
-  @media (min-width: 768px) and (max-width: 991.98px) {
-    .selector {
-      /* Styles for tablets or smaller laptops */
-    }
+}
+
+/* Media query for medium devices (larger tablets, 768px - 991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .selector {
+    /* Styles for tablets or smaller laptops */
   }
-  
-  /* Media query for large devices (desktops, 992px - 1199px) */
-  @media (min-width: 992px) and (max-width: 1199.98px) {
-    .selector {
-      /* Styles for desktops */
-    }
+}
+
+/* Media query for large devices (desktops, 992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .selector {
+    /* Styles for desktops */
   }
-  
-  /* Media query for extra-large devices (large desktops, >= 1200px) */
-  @media (min-width: 1200px) {
-    .selector {
-      /* Styles for large desktops */
-    }
+}
+
+/* Media query for extra-large devices (large desktops, >= 1200px) */
+@media (min-width: 1200px) {
+  .selector {
+    /* Styles for large desktops */
   }
+}
