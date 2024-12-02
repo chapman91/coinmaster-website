@@ -51,36 +51,52 @@
   z-index: 3;
 }
 
+/* Specifc styles for each checkpointnt1 {
+  top: 10%;
+  left: 20%;
+}
+
+.checkpoint2 {
+  top: 25%;
+  left: 50%;
+}
+
+.checkpoint3 {
+  top: 60%;
+  left: 30%;
+}
+
+.checkpoint4 {
+  top: 80%;
+  left: 70%;
+}
 
 /* Pseudo-element for radar effect */
 .checkpoint::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 0 10px rgba(255, 255, 0, 0.7);
-    border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0.5);
-    opacity: 0; /* Start invisible */
-    animation: radarPulse 2s infinite ease-out; /* Radar animation */
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.7);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0; /* Start invisible */
+  animation: radarPulse 2s infinite ease-out; /* Radar animation */
 }
 
 /* @keyframes for radar artist  */
 @keyframes radarPulse {
-    0% {
-        transform: translate(-50%, -50%) scale(0.5);
-        opacity: 1;
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(3); 
-        opacity: 0; 
-    }
-    
-    }
-
-
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
 
 .checkpointImage {
   width: 100%;
@@ -90,13 +106,57 @@
   transition: transform 0.3s ease; /* Hover animation*/
 }
 
-
-
-
-
-
 .checkpointImage:hover {
-  transform: scale(1.2); 
+  transform: scale(1.2);
+}
+
+/* Hologram Box Styles */
+.hologramBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  z-index: 10;
+  max-width: 90%;
+  max-height: 60vh;
+  width: 300px;
+  height: auto;
+}
+
+/* HologramBox1 specific styles */
+.hologramBox1 {
+  width: 300px;
+  height: auto;
+  max-width: 90%; /* Makes it responsive */
+  left: 20; /* Position adjustments for this specific checkpoint */
+  top: -50%; /* Adjust relative to checkpoint */
+}
+
+/* HologramBox specific styles */
+.hologramBox2 {
+  width: 350px;
+  height: auto;
+  max-width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30px;
+}
+
+/* Hologram Image */
+.hologramImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.hologramText {
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
 }
 
 /* Media query for extra small devices (phones, < 576px) */
@@ -109,32 +169,101 @@
   .roadmapImageDirect {
     height: 100% !important;
   }
+
+  .checkpoint1 {
+    top: 15%;
+    left: 25%;
+  }
+  .checkpoint2 {
+    top: 35%;
+    left: 60%;
+  }
+  .checkpoint3 {
+    top: 70%;
+    left: 40%;
+  }
+  .checkpoint4 {
+    top: 90%;
+    left: 80%;
+  }
 }
 
-/* Media query for small devices (tablets, 576px - 767px) */
+/* Small tablets devices (tablets, 576px - 767px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .selector {
-    /* Styles for small tablets */
+  .checkpoint1 {
+    top: 20%;
+    left: 25%;
+  }
+  .checkpoint2 {
+    top: 40%;
+    left: 60%;
+  }
+  .checkpoint3 {
+    top: 70%;
+    left: 50%;
+  }
+  .checkpoint4 {
+    top: 85%;
+    left: 80%;
   }
 }
 
 /* Media query for medium devices (larger tablets, 768px - 991px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .selector {
-    /* Styles for tablets or smaller laptops */
+  .checkpoint1 {
+    top: 15%;
+    left: 22%;
+  }
+  .checkpoint2 {
+    top: 30%;
+    left: 55%;
+  }
+  .checkpoint3 {
+    top: 65%;
+    left: 40%;
+  }
+  .checkpoint4 {
+    top: 80%;
+    left: 70%;
   }
 }
 
 /* Media query for large devices (desktops, 992px - 1199px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  .selector {
-    /* Styles for desktops */
+  .checkpoint1 {
+    top: 12%;
+    left: 20%;
+  }
+  .checkpoint2 {
+    top: 28%;
+    left: 50%;
+  }
+  .checkpoint3 {
+    top: 60%;
+    left: 30%;
+  }
+  .checkpoint4 {
+    top: 78%;
+    left: 65%;
   }
 }
 
 /* Media query for extra-large devices (large desktops, >= 1200px) */
 @media (min-width: 1200px) {
-  .selector {
-    /* Styles for large desktops */
+  .checkpoint1 {
+    top: 12%;
+    right: 40%;
+  }
+  .checkpoint2 {
+    top: 10%;
+    left: 20%;
+  }
+  .checkpoint3 {
+    top: 30%;
+    left: 2%;
+  }
+  .checkpoint4 {
+    top: 80%;
+    left: 5%;
   }
 }
