@@ -25,7 +25,9 @@ const Roadmap = () => {
     {
       id: 2,
       text: 'Phase 2: Development - The team works on developing key features of the platform.',
-      img: images.checkpoint2,
+      hologramType: 'text', 
+      hologramImage: "", 
+      img: images.checkpoint2,   
     },
     {
       id: 3,
@@ -38,7 +40,8 @@ const Roadmap = () => {
       id: 4,
       text: 'Phase 4: Expansion  - Expanding our reach globally and integrating with other platforms.',
       img: images.checkpoint4,
-      hologramType: 'text',
+      hologramType: 'text', 
+      hologramImage: '',
     },
   ];
 
@@ -115,29 +118,32 @@ const Roadmap = () => {
         </div>
       )} */}
 
-      {activeCheckpoint && (
-        <div className={styles.hologramBox}>
-          {checkpoints
-            .filter((checkpoint) => checkpoint.id === activeCheckpoint)
-            .map(({ hologramType, hologramImage, text }) =>
-              hologramType === 'image' ? (
-                <Image
-                  key="image"
-                  src={hologramImage}
-                  alt="Hologram Box"
-                  layout="intrinsic"
-                  width={400}
-                  height={300}
-                  className={styles.hologramImage}
-                />
-              ) : (
-                <p key="text" className={styles.hologramText}>
-                  {text}
-                </p>
-              )
-            )}
-        </div>
-      )}
+{activeCheckpoint && (
+  <div className={styles.hologramBox}>
+    {checkpoints
+      .filter((checkpoint) => checkpoint.id === activeCheckpoint)
+      .map(({ hologramType, hologramImage, text }) => (
+        hologramType === 'image' && hologramImage ? (
+          <Image
+            key="image"
+            src={hologramImage}
+            alt="Hologram Box"
+            layout="intrinsic"
+            width={400}
+            height={300}
+            className={styles.hologramImage}
+          />
+        ) : (
+          <p key="text" className={styles.hologramText}>
+            {text}
+          </p>
+        )
+      ))}
+  </div>
+)}
+
+
+
     </section>
   );
 };
