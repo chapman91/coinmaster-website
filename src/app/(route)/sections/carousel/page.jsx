@@ -43,6 +43,7 @@ const NextArrow = ({ onClick }) => (
       height="auto"
       _hover={{ transform: 'scale(1.1)' }} // Hover effect
       transition="transform 0.2s"
+      priority
     />
   </Box>
 );
@@ -70,6 +71,7 @@ const PrevArrow = ({ onClick }) => (
       height="auto"
       _hover={{ transform: 'scale(1.1)' }} // Hover effect
       transition="transform 0.2s"
+      priority
     />
   </Box>
 );
@@ -206,6 +208,7 @@ const CarouselSection = () => {
                 width={{ base: '80px', sm: '100px', md: '120px', lg: '120px' }} // Responsive width for the badge
                 height="auto" // Maintain aspect ratio
                 boxShadow={{ base: 'sm', md: 'lg', lg: 'xl' }}
+                priority
               />
 
               {/* Cover Image  */}

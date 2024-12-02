@@ -56,6 +56,8 @@ const InvitationSection = () => {
             width="100%"
             height="auto"
             objectFit="cover"
+            priority
+            placeholder="blur"
           />
         </Box>
 

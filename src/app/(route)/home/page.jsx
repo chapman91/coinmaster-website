@@ -2,12 +2,21 @@ import React from 'react';
 import images from '../../assets/images';
 import styles from '../../styles/HomePage.module.css';
 import Image from 'next/image';
+import {
+  About,
+  CarouselSection,
+  TokenomicsSection,
+  InvitationSection,
+} from '../../(route)/routeBarrel';
+
+
 
 // Import the hero image and hero background
 
 const HomePage = () => {
   return (
-    <main className={styles.backgroundContainer}>
+    <main>
+    <section className={styles.backgroundContainer}>
       {/* City Image  */}
       <Image
         src={images.heroBg}
@@ -33,7 +42,13 @@ const HomePage = () => {
         alt="Yellow Strip"
         className={styles.yellowStripHomePage}
       />
-    </main>
+    </section>
+    
+     <CarouselSection/>
+     <TokenomicsSection/>
+     <About/> 
+     <InvitationSection/>
+     </main>
   );
 };
 

@@ -24,6 +24,17 @@ function NavigationBar() {
     setHoveredItem(null);
   };
 
+  // Style function for nav links
+  const getLinkColor = (route) => ({
+    color: currentRoute === route ? 'yellow' : 'white', // Yellow for active link, white for others
+    fontWeight: currentRoute === route ? 'bold' : 'normal', // Bold for active link
+    backgroundColor: 'transparent', // No background for links
+    border: currentRoute === route ? '2px solid yellow' : 'none', // Add a yellow border for active links if needed
+    borderRadius: '4px', // Optional for a slight rounded highlight
+    padding: '5px 10px',
+    transition: 'color 0.3s, border 0.3s', // Smooth transition for color and border changes
+  });
+
   const router = useRouter();
 
   const currentRoute = router.pathname;
@@ -43,6 +54,7 @@ function NavigationBar() {
     border: 'none',
     transition: 'color 0.3s',
   });
+
   return (
     <header className="header">
       {/* Banner Section */}
@@ -96,7 +108,9 @@ function NavigationBar() {
                   href="/home"
                   className={`${styles.customNavLink} ${styles.navLinkBold} `}
                   active={currentRoute === '/home'}
-                  style={getLinkStyle('/home', 'home')}
+                  style={{
+                    ...getLinkStyle('/home', 'home'),
+                  }}
                   onMouseEnter={() => handleMouseEnter('home')}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -104,31 +118,7 @@ function NavigationBar() {
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item className={styles.navItem}>
-                <Nav.Link
-                  href="/how-to-buy"
-                  className={`${styles.customNavLink} ${styles.navLinkBold}`}
-                  active={currentRoute === '/how-to-buy'}
-                  onMouseEnter={() => handleMouseEnter('how-to-buy')}
-                  onMouseLeave={handleMouseLeave}
-                  style={getLinkStyle('/how-to-buy', 'how-to-buy')}
-                >
-                  How to Buy
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item className={styles.navItem}>
-                <Nav.Link
-                  href="/"
-                  eventKey="link-1"
-                  className={`${styles.customNavLink} ${styles.navLinkBold}`}
-                  active={currentRoute === '/tokenomics'}
-                  onMouseEnter={() => handleMouseEnter('tokenomics')}
-                  onMouseLeave={handleMouseLeave}
-                  style={getLinkStyle('/tokenomics', 'tokenomics')}
-                >
-                  Tokenomics
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item className={styles.navItem}>
+                
                 <Nav.Link
                   href="./buy-now"
                   eventKey="link-3"
@@ -136,7 +126,9 @@ function NavigationBar() {
                   active={currentRoute === '/buy-now'}
                   onMouseEnter={() => handleMouseEnter('buy-now')}
                   onMouseLeave={handleMouseLeave}
-                  style={getLinkStyle('/buy-now', 'buy-now')}
+                  style={{
+                    ...getLinkStyle('/buy-now', 'buy-now'),
+                  }}
                 >
                   Buy Now
                 </Nav.Link>

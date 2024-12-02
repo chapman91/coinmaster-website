@@ -149,6 +149,7 @@ const About = () => {
               position="absolute"
               bottom="0"
               right="-3"
+              priority
             />
           </GridItem>
         </Grid>

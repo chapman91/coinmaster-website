@@ -178,6 +178,7 @@ const TokenomicsSection = () => {
               title={data.title}
               percentage={data.percentage}
               imageSrc={data.imageSrc}
+              placeholder="blur"
             />
           ))}
         </SimpleGrid>
