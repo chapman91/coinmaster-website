@@ -135,14 +135,9 @@ const CarouselSection = () => {
   // Flipbook data
   const flipbooks = [
     {
-      volume: 'Volume 1',
+      volume: 'COMING SOON',
       image: images.coinmasterCover, // Replace with correct path
       flipbookId: 'bdad114828', // Replace with your Heyzine link
-    },
-    {
-      volume: 'Volume 2',
-      image: images.coinmasterCover, // Replace with the correct path
-      flipbookId: '1c066f59ea', // Replace with your Heyzine link
     },
   ];
 
@@ -173,6 +168,7 @@ const CarouselSection = () => {
       px={{ base: 5, md: 10 }}
       bg="white"
       textAlign="center"
+      id="carouselSection"
     >
       {/* Extra box added over Box element */}
       <Box gap={{ base: 'px', sm: '16px', md: '24px' }}>

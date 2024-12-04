@@ -24,8 +24,7 @@
 /* Small Screens (mobile) */
 @media (max-width: 480px) {
   .customTerminalStyle {
-    height: 400px;
     padding: 5px;
-    background-color: #d0d0d0;
+    height: 100%;
   }
 }

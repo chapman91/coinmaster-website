@@ -2,6 +2,7 @@
 
 export { default as WalletConnectButton } from './atoms/client/connectWalletButton';
 export { default as NormalButton } from './atoms/client/normalButton';
+export { default as YellowButton } from './atoms/client/yellowButton';
 export { default as TokenomicsCard } from './molecules/server/TokenomicsCard';
 export { default as Modals } from './molecules/server/Modals';
 export { default as NavigationBar } from './organisms/client/navigationbar';

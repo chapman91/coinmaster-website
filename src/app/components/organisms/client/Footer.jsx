@@ -67,16 +67,7 @@ const Footer = () => {
               Home
             </a>
           </Col>
-          <Col xs="auto">
-            <a href="/how-to-buy" className={styles.navLink}>
-              How To Buy
-            </a>
-          </Col>
-          <Col xs="auto">
-            <a href="/tokenomics" className={styles.navLink}>
-              Tokenomics
-            </a>
-          </Col>
+
           <Col xs="auto">
             <a href="/buy-now" className={styles.navLink}>
               Buy Now
@@ -88,8 +79,7 @@ const Footer = () => {
         <Row className={`${styles.copyrightSection} justify-content-center`}>
           <Col xs="auto">
             <p className={`m-0 ${styles.copyrightSection} px-4 py-4`}>
-              ©2024. SyncSphere Labs. All rights reserved. CoinMaster is a
-              trademark of SyncSphere Labs.
+              ©2024. SyncSphere Labs. All rights reserved. CoinMaster.
             </p>
           </Col>
         </Row>

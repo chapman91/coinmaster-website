@@ -1,18 +1,27 @@
+'use client';
+
 import React from 'react';
 import { Button } from '@chakra-ui/react';
 
-const NormalButton = () => {
+const YellowButton = () => {
+  const scrollToNextSection = () => {
+    const carouselSection = document.getElementById('carouselSection');
+    if (carouselSection) {
+      carouselSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <Button
-      //  onClick={onClick}
-      bg="white" // Background color
-      color="black" // Text color
+      onClick={scrollToNextSection}
+      bg="var(--border-color)" // Background color
+      color="var(--background-color)" // Text color
       fontSize="lg" // Font size
       fontWeight="bold" // Font weight
       py={6} // Padding (vertical)
       px={12}
       borderRadius="md" // Rounded corners
-      boxShadow="0px 4px 6px rgba(0, 0, 0, 0.3)" // Shadow
+      boxShadow="0px 4px 6px rgba(0, 0, 0, 0.9)" // Shadow
       _hover={{
         transform: 'scale(1.05)',
         boxShadow: '0px 6px 8px rgba(0, 0, 0, 0.4)',
@@ -23,9 +32,9 @@ const NormalButton = () => {
       }} // Active effect
       _focus={{ outline: 'none' }} // Remove focus outline
     >
-      APE IN
+      EXPLORE
     </Button>
   );
 };
 
-export default NormalButton;
+export default YellowButton;

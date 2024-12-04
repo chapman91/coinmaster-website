@@ -1,7 +1,6 @@
 // Different Pages
 export { default as BuyNowPage } from './buy-now/page';
 export { default as HomePage } from './home/page';
-export { default as HowToBuyPage } from './how-to-buy/page';
 
 // Different Sections
 export { default as About } from './sections/about/page';

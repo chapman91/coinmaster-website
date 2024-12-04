@@ -43,18 +43,8 @@ const TokenomicsSection = () => {
     },
     {
       title: 'LIQUIDITY POOL',
-      percentage: '90%',
+      percentage: '100%',
       imageSrc: images.liquidityPool,
-    },
-    {
-      title: 'DAO TREASURY',
-      percentage: '5%',
-      imageSrc: images.treasuryImage,
-    },
-    {
-      title: 'CREATORS',
-      percentage: '5%',
-      imageSrc: images.creatorsImage,
     },
   ];
 
@@ -166,7 +156,7 @@ const TokenomicsSection = () => {
         alignItems="center"
       >
         <SimpleGrid
-          columns={{ base: 1, md: 2, lg: 4 }}
+          columns={{ base: 1, md: 2, lg: 2 }}
           spacing={6}
           justifyContent="center"
           alignItems="center"

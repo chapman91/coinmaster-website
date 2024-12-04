@@ -13,6 +13,22 @@
   color: white; /*Ensures text is visible over the background */
 }
 
+.buyNowContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  height: 90%;
+  text-align: center;
+  padding: 20px;
+}
+
+.buyNowImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
 /* Responsive adjustments  */
 @media (max-width: 768px) {
   .buyNowPage {
