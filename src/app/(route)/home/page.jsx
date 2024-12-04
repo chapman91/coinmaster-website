@@ -41,10 +41,12 @@ const HomePage = () => {
           priority
         />
 
-        <img
+        <Image
           src={images.yellowStrip}
           alt="Yellow Strip"
           className={styles.yellowStripHomePage}
+          width={1280}
+          height={21}
         />
 
         {/* CoinMasters Image and Description */}

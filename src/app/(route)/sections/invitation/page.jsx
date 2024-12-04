@@ -9,14 +9,10 @@ import Image from 'next/image';
 import NormalButton from '../../../components/atoms/client/normalButton';
 import { Comic_Neue } from '@next/font/google';
 
-
 const comicNue = Comic_Neue({
   subsets: ['latin'],
-  weight: ['300', '400', '700'], 
-})
-
-
-
+  weight: ['300', '400', '700'],
+});
 
 const InvitationSection = () => {
   return (
@@ -47,8 +43,8 @@ const InvitationSection = () => {
           justifyContent="end"
           alignItems={{ base: 'center', md: 'right' }}
           position={{ base: 'static', md: 'absolute' }}
-          top={{ base: 'auto', md: '140px' }}
-          left={{ base: 'auto', md: '-213px' }}
+          top={{ base: 'auto', md: '105px' }}
+          left={{ base: 'auto', md: '-190px' }}
           width={{ base: '100%', md: '800px' }}
           height={{ base: 'auto', md: 'auto' }} // Auto height on mobile
         >
@@ -66,22 +62,33 @@ const InvitationSection = () => {
 
         {/* Text Section */}
         <GridItem area="text">
-          <VStack spacing={2} fontWeight="bold" textTransform="uppercase" w="100%" mt={{ base: 'auto', md: 'auto' }} mb={{ base: 0, md: '4rem' }}>
+          <VStack
+            spacing={2}
+            fontWeight="bold"
+            textTransform="uppercase"
+            w="100%"
+            mt={{ base: 'auto', md: 'auto' }}
+            mb={{ base: 0, md: '4rem' }}
+          >
             {/* Replace for Cyrocoin Text */}
             <div className={styles.cyrocoinImageContainer}>
-            <Image
-              src={cyrocoinImage}
-              alt="Hero Foreground"
-              className={styles.cyrcoinImage}
-              width={1366}
-              height={763}
-              objectFit="contain"
-              objectPosition="center"
-              priority
-            />
+              <Image
+                src={cyrocoinImage}
+                alt="Hero Foreground"
+                className={styles.cyrcoinImage}
+                width={1366}
+                height={763}
+                objectFit="contain"
+                objectPosition="center"
+                priority
+              />
             </div>
-            <Text className={comicNue.className} fontSize={{ base: '1rem', md: '1.5rem' }} maxW="600px">
-            Become a part of CoinMaster's journey to protect NeoTropolis and fight against corruption, villains, and criminals.
+            <Text
+              className={comicNue.className}
+              fontSize={{ base: '1rem', md: '1.5rem' }}
+              maxW="600px"
+            >
+              Become a part of CoinMaster's journey to protect NeoTropolis.
             </Text>
             {/* Button  */}
             <NormalButton onClick={() => (window.location.href = '/join-us')} />
