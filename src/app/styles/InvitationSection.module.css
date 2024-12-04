@@ -22,29 +22,16 @@
 
 /* Extra Small Devices (Phones, < 480px) */
 @media (max-width: 480px) {
-  .responsive-image-container {
-    height: auto;
-    padding-top: 75%; /* Adjust to a 4:3 aspect ratio for smaller screens */
-  }
 }
 
 /* Small Devices (Phones, Tablets, < 768px) */
 @media (max-width: 768px) {
-  .responsive-image-container {
-    padding-top: 56.25%; /* Standard 16:9 aspect ratio */
-  }
 }
 
 /* Medium Devices (Tablets, < 1024px) */
 @media (max-width: 1024px) {
-  .responsive-image-container {
-    padding-top: 50%; /* Adjust for wider aspect ratio */
-  }
 }
 
 /* Large Devices (Desktops, >= 1025px) */
 @media (min-width: 1025px) {
-  .responsive-image-container {
-    padding-top: 42%; /* Maintain a wide aspect ratio for large screens */
-  }
 }

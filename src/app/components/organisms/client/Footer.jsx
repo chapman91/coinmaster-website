@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import styles from '../../../styles/Footer.module.css';
 import images from '../../../assets/images';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -22,7 +23,12 @@ const Footer = () => {
               rel="noopener noreferrer"
               className={styles.iconLink}
             >
-              <img src={images.twitter} alt="Twitter" />
+              <Image
+                width={70}
+                height={70}
+                src={images.twitter}
+                alt="Twitter"
+              />
             </a>
           </Col>
           {/* Telegram Logo */}
@@ -33,7 +39,12 @@ const Footer = () => {
               rel="noopener noreferrer"
               className={styles.iconLink}
             >
-              <img src={images.telegramFooter} alt="Telegram" />
+              <Image
+                width={70}
+                height={70}
+                src={images.telegramFooter}
+                alt="Telegram"
+              />
             </a>
           </Col>
           {/* CoinGecko Logo */}
@@ -44,7 +55,12 @@ const Footer = () => {
               rel="noopener noreferrer"
               className={styles.iconLink}
             >
-              <img src={images.coingeckoFooter} alt="CoinGecko" />
+              <Image
+                width={70}
+                height={70}
+                src={images.coingeckoFooter}
+                alt="CoinGecko"
+              />
             </a>
           </Col>
           {/* CoinMarketCap Logo */}
@@ -55,7 +71,12 @@ const Footer = () => {
               rel="noopener noreferrer"
               className={styles.iconLink}
             >
-              <img src={images.coinmarketcapFooter} alt="CoinMarketCap" />
+              <Image
+                width={70}
+                height={70}
+                src={images.coinmarketcapFooter}
+                alt="CoinMarketCap"
+              />
             </a>
           </Col>
         </Row>

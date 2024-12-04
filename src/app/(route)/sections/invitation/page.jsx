@@ -88,7 +88,7 @@ const InvitationSection = () => {
               fontSize={{ base: '1rem', md: '1.5rem' }}
               maxW="600px"
             >
-              Become a part of CoinMaster's journey to protect NeoTropolis.
+              Become a part of CoinMaster&#39;s journey to protect NeoTropolis.
             </Text>
             {/* Button  */}
             <NormalButton onClick={() => (window.location.href = '/join-us')} />
