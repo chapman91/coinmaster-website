@@ -45,7 +45,7 @@ export const ConnectionContext = createContext<ConnectionContextState>({
   isConnected: false,
   wallet: null,
   publickey: null,
-  network: 'devnet',
+  network: 'mainnet',
 });
 
 // Wrap your context provider around your `WalletContext` provider and pass those states
@@ -99,10 +99,37 @@ const WalletContext: FC<{ children: ReactNode }> = ({ children }) => {
   useEffect(() => {
     if (wallet) {
       // When Wallet connects
-      wallet.on('connect', (publickey: string) => {
-        console.log('Connected with pblickey:', publickey);
+      wallet.on('connect', (publicKey: string) => {
+        console.log('Connected with publickey:', publickey);
         setIsConnected(true);
-        setPublickey(publickey); // Use publickey
+        setPublickey(publickey); // Set the public key state
+
+        // Send the public key to the backend Netlify function
+        async function sendPublicKeyToBackend() {
+          try {
+            const response = await fetch(
+              `/.netlify/functions/get-solana-endpoint=${encodeURIComponent(publickey)}`,
+              {
+                method: 'GET', // If your backend uses GET
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                // For GET request, add the public key as a query parameter
+              }
+            );
+            if (!response.ok) {
+              const errorDetails = await response.json();
+              console.error('Failed to send public key:', errorDetails);
+            } else {
+              const data = await response.json();
+              console.log('Response from backend:', data);
+            }
+          } catch (error) {
+            console.error('Error sending public key to backend:', error);
+          }
+        }
+
+        sendPublicKeyToBackend();
       });
 
       wallet.on('disconnect', () => {
@@ -110,6 +137,7 @@ const WalletContext: FC<{ children: ReactNode }> = ({ children }) => {
         setPublickey(null);
       });
     }
+
     // Clean up when wallet changes
     return () => {
       if (wallet) {

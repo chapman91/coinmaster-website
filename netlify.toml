@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"   # Build command
+  publish = ".next"           # Directory to publish
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[functions]
+  directory = "netlify/functions" # Directory for serverless functions
+  external_node_modules = ["module-one", "module-two"]
