@@ -11,7 +11,7 @@ import { Comic_Neue } from 'next/font/google';
 
 const comicNue = Comic_Neue({
   subsets: ['latin'],
-  weight: ['400', '700', '900'],
+  weight: ['300', '400', '700'],
 });
 
 const InvitationSection = () => {
