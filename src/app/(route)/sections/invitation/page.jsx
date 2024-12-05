@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Box, Text, Button, Grid, GridItem, VStack } from '@chakra-ui/react';
+import { Box, Text, Grid, GridItem, VStack } from '@chakra-ui/react';
 import cyrocoinImage from '../../../assets/cyrocoin.png';
 import images from '../../../assets/images';
 import styles from '../../../styles/InvitationSection.module.css';
@@ -11,7 +11,7 @@ import { Comic_Neue } from 'next/font/google';
 
 const comicNue = Comic_Neue({
   subsets: ['latin'],
-  weight: ['400'],
+  weight: ['400', '700', '900'],
 });
 
 const InvitationSection = () => {

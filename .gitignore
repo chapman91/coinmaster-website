@@ -17,3 +17,6 @@ public/_next-video
 # API keys
 .env.local
 
+
+# Local Netlify folder
+.netlify
