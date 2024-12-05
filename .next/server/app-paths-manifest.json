@@ -1,6 +1,13 @@
 {
-  "/page": "app/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/opengraph-image.jpg/route": "app/opengraph-image.jpg/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/(route)/buy-now/page": "app/(route)/buy-now/page.js",
-  "/(route)/home/page": "app/(route)/home/page.js"
+  "/(route)/home/page": "app/(route)/home/page.js",
+  "/(route)/sections/about/page": "app/(route)/sections/about/page.js",
+  "/(route)/sections/carousel/page": "app/(route)/sections/carousel/page.js",
+  "/(route)/sections/invitation/page": "app/(route)/sections/invitation/page.js",
+  "/(route)/sections/roadmap/page": "app/(route)/sections/roadmap/page.js",
+  "/(route)/sections/tokenomics/page": "app/(route)/sections/tokenomics/page.js",
+  "/page": "app/page.js"
 }

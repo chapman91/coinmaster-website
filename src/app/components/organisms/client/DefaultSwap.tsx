@@ -39,10 +39,7 @@ export default function DefaultSwap() {
     // Synchronize wallet state with Jupiter Terminal
     if (!window.Jupiter?.syncProps) return;
     window.Jupiter.syncProps({ passthroughWalletContextState });
-  }, [
-    passthroughWalletContextState.connected,
-    passthroughWalletContextState.publickey,
-  ]);
+  }, [passthroughWalletContextState]);
 
   return (
     <div>

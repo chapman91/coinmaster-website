@@ -7,7 +7,7 @@ import { NavigationBar } from './components/componentsBarrel';
 import { Footer } from './components/componentsBarrel';
 import './styles/global.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Roboto } from '@next/font/google';
+import { Roboto } from 'next/font/google';
 import '@solana/wallet-adapter-react-ui/styles.css';
 import { Metadata } from 'next';
 

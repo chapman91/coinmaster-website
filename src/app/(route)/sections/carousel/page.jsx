@@ -1,18 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import {
-  Box,
-  Image,
-  Badge,
-  Text,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalCloseButton,
-  useDisclosure,
-  useDisClosureButton,
-} from '@chakra-ui/react';
+import React from 'react';
+import { Box, Image, Text } from '@chakra-ui/react';
 
 import Slider from 'react-slick';
 import images from '../../../assets/images';
@@ -77,9 +66,6 @@ const PrevArrow = ({ onClick }) => (
 );
 
 const CarouselSection = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [currentFlipbookId, setCurrentFlipbookId] = useState(null);
-
   const settings = {
     dots: true, // show dots for navigation
     infinite: false, // Infinite scroll
@@ -141,26 +127,6 @@ const CarouselSection = () => {
     },
   ];
 
-  // Load Heyzine script dynamically when modal is open
-  useEffect(() => {
-    if (isOpen && currentFlipbookId) {
-      const script = document.createElement('script');
-      script.src = 'https://heyzine.com/js/flipbook-embed.js';
-      script.async = true;
-      document.body.appendChild(script);
-
-      // Clean up the scri[t when the modal is closed
-      return () => {
-        document.body.removeChild(script);
-      };
-    }
-  }, [isOpen, currentFlipbookId]);
-
-  const handleCoverClick = (flipbookId) => {
-    setCurrentFlipbookId(flipbookId);
-    onOpen();
-  };
-
   return (
     <Box
       as="section"
@@ -176,14 +142,15 @@ const CarouselSection = () => {
           {flipbooks.map((book, index) => (
             <Box
               key={index}
-              className={styles.slide} // Apply to focus styles
+              className={styles.slide}
+              // Apply to focus styles
               position="relative"
               borderRadius="xl"
               overflow="hidden"
               boxShadow="0px 8px 16px rgba(0, 0, 0, 0.8), 0px 8px 16px rgba(0, 0, 0, 0.8)"
               // mx={{ base: 4, sm: 2 , md: 2, lg: 2}} // Reduved margin for desktop
               // p={{ base: 10}}
-              onClick={() => window.open(book.link, '_blank')} // Open flipbook on click
+
               cursor="pointer"
               maxW="400px" // Mas width for consistency
               width={{ base: '90%', md: '45%' }} // Smaller width on desktop
@@ -196,6 +163,7 @@ const CarouselSection = () => {
             >
               {/* Badge Positioned on the Image */}
               <Image
+                alt="new Banner"
                 src={images.newBanner}
                 position="absolute"
                 top={{ base: '-6px', sm: '-8px', md: '-3', lg: '-8px' }}
@@ -248,30 +216,6 @@ const CarouselSection = () => {
           ))}
         </Slider>
       </Box>
-      {/* Modal to display flipbook */}
-      <Modal isOpen={isOpen} onClose={onClose} size="full">
-        <ModalOverlay />
-        <ModalContent bg="black">
-          <ModalCloseButton color="white" />
-          <Box
-            width="100%"
-            height="100vh"
-            position="relative"
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-          >
-            {currentFlipbookId && (
-              <div
-                className="heyzine"
-                data-id={currentFlipbookId}
-                data-fullscreen="true"
-                style={{ width: '100%', height: '100%' }}
-              ></div>
-            )}
-          </Box>
-        </ModalContent>
-      </Modal>
     </Box>
   );
 };

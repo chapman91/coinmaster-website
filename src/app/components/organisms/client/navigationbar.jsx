@@ -4,7 +4,6 @@
 import React, { useState } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { WalletConnectButton } from '../../componentsBarrel';
 import Container from 'react-bootstrap/Container';
 import Alert from 'react-bootstrap/Alert';
@@ -139,7 +138,9 @@ function NavigationBar() {
       {/* Yellow Strip at the Bottom of Navigation Bar */}
       <div className={styles.yellowStripContainer}>
         <div className={styles.gradient}></div>
-        <img
+        <Image
+          width={1280}
+          height={21}
           src={images.yellowStrip}
           alt="Yellow Strip"
           className={styles.yellowStrip}

@@ -38,7 +38,7 @@ const TokenomicsSection = () => {
   const tokenomicsData = [
     {
       title: 'MAX SUPPLY',
-      percentage: '500 Trillion CYC',
+      percentage: '1 Billion CYC',
       imageSrc: images.cyrocoinDistribution,
     },
     {

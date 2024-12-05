@@ -130,7 +130,7 @@ const WalletContext: FC<{ children: ReactNode }> = ({ children }) => {
       value={{ connection, isConnected, wallet, publickey, network }}
     >
       <ConnectionProvider endpoint={endpoint}>
-        <WalletProvider wallets={wallets} autoconnect>
+        <WalletProvider wallets={wallets}>
           {typeof window !== 'undefined' && (
             <WalletModalProvider>{children}</WalletModalProvider>
           )}

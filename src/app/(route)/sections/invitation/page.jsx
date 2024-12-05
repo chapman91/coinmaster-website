@@ -7,11 +7,11 @@ import images from '../../../assets/images';
 import styles from '../../../styles/InvitationSection.module.css';
 import Image from 'next/image';
 import NormalButton from '../../../components/atoms/client/normalButton';
-import { Comic_Neue } from '@next/font/google';
+import { Comic_Neue } from 'next/font/google';
 
 const comicNue = Comic_Neue({
   subsets: ['latin'],
-  weight: ['300', '400', '700'],
+  weight: ['400'],
 });
 
 const InvitationSection = () => {
