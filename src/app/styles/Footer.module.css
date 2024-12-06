@@ -9,7 +9,7 @@
 }
 
 .footerContainer {
-  min-height: 200px;
+  min-height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -151,5 +151,14 @@
   .copyrightSection {
     font-size: 10px;
     padding-top: 5px;
+  }
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 480px) {
+  /* Image dimension small devices */
+  .iconLink img {
+    width: 50px;
+    height: 50px;
   }
 }

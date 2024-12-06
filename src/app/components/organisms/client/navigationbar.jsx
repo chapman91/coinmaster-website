@@ -4,7 +4,7 @@
 import React, { useState } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { WalletConnectButton } from '../../componentsBarrel';
+// import { WalletConnectButton } from '../../componentsBarrel';
 import Container from 'react-bootstrap/Container';
 import Alert from 'react-bootstrap/Alert';
 import styles from '../../../styles/NavigationBar.module.css';
@@ -82,9 +82,9 @@ function NavigationBar() {
             />
           </div>
           {/* Wallet Connect Button */}
-          <div>
+          {/* <div>
             <WalletConnectButton />
-          </div>
+          </div> */}
         </div>
       </Alert>
 
@@ -102,7 +102,7 @@ function NavigationBar() {
               variant="tabs"
               defaultActiveKey="/home"
             >
-              <Nav.Item className={styles.navItem}>
+              {/* <Nav.Item className={styles.navItem}>
                 <Nav.Link
                   href="/home"
                   className={`${styles.customNavLink} ${styles.navLinkBold} `}
@@ -130,7 +130,7 @@ function NavigationBar() {
                 >
                   Buy Now
                 </Nav.Link>
-              </Nav.Item>
+              </Nav.Item> */}
             </Nav>
           </Navbar.Collapse>
         </Container>
