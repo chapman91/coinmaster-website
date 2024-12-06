@@ -32,6 +32,7 @@
 @media (max-width: 1024px) {
 }
 
-/* Large Devices (Desktops, >= 1025px) */
-@media (min-width: 1025px) {
+
+@media (max-width: 1199px) {
+  
 }
