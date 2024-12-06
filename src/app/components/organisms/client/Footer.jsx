@@ -52,40 +52,32 @@ const Footer = () => {
               placement="top"
               overlay={<Tooltip id="tooltip-coingecko">Coming Soon</Tooltip>}
             >
-              <a
-                href="https://coingecko.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.iconLink}
-              >
+              <span className={styles.iconLink}>
                 <Image
                   width={70}
                   height={70}
                   src={images.coingeckoFooter}
                   alt="CoinGecko"
                 />
-              </a>
+              </span>
             </OverlayTrigger>
           </Col>
           {/* CoinMarketCap Logo */}
           <Col xs="auto">
-            <OverlayTrigger 
-             placement="top"
-             overlay={<Tooltip id="tooltip-coinmarketcap">Coming Soon</Tooltip>}
+            <OverlayTrigger
+              placement="top"
+              overlay={
+                <Tooltip id="tooltip-coinmarketcap">Coming Soon</Tooltip>
+              }
             >
-            <a
-              href="https://coinmarketcap.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.iconLink}
-            >
-              <Image
-                width={70}
-                height={70}
-                src={images.coinmarketcapFooter}
-                alt="CoinMarketCap"
-              />
-            </a>
+              <span className={styles.iconLink}>
+                <Image
+                  width={70}
+                  height={70}
+                  src={images.coinmarketcapFooter}
+                  alt="CoinMarketCap"
+                />
+              </span>
             </OverlayTrigger>
           </Col>
         </Row>
