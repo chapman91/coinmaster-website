@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import images from '../../assets/images';
 import styles from '../../styles/HomePage.module.css';
