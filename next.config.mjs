@@ -23,10 +23,10 @@ const nextConfig = {
   // Images configuration
   images: {
     // Add external domains if required
-    domains: [], // Leave empty if only using `public` directory
+    domains: ['cyrocoin.xyz'], // Leave empty if only using `public` directory
 
     // Disables image optimization for troubleshooting
-    unoptimized: false, // Set to true temporarily if you suspect optimization issues
+    unoptimized: true, // Set to true temporarily if you suspect optimization issues
   },
 
   // Additional configurations
