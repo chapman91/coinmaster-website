@@ -1,5 +1,4 @@
 // Different Pages
-export { default as BuyNowPage } from './buy-now/page';
 export { default as HomePage } from './home/page';
 
 // Different Sections

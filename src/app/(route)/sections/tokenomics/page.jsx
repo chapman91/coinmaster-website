@@ -16,29 +16,23 @@ import images from '../../../assets/images';
 import { FiCopy } from 'react-icons/fi';
 
 /**
- * TokenomicsPage Component
+ * TokenomicsSection Component
  *
- * This component displays a grid of TokenomicsCard components, each representing
- * a different aspect of the tokenomics structure. The data for each card (title,
- * percentage, and image) is provided in the tokenomicsData array, allowing for easy
- * customization or expansion if additional cards are needed.
- *
- * This component is designed to be rendered on the tokenomics page, providing a
- * visually appealing breakdown of the token distribution or other tokenomics details.
- *
- * @returns {JSX.Element} A grid layout of TokenomicsCard components, spaced and responsive
- *                        to adapt to various screen sizes.
+ * Displays a grid of TokenomicsCard components representing various aspects of the tokenomics structure.
+ * Includes a background video and functionality to copy the token address to the clipboard.
  */
 
 const TokenomicsSection = () => {
-  // useToast Initilaization
   const toast = useToast();
 
-  // Array of tokenomics data to be displayed on the page, with each object representing a card's content.
+  // Token address to copy
+  const tokenAddress = '0xYourTokenAddressHere';
+
+  // Tokenomics data
   const tokenomicsData = [
     {
       title: 'MAX SUPPLY',
-      percentage: '1 Billion CYC',
+      percentage: '1 Billion $CYC',
       imageSrc: images.cyrocoinDistribution,
     },
     {
@@ -48,32 +42,33 @@ const TokenomicsSection = () => {
     },
   ];
 
-  //  Use toast After Successful Copy: In the handdleCOpyAddress fun
+  // Fallback function for clipboard copy
+  const fallbackCopyTextToClipboard = (text) => {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed'; // Prevent scrolling
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
 
-  // Token Address
-  const tokenAddress = '0xYourTokenAddressHere';
+    try {
+      document.execCommand('copy');
+      toast({
+        title: 'Copied to clipboard',
+        description: 'Token address has been copied!',
+        status: 'success',
+        duration: 2000,
+        isClosable: true,
+      });
+    } catch (err) {
+      console.error('Fallback: Unable to copy', err);
+    } finally {
+      document.body.removeChild(textArea);
+    }
+  };
 
-  /** Copies the token address to the clipboard and provides user feedback  via a toast notification
-   *  indicating whether the copy action was successful or not.
-   * */
-
+  // Clipboard copy handler
   const handleCopyAddress = () => {
-    console.log('Copy icon clicked');
-    // Clipboard Write Operation
-    /**
-     *  navigator.clipboard.writeText(tokenAddress): Uses the Clipboard API's `writeText`
-     *  method to copy the `tokenAddress` string to the clipboard.  `navigator.clipboard`
-     *  provides an asynchronous way to access the clipboard, and writeText accepts the text
-     *  you want to copy.
-     *
-     */
-
-    /**
-     * Attaches a `then` method to handle the successful case. If the copy operation succeeds,
-     * the code inside this then block will execute.
-     *
-     */
-
     if (navigator.clipboard) {
       navigator.clipboard
         .writeText(tokenAddress)
@@ -95,7 +90,6 @@ const TokenomicsSection = () => {
     }
   };
 
-  // TokenomicsSection structure and styles
   return (
     <Box
       position="relative"
@@ -108,7 +102,7 @@ const TokenomicsSection = () => {
     >
       {/* Background Video */}
       <video
-        src="/assets/videos/cyronmics_bg.mp4" // Direct URL reference from the public directory
+        src="/assets/videos/cyronmics_bg.mp4"
         autoPlay
         loop
         muted
@@ -125,7 +119,7 @@ const TokenomicsSection = () => {
         }}
       />
 
-      {/* Overlay to further darken the background and improve readability */}
+      {/* Overlay */}
       <Box
         position="absolute"
         top={0}
@@ -136,7 +130,7 @@ const TokenomicsSection = () => {
         zIndex={0}
       />
 
-      {/* Section Content  */}
+      {/* Section Content */}
       <Heading
         as="h2"
         size="lg"
@@ -148,7 +142,6 @@ const TokenomicsSection = () => {
         Tokenomics Overview
       </Heading>
 
-      {/* Centered Tokenomics Cards */}
       <Box
         width="100%"
         display="flex"
@@ -161,7 +154,6 @@ const TokenomicsSection = () => {
           justifyContent="center"
           alignItems="center"
         >
-          {/* Mapping tokenomicsData to Render TokenomicsCard Components */}
           {tokenomicsData.map((data, index) => (
             <TokenomicsCard
               key={index}
@@ -174,7 +166,7 @@ const TokenomicsSection = () => {
         </SimpleGrid>
       </Box>
 
-      {/* Token Address footer text  */}
+      {/* Token Address Copy Button */}
       <Box mt={6} zIndex={1}>
         <Tooltip label="Click to copy" aria-label="A tooltip">
           <Button

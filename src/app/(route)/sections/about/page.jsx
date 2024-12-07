@@ -87,10 +87,7 @@ const About = () => {
             </Text>
             {/* CoinMaster Story Summary */}
             <Text fontSize="lg" color="gray.700">
-              I discovered the CyroCoin in the ashes of my grandparents&#39;
-              home, destroyed by the Lazarus Group. I was just an intern then,
-              but that day changed everything. Now, I fight for NeoTropolis and
-              to honor their legacy.
+            I discovered the CyroCoin in the ashes of my grandparents' home, destroyed by the Lazarus Group. I was just an intern then, but that day changed everything. Now, I fight for NeoTropolis and to honor their legacy.
             </Text>
             {/* Signature */}
             <Text
@@ -119,7 +116,7 @@ const About = () => {
                 base: '80px', // Smaller screens
                 sm: '100px', // Small screens (480px and up)
                 md: '150px', // Medium screens (768px and up)
-                lg: '395px', // Large screens (992px and up)
+                lg: '385px', // Large screens (992px and up)
               }}
               position="absolute"
               right={{
@@ -132,7 +129,7 @@ const About = () => {
                 base: '-5%', // Extra space above for smaller screens
                 sm: '-7%', // Slight adjustment for small screens
                 md: '-10%', // Medium screens
-                lg: '-82%', // Large screens (exact fit)
+                lg: '-50%', // Large screens (exact fit)
               }}
               zIndex="2" // Ensures it remains above other elements
             />
@@ -147,7 +144,6 @@ const About = () => {
               position="absolute"
               bottom="0"
               right="-3"
-              priority
             />
           </GridItem>
         </Grid>
