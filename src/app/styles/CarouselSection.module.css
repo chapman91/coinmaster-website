@@ -1,3 +1,27 @@
+.carouselContainer {
+  z-index: 5;
+}
+
+
+.prevArrow {
+  z-index: 5;
+}
+
+
+.newBanner {
+  z-index: 3;
+}
+
+
+.darkOverlay {
+  z-index: 2;
+}
+
+
+.volumeText {
+  z-index: 4;
+}
+
 .slide {
   transition:
     transform 0.3s ease,

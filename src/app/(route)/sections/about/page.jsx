@@ -1,16 +1,8 @@
 import React from 'react';
-import {
-  Box,
-  Heading,
-  Text,
-  VStack,
-  Grid,
-  GridItem,
-} from '@chakra-ui/react';
+import { Box, Heading, Text, VStack, Grid, GridItem } from '@chakra-ui/react';
 import Image from 'next/image';
 import images from '../../../assets/images';
-import styles from "../../../styles/About.module.css"
-
+import styles from '../../../styles/About.module.css';
 
 // About functional React component called AboutSection
 const About = () => {
@@ -84,7 +76,6 @@ const About = () => {
           // }}
           width={424}
           height={451}
-          zIndex={2}
         />
 
         {/* Text Column - Left Side */}
@@ -141,8 +132,8 @@ const About = () => {
               //     md: '150px', // Medium screens (768px and up)
               //     lg: '385px', // Large screens (992px and up)
               //   }}
-              // }}      
-              className={styles.exclamationBubbleImage}   
+              // }}
+              className={styles.exclamationBubbleImage}
               position="absolute"
               right={{
                 base: '-2%', // Adjusted to keep in place for smaller screens
@@ -156,7 +147,6 @@ const About = () => {
                 md: '-10%', // Medium screens
                 lg: '-50%', // Large screens (exact fit)
               }}
-              zIndex={2} // Ensures it remains above other elements
               width={500}
               height={443}
             />

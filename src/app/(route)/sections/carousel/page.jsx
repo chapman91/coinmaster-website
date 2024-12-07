@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   Box,
   Image,
@@ -11,9 +11,7 @@ import {
   ModalContent,
   ModalCloseButton,
   useDisclosure,
-  useDisClosureButton,
 } from '@chakra-ui/react';
-
 import Slider from 'react-slick';
 import images from '../../../assets/images';
 import 'slick-carousel/slick/slick.css';
@@ -33,7 +31,7 @@ const NextArrow = ({ onClick }) => (
     alignItems="center"
     justifyContent="center"
     cursor="pointer"
-    zIndex={5}
+    className={styles.carouselContainer}
     onClick={onClick}
   >
     <Image
@@ -60,7 +58,7 @@ const PrevArrow = ({ onClick }) => (
     alignItems="center"
     justifyContent="center"
     cursor="pointer"
-    zIndex={5}
+    className={styles.prevArrow}
     onClick={onClick}
   >
     <Image
@@ -176,11 +174,11 @@ const CarouselSection = () => {
                 position="absolute"
                 top={{ base: '-6px', sm: '-8px', md: '-3', lg: '-8px' }}
                 left={{ base: '-2px', sm: '-8px', md: '-2', lg: '-10px' }}
-                zIndex={3} // Ensure it's on top of the image
                 width={{ base: '80px', sm: '100px', md: '120px', lg: '120px' }} // Responsive width for the badge
                 height="auto" // Maintain aspect ratio
                 boxShadow={{ base: 'sm', md: 'lg', lg: 'xl' }}
                 alt="New Banner"
+                className={styles.newBanner}
               />
 
               {/* Cover Image  */}
@@ -203,7 +201,7 @@ const CarouselSection = () => {
                 width="100%"
                 height="100%"
                 bg="rgba(0, 0, 0, 0.2)" // Semi-transparent black background
-                zIndex={2} // Above the image but below other content
+                className={styles.darkOverlay}
               />
 
               {/* Volume Text */}
@@ -216,7 +214,7 @@ const CarouselSection = () => {
                 px={4}
                 py={2}
                 border="2px solid white"
-                zIndex={4}
+                className={styles.volumeText}
               >
                 <Text fontWeight="extrabold">{book.volume}</Text>
               </Box>
