@@ -13,47 +13,6 @@ import images from '../../../assets/images';
 import { useRouter } from 'next/navigation';
 
 function NavigationBar() {
-  const [hoveredItem, setHoveredItem] = useState(null);
-
-  const handleMouseEnter = (item) => {
-    setHoveredItem(item);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredItem(null);
-  };
-
-  // Style function for nav links
-  const getLinkColor = (route) => ({
-    color: currentRoute === route ? 'yellow' : 'white', // Yellow for active link, white for others
-    fontWeight: currentRoute === route ? 'bold' : 'normal', // Bold for active link
-    backgroundColor: 'transparent', // No background for links
-    border: currentRoute === route ? '2px solid yellow' : 'none', // Add a yellow border for active links if needed
-    borderRadius: '4px', // Optional for a slight rounded highlight
-    padding: '5px 10px',
-    transition: 'color 0.3s, border 0.3s', // Smooth transition for color and border changes
-  });
-
-  const router = useRouter();
-
-  const currentRoute = router.pathname;
-
-  // Instead od checking `currentRoute` for each link, consider using the active prop for `Nav.Link`
-  // Refactor the `Nav.Link` componenets to use the `active` prop based on your route condition
-  const getLinkStyle = (route, item) => ({
-    // currentRoute === route: This checks if the `currentRoute` (the current URL path that the user is on) is equal to route (the specific path for that navigation link).
-    // hoveredItem === item: This checks if hoveredItem (the item currently being hovered over by the mouse) is equal to item (the specific identifier for that navigation link).
-    // Logical OR Operator `||`: if either of conditions on the left or right evaluates to true, the overall expression will be true.
-    // Ternary Operator: `condition ? valueIfTrue : valueIfFalse`
-    // `===` is a stricy equality operator: use to compare two values to determine if they are equal in both value and type
-    color: currentRoute === route || hoveredItem === item ? 'black' : 'white',
-    backgroundColor:
-      currentRoute === route || hoveredItem === item ? 'white' : 'transparent',
-    borderRadius: '0',
-    border: 'none',
-    transition: 'color 0.3s',
-  });
-
   return (
     <header className="header">
       {/* Banner Section */}
@@ -81,10 +40,6 @@ function NavigationBar() {
               className={styles.logoLeft}
             />
           </div>
-          {/* Wallet Connect Button */}
-          {/* <div>
-            <WalletConnectButton />
-          </div> */}
         </div>
       </Alert>
 
@@ -101,37 +56,7 @@ function NavigationBar() {
               justify
               variant="tabs"
               defaultActiveKey="/home"
-            >
-              {/* <Nav.Item className={styles.navItem}>
-                <Nav.Link
-                  href="/home"
-                  className={`${styles.customNavLink} ${styles.navLinkBold} `}
-                  active={currentRoute === '/home'}
-                  style={{
-                    ...getLinkStyle('/home', 'home'),
-                  }}
-                  onMouseEnter={() => handleMouseEnter('home')}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  Home
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item className={styles.navItem}>
-                <Nav.Link
-                  href="./buy-now"
-                  eventKey="link-3"
-                  className={`${styles.customNavLink} ${styles.navLinkBold}`}
-                  active={currentRoute === '/buy-now'}
-                  onMouseEnter={() => handleMouseEnter('buy-now')}
-                  onMouseLeave={handleMouseLeave}
-                  style={{
-                    ...getLinkStyle('/buy-now', 'buy-now'),
-                  }}
-                >
-                  Buy Now
-                </Nav.Link>
-              </Nav.Item> */}
-            </Nav>
+            ></Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
