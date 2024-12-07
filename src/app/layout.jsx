@@ -5,8 +5,6 @@ import { Footer } from './components/componentsBarrel';
 import './styles/global.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Roboto } from 'next/font/google';
-import '@solana/wallet-adapter-react-ui/styles.css';
-import { Metadata } from 'next';
 
 // Roboto Configuration
 const roboto = Roboto({
@@ -38,11 +36,8 @@ export default function RootLayout({ children }) {
           {/* Wrap the main app content with WalletContext */}
 
           <NavigationBar />
-          <div className="content">
-            {children}
-
-            <Footer />
-          </div>
+          <div className="content">{children}</div>
+          <Footer />
         </ChakraProviderWrapper>
       </body>
     </html>
