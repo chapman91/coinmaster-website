@@ -121,7 +121,6 @@ const CarouselSection = () => {
             }
             border="1px solid black"
             cursor="pointer"
-          
             transition="all 0.3s"
             _hover={{ transform: 'scale(1.2)' }} // Slight enlarge on hover
           />
@@ -136,7 +135,7 @@ const CarouselSection = () => {
       volume: 'COMING SOON!',
       image: images.coinmasterCover, // Replace with correct path
       flipbookId: 'bdad114828', // Replace with your Heyzine link
-    }
+    },
   ];
 
   return (
@@ -181,6 +180,7 @@ const CarouselSection = () => {
                 width={{ base: '80px', sm: '100px', md: '120px', lg: '120px' }} // Responsive width for the badge
                 height="auto" // Maintain aspect ratio
                 boxShadow={{ base: 'sm', md: 'lg', lg: 'xl' }}
+                alt="New Banner"
               />
 
               {/* Cover Image  */}

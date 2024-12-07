@@ -87,7 +87,10 @@ const About = () => {
             </Text>
             {/* CoinMaster Story Summary */}
             <Text fontSize="lg" color="gray.700">
-            I discovered the CyroCoin in the ashes of my grandparents' home, destroyed by the Lazarus Group. I was just an intern then, but that day changed everything. Now, I fight for NeoTropolis and to honor their legacy.
+              I discovered the CyroCoin in the ashes of my grandparents&apos;
+              home, destroyed by the Lazarus Group. I was just an intern then,
+              but that day changed everything. Now, I fight for NeoTropolis and
+              to honor their legacy.
             </Text>
             {/* Signature */}
             <Text

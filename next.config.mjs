@@ -5,7 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   // Enable experimental Turbopack or Webpack as needed
   experimental: {
-    turbo: false, // Set to true to enable Turbopack
+    turbo: {}, // Set to true to enable Turbopack
   },
   // Configure Webpack fallback (if Turbopack is off)
   webpack(config) {

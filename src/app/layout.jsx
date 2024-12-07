@@ -1,8 +1,5 @@
 // Adjust the path if your globals.css is in a different folder
-import {
-
-  ChakraProviderWrapper,
-} from './components/componentsBarrel';
+import { ChakraProviderWrapper } from './components/componentsBarrel';
 import { NavigationBar } from './components/componentsBarrel';
 import { Footer } from './components/componentsBarrel';
 import './styles/global.css';
@@ -39,14 +36,13 @@ export default function RootLayout({ children }) {
       <body className={roboto.className}>
         <ChakraProviderWrapper>
           {/* Wrap the main app content with WalletContext */}
-       
-            <NavigationBar />
-            <div className="content">
-              {children}
 
-              <Footer />
-            </div>
-        
+          <NavigationBar />
+          <div className="content">
+            {children}
+
+            <Footer />
+          </div>
         </ChakraProviderWrapper>
       </body>
     </html>
