@@ -4,11 +4,13 @@ import {
   Heading,
   Text,
   VStack,
-  Image,
   Grid,
   GridItem,
 } from '@chakra-ui/react';
+import Image from 'next/image';
 import images from '../../../assets/images';
+import styles from "../../../styles/About.module.css"
+
 
 // About functional React component called AboutSection
 const About = () => {
@@ -63,15 +65,26 @@ const About = () => {
             lg: '-20%',
             xl: '-15%',
           }}
-          boxSize={{
-            xs: '70px',
-            base: '50px',
-            sm: '70px',
-            md: '80px',
-            lg: '145px',
-            xl: '200px',
-          }}
-          zIndex="2"
+          className={styles.exclamationImage}
+          // width={{
+          //   xs: '70px',
+          //   base: '50px',
+          //   sm: '70px',
+          //   md: '80px',
+          //   lg: '145px',
+          //   xl: '200px',
+          // }}
+          // height={{
+          //   xs: '70px',
+          //   base: '50px',
+          //   sm: '70px',
+          //   md: '80px',
+          //   lg: '145px',
+          //   xl: '200px',
+          // }}
+          width={424}
+          height={451}
+          zIndex={2}
         />
 
         {/* Text Column - Left Side */}
@@ -115,12 +128,21 @@ const About = () => {
             <Image
               src={images.exclamationBubble}
               alt="Exclamation Bubble"
-              boxSize={{
-                base: '80px', // Smaller screens
-                sm: '100px', // Small screens (480px and up)
-                md: '150px', // Medium screens (768px and up)
-                lg: '385px', // Large screens (992px and up)
-              }}
+              // style={{
+              //   width={{
+              //     base: '80px', // Smaller screens
+              //     sm: '100px', // Small screens (480px and up)
+              //     md: '150px', // Medium screens (768px and up)
+              //     lg: '385px', // Large screens (992px and up)
+              //   }}
+              //   height={{
+              //     base: '80px', // Smaller screens
+              //     sm: '100px', // Small screens (480px and up)
+              //     md: '150px', // Medium screens (768px and up)
+              //     lg: '385px', // Large screens (992px and up)
+              //   }}
+              // }}      
+              className={styles.exclamationBubbleImage}   
               position="absolute"
               right={{
                 base: '-2%', // Adjusted to keep in place for smaller screens
@@ -134,7 +156,9 @@ const About = () => {
                 md: '-10%', // Medium screens
                 lg: '-50%', // Large screens (exact fit)
               }}
-              zIndex="2" // Ensures it remains above other elements
+              zIndex={2} // Ensures it remains above other elements
+              width={500}
+              height={443}
             />
           </GridItem>
 
@@ -143,7 +167,10 @@ const About = () => {
             <Image
               src={images.cyroMan}
               alt="CoinMaster SuperHero"
-              boxSize={{ base: '200px', md: '300px', lg: '400px' }}
+              // height={{ base: '200px', md: '300px', lg: '400px' }}
+              // width={{ base: '200px', md: '300px', lg: '400px' }}
+              width={500}
+              height={500}
               position="absolute"
               bottom="0"
               right="-3"

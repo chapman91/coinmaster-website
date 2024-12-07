@@ -1,7 +1,7 @@
 // Client side
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 // import { WalletConnectButton } from '../../componentsBarrel';
@@ -10,7 +10,6 @@ import Alert from 'react-bootstrap/Alert';
 import styles from '../../../styles/NavigationBar.module.css';
 import Image from 'next/image';
 import images from '../../../assets/images';
-import { useRouter } from 'next/navigation';
 
 function NavigationBar() {
   return (

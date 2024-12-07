@@ -1,5 +1,7 @@
 import React from 'react';
-import { Box, Image, Text, VStack } from '@chakra-ui/react';
+import { Box, Text, VStack } from '@chakra-ui/react';
+import Image from 'next/image';
+
 
 /**
  * TokenomicsCard Component
@@ -52,7 +54,7 @@ const TokenomicsCard = ({ title, percentage, imageSrc }) => {
           borderRadius="25px"
           objectFit="contain"
         >
-          <Image src={imageSrc} boxSize="210px" alt={title} />
+          <Image src={imageSrc} width={1366} height={768} alt={title} />
         </Box>
         <Text fontSize="xl" fontWeight="bold">
           {title}

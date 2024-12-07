@@ -1,0 +1,77 @@
+/* Exclamation Image */
+
+.exclamationImage {
+    position: relative;
+}
+
+/* ResponsiveImage.module.css */
+.exclamationBubbleImage {
+    position: absolute;
+  }
+ 
+  @media (max-width: 479px) {
+
+    .exclamationImage {
+        width: 70px;
+        height: 70px;
+    }
+
+    .exclamationBubbleImage {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  
+  @media (min-width: 480px) and (max-width: 767px) {
+
+    .exclamationImage {
+        width: 50px;
+        height: 50px;
+    }
+
+    .exclamationBubbleImage {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 991px) {
+
+    .exclamationImage {
+        width: 70px;
+        height: 70px;
+      }
+
+    .exclamationBubbleImage {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .exclamationBubbleImage {
+      width: 385px;
+      height: 385px;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .exclamationImage {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  
+  @media (min-width: 1200px) and (max-width: 1439px) {
+    .exclamationImage {
+      width: 145px;
+      height: 145px;
+    }
+  }
+  
+  @media (min-width: 1440px) {
+    .exclamationImage {
+      width: 200px;
+      height: 200px;
+    }
+  

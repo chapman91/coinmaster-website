@@ -6,7 +6,7 @@ const nextConfig = {
 
   // Enable experimental features if needed
   experimental: {
-    turbo: false, // Set to true if you want to use Turbopack
+    turbo: {}, // Set to true if you want to use Turbopack
   },
 
   // Webpack configuration
