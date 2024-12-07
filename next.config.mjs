@@ -3,13 +3,12 @@ import withBundleAnalyzer from '@next/bundle-analyzer';
 
 const nextConfig = {
   reactStrictMode: true,
-  // Enable experimental Turbopack or Webpack as needed
+  // Disable Turbopack temporarily if needed
   experimental: {
-    turbo: {}, // Set to true to enable Turbopack
+    turbo: false, // Set to true if using Turbopack
   },
-  // Configure Webpack fallback (if Turbopack is off)
+  // Webpack configuration
   webpack(config) {
-    // Ensure Turbopack's [turbopack]_runtime.js is handled properly
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
@@ -17,9 +16,9 @@ const nextConfig = {
     };
     return config;
   },
-  // Any additional configuration
+  // Image domain configuration
   images: {
-    domains: ['your-image-domain.com'], // Replace with allowed image domains
+    domains: ['cyrocoin.xyz'], // Ensure all domains are listed
   },
 };
 
