@@ -160,6 +160,8 @@ const TokenomicsSection = () => {
               title={data.title}
               percentage={data.percentage}
               imageSrc={data.imageSrc}
+              width={200}
+              height={200} 
               placeholder="blur"
             />
           ))}

@@ -4,7 +4,7 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 // import { WalletConnectButton } from '../../componentsBarrel';
-// import Alert from 'react-bootstrap/Alert';
+import Alert from 'react-bootstrap/Alert';
 import styles from '../../../styles/NavigationBar.module.css';
 import Image from 'next/image';
 import images from '../../../assets/images';
@@ -13,7 +13,7 @@ function NavigationBar() {
   return (
     <header>
       {/* Banner Section */}
-      <div
+      <Alert
         className={`${styles.customAlertBackground} mb-0 text-center m-o rounded-0`}
         role="banner"
       >
@@ -42,7 +42,7 @@ function NavigationBar() {
             </a>
           </div>
         </div>
-      </div>
+      </Alert>
 
       {/* Main Navigation */}
       <Navbar expand="md" bg="dark" variant="dark"></Navbar>

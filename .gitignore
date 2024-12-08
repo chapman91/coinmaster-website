@@ -20,3 +20,4 @@ public/_next-video
 
 # Local Netlify folder
 .netlify
+.vercel
