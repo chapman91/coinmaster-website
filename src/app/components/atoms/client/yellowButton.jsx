@@ -7,7 +7,10 @@ const YellowButton = () => {
   const scrollToNextSection = () => {
     const carouselSection = document.getElementById('carouselSection');
     if (carouselSection) {
-      carouselSection.scrollIntoView({ behavior: 'smooth' });
+      carouselSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
     }
   };
 
