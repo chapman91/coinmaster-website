@@ -25,7 +25,6 @@ const HomePage = () => {
           objectFit="cover"
           width={1366}
           height={768}
-          // layout="fill"
           priority
         />
         {/* CoinMaster Image */}
@@ -77,7 +76,7 @@ const HomePage = () => {
 
           {/* Button Section */}
           <div className={styles.buttonContainer}>
-            <YellowButton />
+            <YellowButton targetUrl="/about" />
           </div>
         </div>
       </section>

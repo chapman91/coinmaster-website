@@ -1,7 +1,6 @@
 import React from 'react';
 import { Box, Text, Image, VStack } from '@chakra-ui/react';
 
-
 /**
  * TokenomicsCard Component
  *

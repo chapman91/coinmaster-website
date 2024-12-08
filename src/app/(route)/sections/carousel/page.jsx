@@ -33,6 +33,7 @@ const NextArrow = ({ onClick }) => (
     cursor="pointer"
     className={styles.carouselContainer}
     onClick={onClick}
+    id="carouselSection"
   >
     <Image
       src={images.carouselArrowLeft}

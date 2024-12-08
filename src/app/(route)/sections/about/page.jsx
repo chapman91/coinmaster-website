@@ -1,8 +1,14 @@
 import React from 'react';
-import { Box, Heading, Text, VStack, Grid, GridItem } from '@chakra-ui/react';
-import Image from 'next/image';
+import {
+  Box,
+  Heading,
+  Text,
+  VStack,
+  Image,
+  Grid,
+  GridItem,
+} from '@chakra-ui/react';
 import images from '../../../assets/images';
-import styles from '../../../styles/About.module.css';
 
 // About functional React component called AboutSection
 const About = () => {
@@ -57,25 +63,15 @@ const About = () => {
             lg: '-20%',
             xl: '-15%',
           }}
-          className={styles.exclamationImage}
-          // width={{
-          //   xs: '70px',
-          //   base: '50px',
-          //   sm: '70px',
-          //   md: '80px',
-          //   lg: '145px',
-          //   xl: '200px',
-          // }}
-          // height={{
-          //   xs: '70px',
-          //   base: '50px',
-          //   sm: '70px',
-          //   md: '80px',
-          //   lg: '145px',
-          //   xl: '200px',
-          // }}
-          width={424}
-          height={451}
+          boxSize={{
+            xs: '70px',
+            base: '50px',
+            sm: '70px',
+            md: '80px',
+            lg: '145px',
+            xl: '200px',
+          }}
+          zIndex="2"
         />
 
         {/* Text Column - Left Side */}
@@ -91,7 +87,7 @@ const About = () => {
             </Text>
             {/* CoinMaster Story Summary */}
             <Text fontSize="lg" color="gray.700">
-              I discovered the CyroCoin in the ashes of my grandparents&apos;
+              I discovered the CyroCoin in the ashes of my grandparents&#39;
               home, destroyed by the Lazarus Group. I was just an intern then,
               but that day changed everything. Now, I fight for NeoTropolis and
               to honor their legacy.
@@ -119,21 +115,12 @@ const About = () => {
             <Image
               src={images.exclamationBubble}
               alt="Exclamation Bubble"
-              // style={{
-              //   width={{
-              //     base: '80px', // Smaller screens
-              //     sm: '100px', // Small screens (480px and up)
-              //     md: '150px', // Medium screens (768px and up)
-              //     lg: '385px', // Large screens (992px and up)
-              //   }}
-              //   height={{
-              //     base: '80px', // Smaller screens
-              //     sm: '100px', // Small screens (480px and up)
-              //     md: '150px', // Medium screens (768px and up)
-              //     lg: '385px', // Large screens (992px and up)
-              //   }}
-              // }}
-              className={styles.exclamationBubbleImage}
+              boxSize={{
+                base: '80px', // Smaller screens
+                sm: '100px', // Small screens (480px and up)
+                md: '150px', // Medium screens (768px and up)
+                lg: '395px', // Large screens (992px and up)
+              }}
               position="absolute"
               right={{
                 base: '-2%', // Adjusted to keep in place for smaller screens
@@ -145,10 +132,9 @@ const About = () => {
                 base: '-5%', // Extra space above for smaller screens
                 sm: '-7%', // Slight adjustment for small screens
                 md: '-10%', // Medium screens
-                lg: '-50%', // Large screens (exact fit)
+                lg: '-82%', // Large screens (exact fit)
               }}
-              width={500}
-              height={443}
+              zIndex="2" // Ensures it remains above other elements
             />
           </GridItem>
 
@@ -157,13 +143,11 @@ const About = () => {
             <Image
               src={images.cyroMan}
               alt="CoinMaster SuperHero"
-              // height={{ base: '200px', md: '300px', lg: '400px' }}
-              // width={{ base: '200px', md: '300px', lg: '400px' }}
-              width={500}
-              height={500}
+              boxSize={{ base: '200px', md: '300px', lg: '400px' }}
               position="absolute"
               bottom="0"
               right="-3"
+              priority
             />
           </GridItem>
         </Grid>
