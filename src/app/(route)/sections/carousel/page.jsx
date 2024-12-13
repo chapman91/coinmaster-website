@@ -33,7 +33,6 @@ const NextArrow = ({ onClick }) => (
     cursor="pointer"
     className={styles.carouselContainer}
     onClick={onClick}
-   
   >
     <Image
       src={images.carouselArrowLeft}
@@ -144,7 +143,7 @@ const CarouselSection = () => {
       px={{ base: 5, md: 10 }}
       bg="white"
       textAlign="center"
-       id="carouselSection"
+      id="carouselSection"
     >
       {/* Extra box added over Box element */}
       <Box gap={{ base: 'px', sm: '16px', md: '24px' }}>

@@ -89,6 +89,7 @@ const InvitationSection = () => {
               maxW="600px"
             >
               Become a part of CoinMaster&#39;s journey to protect NeoTropolis.
+              Powered by Solana.
             </Text>
             {/* Button  */}
             <NormalButton onClick={() => (window.location.href = '/join-us')} />
