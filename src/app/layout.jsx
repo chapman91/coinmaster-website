@@ -5,6 +5,7 @@ import { Footer } from './components/componentsBarrel';
 import './styles/global.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Roboto } from 'next/font/google';
+import Script from 'next/script';
 
 // Roboto Configuration
 const roboto = Roboto({
@@ -22,6 +23,14 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
   },
+  keywords: [
+    'coinmaster',
+    'cyrocoin',
+    'crypto superhero',
+    'next.js',
+    'memecoin',
+    'web3',
+  ],
 };
 
 // React component for the layout
@@ -30,7 +39,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head></head>
+      <head>
+        <Script id="schema-org-markup-website" type="application/ld+json"> 
+          {`
+           "@context" : "https://schema.org",
+           "@type" : "WebSite",
+           "name" : "CoinMaster",
+           "url" : "https://www.cyrocoin.xyz/",
+          `}
+        </Script>
+      </head>
       <body className={roboto.className}>
         <ChakraProviderWrapper>
           {/* Wrap the main app content with WalletContext */}

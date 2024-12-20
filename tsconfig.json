@@ -29,6 +29,6 @@
     "**/*.ts",
     "**/*.tsx",
     "src/app/components/organisms/client/Swap.tsx"
-, "sitemap.xml.js"  ],
+, "src/app/sitemap.xml.js"  ],
   "exclude": ["node_modules"]
 }
