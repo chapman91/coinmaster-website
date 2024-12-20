@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <Script id="schema-org-markup-website" type="application/ld+json"> 
+        <Script id="schema-org-markup-website" type="application/ld+json">
           {`
            "@context" : "https://schema.org",
            "@type" : "WebSite",
