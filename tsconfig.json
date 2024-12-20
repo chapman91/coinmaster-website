@@ -28,7 +28,8 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/app/components/organisms/client/Swap.tsx"
-, "src/app/sitemap.xml.js"  ],
+    "src/app/components/organisms/client/Swap.tsx",
+    "src/app/sitemap.xml/sitemap.xml.js"
+  ],
   "exclude": ["node_modules"]
 }

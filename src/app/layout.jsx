@@ -16,7 +16,7 @@ const roboto = Roboto({
 export const metadata = {
   title: {
     default: 'CoinMaster - The Master of Cyrocoin',
-    template: '$% - CoinMaster',
+    template: '%s - CoinMaster', // Corrected template
   },
   description:
     'The Master of CyroCoin, CoinMaster, is the superhero in SyncSphere Comics books created by SyncSphere Labs.',
@@ -34,25 +34,22 @@ export const metadata = {
 };
 
 // React component for the layout
-// children is a prop or property
-// Layout components wraps page components in `Next.js`
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
         <Script id="schema-org-markup-website" type="application/ld+json">
-          {`
-           "@context" : "https://schema.org",
-           "@type" : "WebSite",
-           "name" : "CoinMaster",
-           "url" : "https://www.cyrocoin.xyz/",
-          `}
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'CoinMaster',
+            url: 'https://www.cyrocoin.xyz/',
+          })}
         </Script>
       </head>
       <body className={roboto.className}>
         <ChakraProviderWrapper>
-          {/* Wrap the main app content with WalletContext */}
-
+          {/* Wrap the main app content */}
           <NavigationBar />
           <div className="content">{children}</div>
           <Footer />
