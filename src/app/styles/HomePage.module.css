@@ -111,7 +111,7 @@
 }
 
 /* Tablet Device */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .heroImage {
     /* Further increase on tablet screens */
     max-width: 800px;
@@ -152,14 +152,14 @@
   }
 }
 
-/* Adjustments for smaller screens */
-@media (min-width: 1024px) {
+
+ @media (min-width: 1026px) {
   .heroImage {
-    /* Increase width on medium screens */
+   
     max-width: 1400px;
   }
 
-  /* CoinMasters Image and Description */
+ 
   .contentContainer {
     flex-direction: row;
     margin-left: 30%;
@@ -180,4 +180,6 @@
     margin-left: 18%;
     margin-top: 12%;
   }
-}
+} 
+
+
