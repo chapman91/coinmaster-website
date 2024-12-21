@@ -15,7 +15,7 @@ export async function GET(request) {
   return new Response(sitemap, {
     headers: {
       'Content-Type': 'application/xml',
-      'Cache-Control': 'public, max-age=86400', // Cache for 24 hours
+      'Cache-Control': 'public, max-age=86400, stale-while-revalidate=3600', // Cache for 24 hours
     },
   });
 }
