@@ -52,7 +52,7 @@ export default function RootLayout({ children }) {
         {/* Open Graph Meta Tags */}
         <meta
           property="og:title"
-          content="CoinMaster - The Guardian of Neotropolis"
+          content="CoinMaster - The Master of CyroCoin"
         />
         <meta
           property="og:description"
@@ -69,7 +69,7 @@ export default function RootLayout({ children }) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="CoinMaster - The Guardian of Neotropolis"
+          content="CoinMaster - The Master of CyroCoin"
         />
         <meta
           name="twitter:description"
