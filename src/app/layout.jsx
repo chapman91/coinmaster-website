@@ -38,12 +38,66 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* Meta Information */}
+        <meta
+          name="description"
+          content="In the bustling city of Neotropolis, CoinMaster rises to confront chaos, restore balance, and uncover the mysteries left behind by his family. A hero’s journey awaits."
+        />
+        <meta
+          name="keywords"
+          content="CoinMaster, Neotropolis, superhero story, culture coin, CoinMaster lore"
+        />
+        <link rel="canonical" href="https://www.cyrocoin.xyz/" />
+
+        {/* Open Graph Meta Tags */}
+        <meta
+          property="og:title"
+          content="CoinMaster - The Guardian of Neotropolis"
+        />
+        <meta
+          property="og:description"
+          content="In Neotropolis, a city teetering on the edge of disorder, a hero emerges. Discover CoinMaster’s journey to restore balance and confront his destiny."
+        />
+        <meta
+          property="og:image"
+          content="https://www.cyrocoin.xyz/images/coinmaster-og-image.jpg"
+        />
+        <meta property="og:url" content="https://www.cyrocoin.xyz/" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="CoinMaster - The Guardian of Neotropolis"
+        />
+        <meta
+          name="twitter:description"
+          content="In Neotropolis, a city teetering on the edge of disorder, a hero emerges. Discover CoinMaster’s journey to restore balance and confront his destiny."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.cyrocoin.xyz/images/coinmaster-twitter-image.jpg"
+        />
+
+        {/* Structured Data for Rich Results */}
         <Script id="schema-org-markup-website" type="application/ld+json">
           {JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'WebSite',
             name: 'CoinMaster',
             url: 'https://www.cyrocoin.xyz/',
+            description:
+              'In Neotropolis, CoinMaster rises to confront chaos and uncover the mysteries left behind by his family.',
+            image: 'https://www.cyrocoin.xyz/images/coinmaster-og-image.jpg',
+            publisher: {
+              '@type': 'Organization',
+              name: 'SyncSphere Labs',
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://www.cyrocoin.xyz/images/logo.png',
+              },
+            },
           })}
         </Script>
       </head>
