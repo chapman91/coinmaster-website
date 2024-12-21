@@ -200,7 +200,7 @@ const CarouselSection = () => {
                 left={0}
                 width="100%"
                 height="100%"
-                bg="rgba(0, 0, 0, 0.2)" // Semi-transparent black background
+                bg="rgba(0, 0, 0, 0.1)" // Semi-transparent black background
                 className={styles.darkOverlay}
               />
 
