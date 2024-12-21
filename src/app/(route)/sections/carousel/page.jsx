@@ -158,7 +158,6 @@ const CarouselSection = () => {
               boxShadow="0px 8px 16px rgba(0, 0, 0, 0.8), 0px 8px 16px rgba(0, 0, 0, 0.8)"
               // mx={{ base: 4, sm: 2 , md: 2, lg: 2}} // Reduved margin for desktop
               // p={{ base: 10}}
-              onClick={() => window.open(book.link, '_blank')} // Open flipbook on click
               cursor="pointer"
               maxW="400px" // Mas width for consistency
               width={{ base: '90%', md: '45%' }} // Smaller width on desktop
