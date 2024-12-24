@@ -23,8 +23,8 @@ function NavigationBar() {
             <Image
               src={images.cyclogo}
               alt="Logo Center"
-              width={100}
-              height={50}
+              width={95}
+              height={55}
               className={styles.logoCenter}
             />
           </a>
