@@ -2,10 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { NormalButton } from '../../componentsBarrel';
-import {
-  Text,
-  Box,
-} from '@chakra-ui/react';
+import { Text, Box } from '@chakra-ui/react';
 
 export default function DisclaimerModal() {
   const [isVisible, setIsVisible] = useState(false);
@@ -38,7 +35,16 @@ export default function DisclaimerModal() {
       zIndex="1000"
       width="100%"
     >
-      <Text fontSize="sm" mb={2}>
+      <Text
+        fontSize={{
+          base: '0.75rem',
+          sm: '0.875rem',
+          md: '1rem',
+          lg: '1.125rem',
+        }}
+        fontWeight="bold"
+        mb={2}
+      >
         CyroCoin is not a financial asset and carries no intrinsic value or
         expectation of financial return. This token exists solely to support the
         CoinMaster narrative and is intended for entertainment purposes only.

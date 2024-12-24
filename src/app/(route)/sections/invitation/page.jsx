@@ -96,7 +96,7 @@ const InvitationSection = () => {
               Powered by Solana.
             </Text>
             {/* Button  */}
-            <NormalButton onClick={() => (window.location.href = '/join-us')} >
+            <NormalButton onClick={() => (window.location.href = '/join-us')}>
               APE IN
             </NormalButton>
           </VStack>
