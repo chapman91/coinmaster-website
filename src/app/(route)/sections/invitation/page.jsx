@@ -85,7 +85,11 @@ const InvitationSection = () => {
             </div>
             <Text
               className={comicNue.className}
-              fontSize={{ base: '1rem', md: '1.5rem' }}
+              fontSize={{
+                base: '1rem',
+                sm: '1.25rem',
+                md: '1.5rem',
+              }}
               maxW="600px"
             >
               Become a part of CoinMaster&#39;s journey to protect NeoTropolis.

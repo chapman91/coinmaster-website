@@ -86,6 +86,7 @@
   z-index: 5;
   color: var(--background-color);
   font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .buttonContainer {
@@ -152,14 +153,11 @@
   }
 }
 
-
- @media (min-width: 1026px) {
+@media (min-width: 1026px) {
   .heroImage {
-   
     max-width: 1400px;
   }
 
- 
   .contentContainer {
     flex-direction: row;
     margin-left: 30%;
@@ -180,6 +178,4 @@
     margin-left: 18%;
     margin-top: 12%;
   }
-} 
-
-
+}
