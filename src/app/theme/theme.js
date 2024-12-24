@@ -12,6 +12,7 @@ const theme = extendTheme({
     yellow: {
       400: '#FFD700',
     },
+    transparentDisclaimerColor: 'rgba(var(--border-color), 0.9)',
   },
   breakpoints: {
     xs: '20em', // 320px, for extra-small screens

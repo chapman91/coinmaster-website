@@ -2,6 +2,8 @@
 import { ChakraProviderWrapper } from './components/componentsBarrel';
 import { NavigationBar } from './components/componentsBarrel';
 import { Footer } from './components/componentsBarrel';
+import { DisclaimerModal } from './components/componentsBarrel';
+
 import './styles/global.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Roboto } from 'next/font/google';
@@ -105,6 +107,7 @@ export default function RootLayout({ children }) {
         <ChakraProviderWrapper>
           {/* Wrap the main app content */}
           <NavigationBar />
+          <DisclaimerModal />
           <div className="content">{children}</div>
           <Footer />
         </ChakraProviderWrapper>

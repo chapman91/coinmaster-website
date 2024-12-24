@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@chakra-ui/react';
 
-const NormalButton = () => {
+const NormalButton = ({ children, ...props }) => {
   return (
     <Button
       //  onClick={onClick}
@@ -22,8 +22,9 @@ const NormalButton = () => {
         boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)',
       }} // Active effect
       _focus={{ outline: 'none' }} // Remove focus outline
+      {...props}
     >
-      APE IN
+      {children}
     </Button>
   );
 };
