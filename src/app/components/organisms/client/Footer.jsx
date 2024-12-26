@@ -33,7 +33,7 @@ const Footer = () => {
           {/* Telegram Logo */}
           <Col xs="auto">
             <a
-              href="https://.t.me/cyrocoin"
+              href="https://t.me/cyrocoin"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.iconLink}
