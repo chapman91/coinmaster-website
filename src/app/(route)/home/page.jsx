@@ -67,7 +67,7 @@ const HomePage = () => {
             <div className={styles.textContainer}>
               <p className={styles.description}>
                 When Neotropolis needed a hero, the Cyrocoin choose Cyrus
-                Maxwell. Now, armed with the incredible powers and a mission to
+                Maxwell. Now, armed with incredible powers and a mission to
                 protect his city, CoinMaster fights against corruption, villains
                 and criminals.
               </p>
