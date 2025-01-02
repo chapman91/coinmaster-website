@@ -21,7 +21,7 @@ export const metadata = {
     template: '%s - CoinMaster', // Corrected template
   },
   description:
-    'The Master of CyroCoin, CoinMaster, is the superhero in SyncSphere Comics books created by SyncSphere Labs.',
+    'The Master of CyroCoin, CoinMaster, is the flagship superhero in SyncSphere Universe created by SyncSphere Labs.',
   twitter: {
     card: 'summary_large_image',
   },

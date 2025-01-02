@@ -28,7 +28,7 @@ const InvitationSection = () => {
     >
       {/* Grid Container */}
       <Grid
-      // define how grid areas should behave on different screen sizes
+        // define how grid areas should behave on different screen sizes
         templateAreas={{
           base: `"text" "image"`, // Stack text and image on mobile
           sm: `"text" "image"`,
@@ -67,7 +67,7 @@ const InvitationSection = () => {
         </Box>
 
         {/* Text Section */}
-        <GridItem area="text" mb={{ md: '300px', lg: '0'}}>
+        <GridItem area="text" mb={{ md: '300px', lg: '0' }}>
           <VStack
             spacing={2}
             fontWeight="bold"
@@ -114,14 +114,13 @@ const InvitationSection = () => {
 
 export default InvitationSection;
 
-
 /**
  *  1. Understand the structure of the invitation code
- * 
+ *
  *  2. Target the Dual Superhero image and reduce it on smaller screens to position the section for better responsiveness
- * 
+ *
  *  3. Target the cyrocoin text image.
- * 
- *  4. Find out how to make the image not overlap with the body of CTA text 
- * 
+ *
+ *  4. Find out how to make the image not overlap with the body of CTA text
+ *
  */
