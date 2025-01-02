@@ -1,5 +1,6 @@
 'use client';
 
+// Import statements
 import React from 'react';
 import { Box, Text, Grid, GridItem, VStack } from '@chakra-ui/react';
 import cyrocoinImage from '../../../assets/cyrocoin.png';
@@ -27,26 +28,31 @@ const InvitationSection = () => {
     >
       {/* Grid Container */}
       <Grid
+      // define how grid areas should behave on different screen sizes
         templateAreas={{
           base: `"text" "image"`, // Stack text and image on mobile
-          md: `"image text"`, // Place image to the left of text and desktop
+          sm: `"text" "image"`,
+          md: `"text" "image"`, // Place image to the left of text and desktop
+          lg: `"image text"`,
         }}
-        gridTemplateColumns={{ base: '1fr', md: '1fr 2fr ' }}
+        gridTemplateColumns={{ base: '1fr', md: '1fr', lg: '1fr 2fr ' }}
         alignItems="center"
         gap={6}
         position="relative"
       >
-        {/* Image Section */}
+        {/* Adjust the size responsively for the dual image */}
         <Box
           area="image"
-          display={{ base: 'flex', md: 'block' }}
-          justifyContent="end"
-          alignItems={{ base: 'center', md: 'right' }}
+          display={{ base: 'flex', md: 'flex', lg: 'block' }}
+          justifyContent="center"
+          alignItems={{ base: 'center', md: 'center' }}
           position={{ base: 'static', md: 'absolute' }}
-          top={{ base: 'auto', md: '105px' }}
-          left={{ base: 'auto', md: '-190px' }}
-          width={{ base: '100%', md: '800px' }}
-          height={{ base: 'auto', md: 'auto' }} // Auto height on mobile
+          top={{ base: 'auto', lg: '105px' }}
+          left={{ base: 'auto', lg: '-190px' }}
+          mt={{ md: '540px', lg: '0' }}
+          ml={{ base: 'auto', md: '105px', lg: '0' }}
+          width={{ base: '100%', md: '600px', lg: '800px' }}
+          height={{ base: 'auto', md: 'auto', lg: 'auto' }} // Auto height on mobile
         >
           <div className={styles.cyrocoinContainer}>
             <Image
@@ -61,7 +67,7 @@ const InvitationSection = () => {
         </Box>
 
         {/* Text Section */}
-        <GridItem area="text">
+        <GridItem area="text" mb={{ md: '300px', lg: '0'}}>
           <VStack
             spacing={2}
             fontWeight="bold"
@@ -107,3 +113,15 @@ const InvitationSection = () => {
 };
 
 export default InvitationSection;
+
+
+/**
+ *  1. Understand the structure of the invitation code
+ * 
+ *  2. Target the Dual Superhero image and reduce it on smaller screens to position the section for better responsiveness
+ * 
+ *  3. Target the cyrocoin text image.
+ * 
+ *  4. Find out how to make the image not overlap with the body of CTA text 
+ * 
+ */

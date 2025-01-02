@@ -8,7 +8,7 @@ import {
   CarouselSection,
   TokenomicsSection,
   InvitationSection,
-} from '../../(route)/routeBarrel';
+} from '../routeBarrel';
 import { YellowButton } from '../../components/componentsBarrel';
 
 // Import the hero image and hero background

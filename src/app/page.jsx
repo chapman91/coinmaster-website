@@ -1,4 +1,4 @@
-import { HomePage } from './(route)/routeBarrel';
+import { HomePage } from './route/routeBarrel';
 // import {
 //   About,
 //   CarouselSection,
