@@ -46,6 +46,22 @@ const Footer = () => {
               />
             </a>
           </Col>
+          {/* Telegram Logo */}
+          <Col xs="auto">
+            <a
+              href="https://dexscreener.com/solana/nafckkxopv9smkps8k8al59rduldkiufaw4vvvptgrd"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.iconLink}
+            >
+              <Image
+                width={70}
+                height={70}
+                src={images.dexscreenerFooter}
+                alt="Telegram"
+              />
+            </a>
+          </Col>
           {/* CoinGecko Logo */}
           <Col xs="auto">
             <OverlayTrigger

@@ -42,6 +42,7 @@ const images = {
   yellowStrip: '/assets/images/yellow-strip.png',
   twitter: '/assets/images/xxlogo.png',
   telegramFooter: '/assets/images/telegram-footer.png',
+  dexscreenerFooter: '/assets/images/dexscreener.png',
   coingeckoFooter: '/assets/images/coingecko-cap-footer.png',
   coinmarketcapFooter: '/assets/images/msign-1.png',
   creatorsImage: '/assets/images/creators.png',
