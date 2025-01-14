@@ -102,8 +102,15 @@ const InvitationSection = () => {
               Powered by Solana.
             </Text>
             {/* Button  */}
-            <NormalButton onClick={() => (window.location.href = '/join-us')}>
-              APE IN
+            <NormalButton
+  onClick={() => {
+    window.open(
+      'https://pump.fun/coin/6toKojUsHdA5puXDmt5yg4shVAL694jn6YWWfcHtpump',
+      '_blank'
+    );
+  }}
+>
+  APE IN
             </NormalButton>
           </VStack>
         </GridItem>

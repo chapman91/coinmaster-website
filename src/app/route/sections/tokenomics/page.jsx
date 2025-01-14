@@ -183,7 +183,10 @@ const TokenomicsSection = () => {
             color="yellow.400"
             _hover={{ backgroundColor: 'transparent', color: 'yellow.300' }}
           >
-            <Text fontSize="24px" fontWeight="bold">{`[ Token Address ]`}</Text>
+            <Text
+              fontSize="24px"
+              fontWeight="bold"
+            >{`[ 6toKojUsHdA5puXDmt5yg4shVAL694jn6YWWfcHtpump ]`}</Text>
             <Icon as={FiCopy} ml={2} color="white" />
           </Button>
         </Tooltip>
