@@ -26,7 +26,7 @@ const TokenomicsSection = () => {
   const toast = useToast();
 
   // Token address to copy
-  const tokenAddress = '0xYourTokenAddressHere';
+  const tokenAddress = '6toKojUsHdA5puXDmt5yg4shVAL694jn6YWWfcHtpump';
 
   // Tokenomics data
   const tokenomicsData = [
