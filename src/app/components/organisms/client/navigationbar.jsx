@@ -19,7 +19,7 @@ function NavigationBar() {
       >
         <div className="d-flex justify-content-between align-items-center">
           {/* Logo on the far left */}
-          <a href="/home">
+          <a href="./">
             <Image
               src={images.cyclogo}
               alt="Logo Center"
@@ -31,7 +31,7 @@ function NavigationBar() {
 
           {/* Centered Logo - Hidden on small and tablet screens  */}
           <div className="d-none d-lg-flex flex-grow-1 justify-content-center">
-            <a href="/home">
+            <a href="./">
               <Image
                 src={images.coinmasterLogo}
                 alt="Logo Left"
