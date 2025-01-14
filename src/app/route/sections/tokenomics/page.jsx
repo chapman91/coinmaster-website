@@ -169,7 +169,7 @@ const TokenomicsSection = () => {
       </Box>
 
       {/* Token Address Copy Button */}
-      <Box mt={6} zIndex={1}>
+      <Box maxWidth="100%" mt={6} zIndex={1}>
         <Tooltip label="Click to copy" aria-label="A tooltip">
           <Button
             variant="ghost"
@@ -183,10 +183,17 @@ const TokenomicsSection = () => {
             color="yellow.400"
             _hover={{ backgroundColor: 'transparent', color: 'yellow.300' }}
           >
+            {/* Ensure token address font size is responsive */}
             <Text
-              fontSize="24px"
+              fontSize={['sm', 'md', 'lg', 'xl']}
               fontWeight="bold"
-            >{`[ 6toKojUsHdA5puXDmt5yg4shVAL694jn6YWWfcHtpump ]`}</Text>
+              whiteSpace="normal"
+              wordBreak="break-word"
+              overflowWrap="anywhere"
+              textAlign="center"
+            >
+              {` 6toKojUsHdA5puXDmt5yg4shVAL694jn6YWWfcHtpump `}
+            </Text>
             <Icon as={FiCopy} ml={2} color="white" />
           </Button>
         </Tooltip>
