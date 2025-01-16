@@ -40,6 +40,11 @@ const TokenomicsSection = () => {
       percentage: '100%',
       imageSrc: images.liquidityPool,
     },
+    {
+      title: 'LP TOKENS LOCKED',
+      percentage: '100%',
+      imageSrc: images.cyrocoinDistribution,
+    },
   ];
 
   // Fallback function for clipboard copy
@@ -149,7 +154,7 @@ const TokenomicsSection = () => {
         alignItems="center"
       >
         <SimpleGrid
-          columns={{ base: 1, md: 2, lg: 2 }}
+          columns={{ base: 1, md: 2, lg: 3 }}
           spacing={6}
           justifyContent="center"
           alignItems="center"
