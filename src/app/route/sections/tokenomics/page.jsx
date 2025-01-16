@@ -191,8 +191,9 @@ const TokenomicsSection = () => {
               wordBreak="break-word"
               overflowWrap="anywhere"
               textAlign="center"
+              data-copy="6toKojUsHdA5puXDmt5yg4shVAL694jn6YWWfcHtpump"
             >
-              {` 6toKojUsHdA5puXDmt5yg4shVAL694jn6YWWfcHtpump `}
+              CA: 6toKojUsHdA5puXDmt5yg4shVAL694jn6YWWfcHtpump
             </Text>
             <Icon as={FiCopy} ml={2} color="white" />
           </Button>
