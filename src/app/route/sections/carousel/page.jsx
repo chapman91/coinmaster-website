@@ -18,60 +18,6 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styles from '../../../styles/CarouselSection.module.css';
 
-// Custom Next Arrow
-const NextArrow = ({ onClick }) => (
-  <Box
-    position="absolute"
-    top="50%"
-    right="10px"
-    transform="translateY(-50%)"
-    width="40px"
-    height="40px"
-    display="flex"
-    alignItems="center"
-    justifyContent="center"
-    cursor="pointer"
-    className={styles.carouselContainer}
-    onClick={onClick}
-  >
-    <Image
-      src={images.carouselArrowLeft}
-      alt="Next"
-      width="100%"
-      height="auto"
-      _hover={{ transform: 'scale(1.1)' }} // Hover effect
-      transition="transform 0.2s"
-    />
-  </Box>
-);
-
-// Custom Previous Arrow
-const PrevArrow = ({ onClick }) => (
-  <Box
-    position="absolute"
-    top="50%"
-    left="10px"
-    transform="translateY(-50%)"
-    width="40px"
-    height="40px"
-    display="flex"
-    alignItems="center"
-    justifyContent="center"
-    cursor="pointer"
-    className={styles.prevArrow}
-    onClick={onClick}
-  >
-    <Image
-      src={images.carouselArrowRight}
-      alt="Previous"
-      width="100%"
-      height="auto"
-      _hover={{ transform: 'scale(1.1)' }} // Hover effect
-      transition="transform 0.2s"
-    />
-  </Box>
-);
-
 const CarouselSection = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [currentFlipbookId, setCurrentFlipbookId] = useState(null);
@@ -83,8 +29,6 @@ const CarouselSection = () => {
     slidesToShow: 1, // Number of slides visible at a time
     slidesToScroll: 1, // Number of slides to scroll
     arrows: true, // Show next/prev arrows
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
     centerPadding: '20px', // Add padding to create spacing
     responsive: [
       {
@@ -130,7 +74,6 @@ const CarouselSection = () => {
   // Flipbook data
   const flipbooks = [
     {
-      volume: 'COMING SOON!',
       image: images.coinmasterCover, // Replace with correct path
       flipbookId: 'bdad114828', // Replace with your Heyzine link
     },
@@ -203,21 +146,6 @@ const CarouselSection = () => {
                 bg="rgba(0, 0, 0, 0.1)" // Semi-transparent black background
                 className={styles.darkOverlay}
               />
-
-              {/* Volume Text */}
-              <Box
-                position="absolute"
-                bottom={1}
-                left="50%"
-                transform="translateX(-50%)"
-                color="white"
-                px={4}
-                py={2}
-                border="2px solid white"
-                className={styles.volumeText}
-              >
-                <Text fontWeight="extrabold">{book.volume}</Text>
-              </Box>
             </Box>
           ))}
         </Slider>
