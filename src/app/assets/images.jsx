@@ -51,6 +51,7 @@ const images = {
   tokenomicsGif: '/assets/vidoes/cyronmics_bg.mp4',
   aboutBackground: '/assets/images/about-background.png',
   coinmasterCover: '/assets/images/coinmaster-cover.jpg',
+  lptokensLocked: '/assets/images/LP-tokens-locked.png',
 };
 
 export default images;

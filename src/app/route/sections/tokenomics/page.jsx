@@ -43,7 +43,7 @@ const TokenomicsSection = () => {
     {
       title: 'LP TOKENS LOCKED',
       percentage: '100%',
-      imageSrc: images.cyrocoinDistribution,
+      imageSrc: images.lptokensLocked,
     },
   ];
 
