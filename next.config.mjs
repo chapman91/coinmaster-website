@@ -16,9 +16,9 @@ const nextConfig = {
 
   // Ensure static images load correctly
   images: {
-    domains: ['www.cyrocoin.xyz'], // Use the full domain
-    unoptimized: false, // Set to false to use Next.js image optimization
-    formats: ['image/avif', 'image/webp', 'image/png', 'image/jpeg'], // Allow these formats
+    domains: ['www.cyrocoin.xyz'], // Ensure domain matches
+    unoptimized: false, // Keep Next.js image optimization enabled
+    formats: ['image/avif', 'image/webp'], // Remove PNG/JPEG to fix error
   },
 
   // Ensure public folder is served properly
@@ -30,10 +30,10 @@ const nextConfig = {
   },
 
   // Make sure Next.js serves static files correctly
-  output: 'standalone', // Ensures proper static asset handling
+  output: 'standalone',
 
   // Ensure URLs work properly
-  trailingSlash: false, // Set to false to avoid unnecessary trailing slashes
+  trailingSlash: false,
 };
 
 export default withBundleAnalyzer({
