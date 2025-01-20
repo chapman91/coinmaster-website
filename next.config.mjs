@@ -4,14 +4,8 @@ import withBundleAnalyzer from '@next/bundle-analyzer';
 const nextConfig = {
   reactStrictMode: true,
 
-  // Enable experimental features if needed
-  experimental: {
-    turbo: {}, // Set to true if you want to use Turbopack
-  },
-
   // Webpack configuration
   webpack(config) {
-    // Ensure proper fallback handling for client-side builds
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
@@ -20,17 +14,26 @@ const nextConfig = {
     return config;
   },
 
-  // Images configuration
+  // Ensure static images load correctly
   images: {
-    // Add external domains if required
-    domains: ['cyrocoin.xyz'], // Leave empty if only using `public` directory
-
-    // Disables image optimization for troubleshooting
-    unoptimized: true, // Set to true temporarily if you suspect optimization issues
+    domains: ['www.cyrocoin.xyz'], // Use the full domain
+    unoptimized: false, // Set to false to use Next.js image optimization
+    formats: ['image/avif', 'image/webp', 'image/png', 'image/jpeg'], // Allow these formats
   },
 
-  // Additional configurations
-  trailingSlash: true, // Ensures trailing slashes in URLs
+  // Ensure public folder is served properly
+  staticPageGenerationTimeout: 60,
+
+  // Turbo config (if used)
+  experimental: {
+    turbo: {}, // Enable if needed
+  },
+
+  // Make sure Next.js serves static files correctly
+  output: 'standalone', // Ensures proper static asset handling
+
+  // Ensure URLs work properly
+  trailingSlash: false, // Set to false to avoid unnecessary trailing slashes
 };
 
 export default withBundleAnalyzer({
