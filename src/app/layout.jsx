@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
         />
         <meta
           property="og:image"
-          content="https://www.cyrocoin.xyz/images/coinmaster-og-image.jpg"
+          content="https://www.cyrocoin.xyz/images/coinmaster-twitter-image.jpg"
         />
         <meta property="og:url" content="https://www.cyrocoin.xyz/" />
         <meta property="og:type" content="website" />
