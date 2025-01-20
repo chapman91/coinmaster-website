@@ -91,7 +91,8 @@ export default function RootLayout({ children }) {
             url: 'https://www.cyrocoin.xyz/',
             description:
               'In Neotropolis, CoinMaster rises to confront chaos and uncover the mysteries left behind by his family.',
-            image: 'https://www.cyrocoin.xyz/images/coinmaster-og-image.jpg',
+            image:
+              'https://www.cyrocoin.xyz/images/coinmaster-twitter-image.jpg',
             publisher: {
               '@type': 'Organization',
               name: 'SyncSphere Labs',
