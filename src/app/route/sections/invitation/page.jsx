@@ -99,7 +99,7 @@ const InvitationSection = () => {
               maxW="600px"
             >
               Become a part of CoinMaster&#39;s journey to protect NeoTropolis.
-              Powered by Solana.
+              Powered by Solana Blockchain.
             </Text>
             {/* Button  */}
             <NormalButton
